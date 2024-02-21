@@ -1,0 +1,26 @@
+{
+  "name": "@shoptop/grid-layouts",
+  "version": "3.0.0",
+  "main": "index.ts",
+  "module": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "pnpm rimraf node_modules && pnpm rimraf dist && pnpm rimraf .turbo"
+  },
+  "dependencies": {
+    "@shoptop/constants": "workspace:*",
+    "@shoptop/directives": "workspace:*",
+    "@shoptop/hooks": "workspace:*",
+    "@shoptop/locale": "workspace:*",
+    "@shoptop/router": "workspace:*",
+    "@shoptop/stores": "workspace:*",
+    "@shoptop/utils": "workspace:*",
+    "@shoptop/designComponents": "workspace:*",
+    "pinia": "^2.1.7",
+    "vue": "3.3.6",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@shoptop/types": "workspace:*"
+  }
+}

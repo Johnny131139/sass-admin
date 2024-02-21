@@ -1,0 +1,28 @@
+{
+  "name": "@shoptop/designComponents",
+  "version": "1.0.2",
+  "description": "",
+  "main": "./index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@iconify/iconify": "^3.1.1",
+    "@shoptop/constants": "workspace:*",
+    "@shoptop/hooks": "workspace:*",
+    "@shoptop/utils": "workspace:*",
+    "sass": "^1.69.7",
+    "vue": "^3.4.18",
+    "vxe-table-demonic": "^4.5.19",
+    "xe-utils": "^3.5.20"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.181",
+    "@purge-icons/generated": "^0.10.0"
+  }
+}
