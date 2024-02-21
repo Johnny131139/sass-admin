@@ -7,15 +7,10 @@ import {
 } from './helper'
 import { isArray, isString } from '@shoptop/utils'
 import { DEFAULT_SELECT_TYPE } from './constant'
-// import ora from 'ora'
-// const spinner = ora({
-//   text: 'Loading...',
-//   color: 'yellow',
-// })
+
 const prompts = require('prompts')
 
 async function runScript(argv: string[], script: string) {
-  // spinner.stop()
   execa('pnpm', ['-w', 'run', `turbo:${script}`].concat(argv), {
     stdio: 'inherit',
     preferLocal: true,
