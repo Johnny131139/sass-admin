@@ -8,9 +8,9 @@
   },
   "type": "module",
   "author": {
-    "name": "vben",
-    "email": "anncwb@126.com",
-    "url": "https://github.com/anncwb"
+    "name": "Johnny",
+    "email": "Johnny@shoptop.com",
+    "url": "https://domain-ishoptop.com.com"
   },
   "scripts": {
     "build": "pnpm cross-env NODE_ENV=production vite build",
