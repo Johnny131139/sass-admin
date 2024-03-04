@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VbenColumns, useTable } from '@shoptop/designComponents/src/table'
+import { VbenColumns, useTable } from '@shoptop/design/src/table'
 import { getUseTableData } from '../apis/table'
 const columns: VbenColumns = [
   { field: 'userId', title: 'id', width: 100 },

@@ -8,7 +8,7 @@
 -->
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { useForm, useTable } from '@shoptop/designComponents'
+import { useForm, useTable } from '@shoptop/design'
 import { roleSchema, roleColumns } from './schemas'
 
 import RoleAddDraw from './modules/roleAddDraw.vue'

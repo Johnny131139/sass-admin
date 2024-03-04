@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useI18n } from '@shoptop/locale'
-import { VbenIconify, renderIcon } from '@shoptop/designComponents'
+import { VbenIconify, renderIcon } from '@shoptop/design'
 import { TabActionEnum } from '@shoptop/constants'
 import { RouteLocationNormalized } from 'vue-router'
 

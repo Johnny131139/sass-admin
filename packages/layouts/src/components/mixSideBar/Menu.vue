@@ -8,7 +8,7 @@ import {
   watchEffect,
 } from 'vue'
 import { createNamespace, getGlobalConfig } from '@shoptop/utils'
-import { VbenIconify } from '@shoptop/designComponents'
+import { VbenIconify } from '@shoptop/design'
 import { context } from '../../../bridge'
 import { NavBarModeEnum } from '@shoptop/constants'
 import { useI18n } from '@shoptop/locale'

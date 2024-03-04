@@ -7,7 +7,7 @@ import { useI18n } from '@shoptop/locale'
 import { useGo } from '@shoptop/hooks'
 import { filterTree, isString } from '@shoptop/utils'
 import { REDIRECT_NAME } from '@shoptop/constants'
-import { VbenIconify } from '@shoptop/designComponents'
+import { VbenIconify } from '@shoptop/design'
 import { Menu } from '@shoptop/types'
 import {renderIcon} from "../render"
 import {getAllParentPath, getMenus} from "@shoptop/router";

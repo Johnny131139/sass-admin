@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useForm, useTable } from '@shoptop/designComponents'
+import { useForm, useTable } from '@shoptop/design'
 import { formSchema, deptColumns } from './schemas'
 import { getDepartment } from '@/apis/sys/index'
 import DeptAddDraw from './modules/deptAddDraw.vue'

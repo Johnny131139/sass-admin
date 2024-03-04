@@ -18,7 +18,7 @@ export {
   useMsg,
   useDialog,
 } from './src'
-export function initVbenComponent(app: App, comp: Object, global = true) {
+export function initComponent(app: App, comp: Object, global = true) {
   Object.keys(comp).forEach((k) => {
     maps.set(k, comp[k])
   })

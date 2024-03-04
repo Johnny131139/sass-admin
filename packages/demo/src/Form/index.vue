@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
-import { useForm } from '@shoptop/designComponents'
+import { useForm } from '@shoptop/design'
 
-import { transferFormilySchemas } from '@shoptop/designComponents/src/form'
+import { transferFormilySchemas } from '@shoptop/design/src/form'
 import { FormilyProps, BasicProps, selectParams } from './schemas'
 
 const Ref = ref(null)

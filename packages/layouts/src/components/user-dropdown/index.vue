@@ -2,7 +2,7 @@
 import { ref, unref } from 'vue'
 import { useI18n } from '@shoptop/locale'
 import LockModal from '../lock/LockModal.vue'
-import { renderIcon } from '@shoptop/designComponents'
+import { renderIcon } from '@shoptop/design'
 import { context } from '../../../bridge'
 const { useUserStore } = context
 

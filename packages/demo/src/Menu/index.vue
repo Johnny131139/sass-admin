@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { useForm, useTable } from '@shoptop/designComponents'
+import { useForm, useTable } from '@shoptop/design'
 import { formSchema, menuColumns } from './schemas'
 
 import MenuAddDraw from './modules/menuAddDraw.vue'

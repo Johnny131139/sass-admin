@@ -9,7 +9,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import { useForm } from '@shoptop/designComponents'
+import { useForm } from '@shoptop/design'
 import { formSchema, userColumns } from './schemas'
 import { getDeptTree, getDeptUser } from '@/apis/sys/index'
 import AccountAddModal from './modules/accountAddModal.vue'

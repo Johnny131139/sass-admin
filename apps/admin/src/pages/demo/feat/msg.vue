@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useMsg, useDialog, useNotice } from '@shoptop/designComponents'
+import { useMsg, useDialog, useNotice } from '@shoptop/design'
 
 const msg = useMsg()
 const dialog = useDialog()

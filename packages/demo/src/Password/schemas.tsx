@@ -1,4 +1,4 @@
-import { VbenFormSchema } from '@shoptop/designComponents/src/form'
+import { VbenFormSchema } from '@shoptop/design/src/form'
 
 const formSchema: VbenFormSchema[] = [
   {

@@ -104,14 +104,14 @@ import {
   useDialog,
 } from 'naive-ui'
 import {
-  initVbenComponent,
+  initComponent,
   setNotice,
   setMessage,
   setDialog,
-} from '@shoptop/designComponents'
+} from '@shoptop/design'
 
 export async function registerComponents(app) {
-  initVbenComponent(app, {
+  initComponent(app, {
     Affix: NAffix,
     Avatar: NAvatar,
     AutoComplete: NAutoComplete,

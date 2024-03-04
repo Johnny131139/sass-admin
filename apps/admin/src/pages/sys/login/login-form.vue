@@ -8,7 +8,7 @@ import {
   TwitterCircleFilled
 } from '@ant-design/icons-vue';
 import { useI18n } from '@shoptop/locale';
-import { notice } from '@shoptop/designComponents'
+import { notice } from '@shoptop/design'
 import { useUserStore } from '@/store/user';
 import {
   LoginStateEnum,

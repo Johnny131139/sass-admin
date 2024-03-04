@@ -3,7 +3,7 @@ import { useUserStoreWithout, useUserStore } from '@/store/user'
 import { useI18n, useLocale } from '@shoptop/locale'
 import { getGlobalConfig } from '@shoptop/utils'
 import { projectSetting } from './setting'
-import { initComp } from '@shoptop/designComponents'
+import { initComp } from '@shoptop/design'
 import { initLayout } from '@shoptop/layouts'
 import { localeList } from '@shoptop/locale/src/config'
 import {

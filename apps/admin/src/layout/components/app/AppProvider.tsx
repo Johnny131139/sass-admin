@@ -1,7 +1,7 @@
 import { namespace } from '@/setting'
 import { defineComponent, toRefs, ref, unref } from 'vue'
 import { useConfigStoreWithOut } from '@/store/config'
-import { useMsg, useNotice, useDialog } from '@shoptop/designComponents'
+import { useMsg, useNotice, useDialog } from '@shoptop/design'
 import { setMsg, setNotice, setDialog } from '@shoptop/request'
 import { createAppProviderContext, createBreakpointListen } from '@shoptop/hooks'
 

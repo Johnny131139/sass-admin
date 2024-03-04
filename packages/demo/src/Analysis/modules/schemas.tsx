@@ -1,4 +1,4 @@
-import { VbenColumns } from '@shoptop/designComponents/src/table'
+import { VbenColumns } from '@shoptop/design/src/table'
 
 export const operatorColumns: VbenColumns = [
   {

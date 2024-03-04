@@ -1,5 +1,5 @@
 import { nextTick, Ref, ref, unref } from 'vue'
-import { VbenFormProps, VbenFormSchema } from '../../../form'
+import { VbenFormProps, VbenFormSchema } from '../..'
 import { error } from '../../../index'
 
 export interface formMethod {

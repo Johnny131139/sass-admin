@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useTable } from '@shoptop/designComponents'
+import { useTable } from '@shoptop/design'
 import { refundTimeTableSchema, refundTimeTableData } from './data'
 
 const [registerTimeTable] = useTable({

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useForm } from '@shoptop/designComponents'
+import { useForm } from '@shoptop/design'
 import { accountAddFormSchema } from './schemas'
 const isModalShow = ref(false)
 

@@ -19,7 +19,7 @@
     "@shoptop/hooks": "workspace:*",
     "@shoptop/request": "workspace:*",
     "@shoptop/utils": "workspace:*",
-    "@shoptop/designComponents": "workspace:*",
+    "@shoptop/design": "workspace:*",
     "echarts": "^5.4.3",
     "vue": "^3.4.18",
     "vue-echarts": "^6.6.8"

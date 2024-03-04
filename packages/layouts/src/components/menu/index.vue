@@ -8,7 +8,7 @@ import {
 } from 'vue-router'
 import { useI18n } from '@shoptop/locale'
 import { REDIRECT_NAME } from '@shoptop/constants'
-import { renderIcon } from '@shoptop/designComponents'
+import { renderIcon } from '@shoptop/design'
 import { context } from '../../../bridge'
 import type { RouteMeta } from 'vue-router'
 import { Menu } from '@shoptop/types'

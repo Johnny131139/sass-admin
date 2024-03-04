@@ -15,7 +15,7 @@
     "@shoptop/router": "workspace:*",
     "@shoptop/stores": "workspace:*",
     "@shoptop/utils": "workspace:*",
-    "@shoptop/designComponents": "workspace:*",
+    "@shoptop/design": "workspace:*",
     "pinia": "^2.1.7",
     "vue": "3.3.6",
     "vue-router": "^4.2.5"

@@ -4,7 +4,7 @@ import {
   getSelectData,
   getTreeSelectData,
 } from '../apis/form'
-import { VbenFormSchema } from '@shoptop/designComponents/src/form'
+import { VbenFormSchema } from '@shoptop/design/src/form'
 import { ref } from 'vue'
 export const selectParams = ref({ id: 1 })
 export const BasicProps: VbenFormSchema[] = [

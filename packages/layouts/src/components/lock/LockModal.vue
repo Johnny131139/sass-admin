@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { useI18n } from '@shoptop/locale'
-import { useForm } from '@shoptop/designComponents'
+import { useForm } from '@shoptop/design'
 import { context } from '../../../bridge'
 import headerImg from '@/assets/images/header.jpg'
 

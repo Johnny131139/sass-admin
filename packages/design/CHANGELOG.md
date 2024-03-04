@@ -1,4 +1,4 @@
-# @shoptop/designComponents
+# @shoptop/design
 
 ## 1.0.1
 

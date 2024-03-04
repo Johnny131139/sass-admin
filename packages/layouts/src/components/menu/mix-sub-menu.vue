@@ -9,7 +9,7 @@ import {
 } from 'vue-router'
 import { useI18n } from '@shoptop/locale'
 import { REDIRECT_NAME } from '@shoptop/constants'
-import { renderIcon } from '@shoptop/designComponents'
+import { renderIcon } from '@shoptop/design'
 import { useAppTheme } from '@shoptop/hooks'
 const { listenerRouteChange, useMenuSetting } = context
 const { getAccordion } = useMenuSetting()

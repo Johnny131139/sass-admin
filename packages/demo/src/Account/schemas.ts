@@ -6,8 +6,8 @@
  * @Description  : account schemas
  * @FilePath     : \vben3\apps\admin\src\pages\demo\system\account\schemas.ts
  */
-import { VbenFormSchema } from '@shoptop/designComponents/src/form'
-import { VbenColumns } from '@shoptop/designComponents/src/table'
+import { VbenFormSchema } from '@shoptop/design/src/form'
+import { VbenColumns } from '@shoptop/design/src/table'
 
 export const formSchema: VbenFormSchema[] = [
   {

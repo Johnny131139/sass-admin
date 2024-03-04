@@ -19,7 +19,7 @@
     "@shoptop/types": "workspace:*",
     "@shoptop/utils": "workspace:*",
     "@shoptop/stores": "workspace:*",
-    "@shoptop/designComponents": "workspace:*",
+    "@shoptop/design": "workspace:*",
     "vue": "3.4.18",
     "vue-router": "^4.2.5"
   }

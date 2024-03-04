@@ -3,7 +3,7 @@ import { computed, nextTick, ref, unref } from 'vue'
 import { useI18n } from '@shoptop/locale'
 import { TabActionEnum } from '@shoptop/constants'
 import { RouteLocationNormalized } from 'vue-router'
-import { renderIcon } from '@shoptop/designComponents'
+import { renderIcon } from '@shoptop/design'
 import { useTabs } from '@shoptop/hooks'
 import { useMultipleTab } from '@shoptop/stores'
 

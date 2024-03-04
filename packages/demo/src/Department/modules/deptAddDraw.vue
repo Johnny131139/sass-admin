@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useForm } from "@shoptop/designComponents";
+import { useForm } from "@shoptop/design";
 import { deptAddFormSchema } from './schemas'
 const deptDrawFlag = ref(false)
 function open() {

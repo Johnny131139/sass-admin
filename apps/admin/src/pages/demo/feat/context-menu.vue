@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { h, nextTick, ref } from 'vue'
 import { Icon } from '@shoptop/components/index'
-import { useMsg } from '@shoptop/designComponents'
+import { useMsg } from '@shoptop/design'
 
 const msg = useMsg()
 

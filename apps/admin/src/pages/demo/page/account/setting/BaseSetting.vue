@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { useForm } from '@shoptop/designComponents'
+import { useForm } from '@shoptop/design'
 import headerImg from '@/assets/images/header.jpg'
 import { CloudUploadOutlined } from '@ant-design/icons-vue'
 import { baseSetschemas } from './data'
 import { useUserStore } from '@/store/user'
-import { msg } from '@shoptop/designComponents'
+import { msg } from '@shoptop/design'
 
 const userStore = useUserStore()
 
