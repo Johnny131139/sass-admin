@@ -36,29 +36,29 @@ function handleTitleClick(item: ListItem) {
 }
 </script>
 <template>
-  <VbenList class="vben-header-notify-list" bordered>
+  <ShopList class="Shop-header-notify-list" bordered>
     <template v-for="item in getData" :key="item.id">
-      <VbenListItem>
-        <VbenThing>
+      <ShopListItem>
+        <ShopThing>
           <template #header>
-            <VbenEllipsis
+            <ShopEllipsis
               class="w-40 text-sm cursor-pointer"
               @click="handleTitleClick"
             >
               {{ item.title }}
-            </VbenEllipsis>
+            </ShopEllipsis>
           </template>
 
           <template #avatar>
-            <VbenAvatar v-if="item.avatar" round :src="item.avatar" />
+            <ShopAvatar v-if="item.avatar" round :src="item.avatar" />
             <span v-else> {{ item.avatar }}</span>
           </template>
 
           <template #description>
             <div v-if="item.type == '3'">
-              <VbenTag size="small" :type="item.color">
+              <ShopTag size="small" :type="item.color">
                 {{ item.extra }}
-              </VbenTag>
+              </ShopTag>
               <div class="text-gray-600 text-sm py-1">
                 {{ item.description }}
               </div>
@@ -67,14 +67,14 @@ function handleTitleClick(item: ListItem) {
               {{ item.datetime }}
             </div>
           </template>
-        </VbenThing>
-      </VbenListItem>
+        </ShopThing>
+      </ShopListItem>
     </template>
-  </VbenList>
+  </ShopList>
 </template>
 
 <style lang="less" scoped>
-.vben-header-notify-list {
+.Shop-header-notify-list {
   &::-webkit-scrollbar {
     display: none;
   }

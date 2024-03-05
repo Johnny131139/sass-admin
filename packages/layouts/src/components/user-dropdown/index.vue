@@ -64,8 +64,8 @@ const handleLock = () => {
 </script>
 
 <template>
-  <VbenDropdown trigger="hover" :options="options" @select="handleSelect">
+  <ShopDropdown trigger="hover" :options="options" @select="handleSelect">
     <UserInfo />
-  </VbenDropdown>
+  </ShopDropdown>
   <LockModal v-model:show="showLockModal" />
 </template>

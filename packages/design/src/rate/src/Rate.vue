@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenRate' })
+defineOptions({ name: 'ShopRate' })
 import { maps } from '../../index'
 
 const Rate = maps.get('Rate')

@@ -26,7 +26,7 @@ const [accountFormReg, { getFieldValue, validate }] = useForm({
 })
 </script>
 <template>
-  <VbenModal
+  <ShopModal
     v-model:show="isModalShow"
     preset="card"
     title="新增账号"
@@ -34,23 +34,23 @@ const [accountFormReg, { getFieldValue, validate }] = useForm({
     :closeOnEsc="false"
     :maskClosable="false"
   >
-    <VbenForm
+    <ShopForm
       ref="accountFormRef"
       class="w-full"
       @register="accountFormReg"
       v-model:model="model"
     >
-    </VbenForm>
+    </ShopForm>
 
     <template #action>
       <div class="w-full flex justify-right">
-        <VbenSpace>
-          <VbenButton type="primary">新增</VbenButton>
-          <VbenButton type="tertiary">取消</VbenButton>
-        </VbenSpace>
+        <ShopSpace>
+          <ShopButton type="primary">新增</ShopButton>
+          <ShopButton type="tertiary">取消</ShopButton>
+        </ShopSpace>
       </div>
     </template>
-  </VbenModal>
+  </ShopModal>
 </template>
 
 <style lang="less" scoped></style>

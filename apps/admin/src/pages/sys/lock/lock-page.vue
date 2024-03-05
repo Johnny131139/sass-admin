@@ -67,7 +67,7 @@ function handleShowForm (show = false) {
         @click="handleShowForm(false)"
         v-show="showDate"
     >
-      <VbenIconify icon="ant-design:lock-outlined"/>
+      <ShopIconify icon="ant-design:lock-outlined"/>
       <span>{{ t('sys.lock.unlock') }}</span>
     </div>
     
@@ -102,7 +102,7 @@ function handleShowForm (show = false) {
               {{ userInfo?.realName??'' }}
             </p>
           </div>
-          <VbenInput
+          <ShopInput
               type="password"
               show-password-on="mousedown"
               :placeholder="t('sys.lock.placeholder')"
@@ -113,7 +113,7 @@ function handleShowForm (show = false) {
             {{ t('sys.lock.alert') }}
           </span>
           <div :class="`${bem('footer')} enter-x`">
-            <VbenButton
+            <ShopButton
                 quaternary
                 type="info"
                 size="small"
@@ -122,8 +122,8 @@ function handleShowForm (show = false) {
                 @click="handleShowForm(true)"
             >
               {{ t('common.back') }}
-            </VbenButton>
-            <VbenButton
+            </ShopButton>
+            <ShopButton
                 quaternary
                 type="info"
                 size="small"
@@ -132,8 +132,8 @@ function handleShowForm (show = false) {
                 @click="goLogin"
             >
               {{ t('sys.lock.backToLogin') }}
-            </VbenButton>
-            <VbenButton
+            </ShopButton>
+            <ShopButton
                 class="mt-2 text-gray-300"
                 quaternary
                 type="info"
@@ -142,7 +142,7 @@ function handleShowForm (show = false) {
                 :loading="loading"
             >
               {{ t('sys.lock.entry') }}
-            </VbenButton>
+            </ShopButton>
           </div>
         </div>
       </div>

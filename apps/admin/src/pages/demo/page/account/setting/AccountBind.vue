@@ -2,9 +2,9 @@
 import { accountBindList } from './data'
 </script>
 <template>
-  <VbenCard title="账号绑定" :canExpan="false">
+  <ShopCard title="账号绑定" :canExpan="false">
     <template v-for="item in accountBindList" :key="item.key">
-      <VbenCard :title="item.title">
+      <ShopCard :title="item.title">
         <template #header-extra>
           <div
             class="float-right mt-10px mr-30px text-blue-500 text-font-normal cursor-pointer"
@@ -14,7 +14,7 @@ import { accountBindList } from './data'
           </div>
         </template>
         <div class="content">
-          <VbenIconify
+          <ShopIconify
             v-if="item.avatar"
             class="avatar"
             :icon="item.avatar"
@@ -22,9 +22,9 @@ import { accountBindList } from './data'
           />
           <div class="text">{{ item.description }}</div>
         </div>
-      </VbenCard>
+      </ShopCard>
     </template>
-  </VbenCard>
+  </ShopCard>
 </template>
 
 <style lang="less" scoped>

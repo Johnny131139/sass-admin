@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenPageHeader' })
+defineOptions({ name: 'ShopPageHeader' })
 import { maps } from '../../index'
 const PageHeader = maps.get('PageHeader')
 </script>

@@ -6,7 +6,7 @@ const { menu, toggleMenuFixed } = useAppConfig()
 </script>
 <template>
   <TopButtonWrapper @click.stop="toggleMenuFixed">
-    <VbenIconify
+    <ShopIconify
       size="22"
       :icon="menu.mixSideFixed ? 'ri:pushpin-2-fill' : 'ri:pushpin-2-line'"
     />

@@ -43,11 +43,11 @@ const buttonTypes = [
 
 <template>
   <div class="p-2 h-full">
-    <VbenCard>
+    <ShopCard>
       <h2>基础组件</h2>
       <p>
         基础组件依赖于Naive-UI,组件库已有的基础组件,项目中不会再次进行demo展示（二次封装组件除外）。
-        <VbenButton
+        <ShopButton
           text
           tag="a"
           href="https://www.naiveui.com/zh-CN/os-theme/components/button"
@@ -55,22 +55,22 @@ const buttonTypes = [
           type="primary"
         >
           Naive-UI
-        </VbenButton>
+        </ShopButton>
       </p>
-    </VbenCard>
-    <VbenCard class="mt-3">
+    </ShopCard>
+    <ShopCard class="mt-3">
       <div v-for="buttonType in buttonTypes" :key="buttonType.value">
         <h3>{{ buttonType.type }}</h3>
-        <VbenButton
+        <ShopButton
           class="mx-2"
           v-for="buttonColor in buttonColors"
           :[buttonType.value]="buttonType.value"
           :key="buttonColor"
           :type="buttonColor"
-          >{{ buttonColor }}</VbenButton
+          >{{ buttonColor }}</ShopButton
         >
       </div>
-    </VbenCard>
+    </ShopCard>
   </div>
 </template>
 

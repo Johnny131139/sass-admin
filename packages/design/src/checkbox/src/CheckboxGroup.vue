@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenCheckboxGroup' })
+defineOptions({ name: 'ShopCheckboxGroup' })
 import { maps } from '../../index'
 import Checkbox from './Checkbox.vue'
 import { fetchProps, fetch } from '../../fetch'
@@ -96,14 +96,14 @@ const update = (v) => {
 <template>
   <CheckboxGroup v-bind="$attrs" @update:value="update">
     <template v-for="item in options" :key="`${item.value}`">
-      <VbenButtonGroup v-if="type === 'button'"
-        ><VbenButton
+      <ShopButtonGroup v-if="type === 'button'"
+        ><ShopButton
           :value="item.value"
           @click="select(item.value)"
           :type="getType(item.value)"
           :disabled="item.disabled"
-          >{{ item.label }}</VbenButton
-        ></VbenButtonGroup
+          >{{ item.label }}</ShopButton
+        ></ShopButtonGroup
       >
       <Checkbox v-bind="item" v-else />
     </template>

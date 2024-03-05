@@ -14,17 +14,17 @@ const getTitle = computed(() => {
 </script>
 
 <template>
-  <VbenPopover :title="getTitle" placement="bottom" :duration="500">
+  <ShopPopover :title="getTitle" placement="bottom" :duration="500">
     <template #trigger>
       <span @click="toggle" class="flex items-center">
-        <VbenIconify
+        <ShopIconify
           icon="ant-design:fullscreen-outlined"
           hoverPointer
           v-if="!isFullscreen"
         />
-        <VbenIconify icon="ant-design:fullscreen-exit-outlined" v-else />
+        <ShopIconify icon="ant-design:fullscreen-exit-outlined" v-else />
       </span>
     </template>
     <span>{{ getTitle }}</span>
-  </VbenPopover>
+  </ShopPopover>
 </template>

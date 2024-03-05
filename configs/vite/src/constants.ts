@@ -4,4 +4,4 @@ export const GLOB_CONFIG_FILE_NAME = '_app.config.js'
 // vite package output directory
 export const OUTPUT_DIR = 'dist'
 
-export const APP_NAME = 'vben-admin'
+export const APP_NAME = 'Shop-admin'

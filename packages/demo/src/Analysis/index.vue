@@ -609,7 +609,7 @@ const e6_option = ref({
           class="bg-white w-full h-60 rounded-md grid grid-cols-12 grid-rows-6 shadow-xl shadow-light-600"
         >
           <div class="p-2 col-start-1 col-span-12 row-start-1 row-span-6">
-            <VbenTable
+            <ShopTable
               :columns="operatorColumns"
               :data="operatorData"
               :options="{
@@ -619,7 +619,7 @@ const e6_option = ref({
                 round: true,
                 maxHeight: 200,
               }"
-            ></VbenTable>
+            ></ShopTable>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenRadio' })
+defineOptions({ name: 'ShopRadio' })
 import { maps } from '../../index'
 const Radio = maps.get('Radio')
 </script>

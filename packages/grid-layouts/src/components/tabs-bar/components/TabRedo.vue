@@ -21,6 +21,6 @@ const { loading, handleFn: handleRedo } = usePromise(reload, {
 
 <template>
   <SuffixItemWrapper @click="handleRedo" v-if="tabTar.showRedo">
-    <VbenIconify icon="ep:refresh-right" size="18" :infinite="loading" />
+    <ShopIconify icon="ep:refresh-right" size="18" :infinite="loading" />
   </SuffixItemWrapper>
 </template>

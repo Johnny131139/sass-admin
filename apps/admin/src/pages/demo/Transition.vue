@@ -1,15 +1,15 @@
 <template>
   <div class="p-2 h-100">
     <div class="flex">
-      <VbenSelect
+      <ShopSelect
         :options="options"
         v-model:value="value"
         placeholder="选择动画"
         :style="{ width: '150px' }"
       />
-      <VbenButton type="primary" class="ml-4" @click="start">
+      <ShopButton type="primary" class="ml-4" @click="start">
         start
-      </VbenButton>
+      </ShopButton>
     </div>
     <component :is="CustomTransition[value]">
       <div class="box" v-show="show"></div>

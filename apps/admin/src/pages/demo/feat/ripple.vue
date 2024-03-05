@@ -3,9 +3,9 @@ import { rippleDirective as vRipple } from '@shoptop/directives'
 </script>
 
 <template>
-  <VbenCard title="Ripple示例">
+  <ShopCard title="Ripple示例">
     <div class="demo-box" v-ripple>content</div>
-  </VbenCard>
+  </ShopCard>
 </template>
 
 <style lang="less" scoped>

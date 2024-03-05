@@ -1,5 +1,5 @@
 <script lang="ts" setup >
-defineOptions({ name: 'VbenDatePicker' })
+defineOptions({ name: 'ShopDatePicker' })
 import { maps } from '../../index'
 const DatePicker = maps.get('DatePicker')
 </script>

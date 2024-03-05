@@ -1,4 +1,4 @@
-import { VbenColumns } from '../../../designComponents/src/table'
+import { ShopColumns } from '../../../designComponents/src/table'
 
 export interface Data {
   table: {
@@ -6,7 +6,7 @@ export interface Data {
     total: number
   }
 }
-export const baseColumns: VbenColumns = [
+export const baseColumns: ShopColumns = [
   {
     field: 'userId',
     title: 'ID',
@@ -49,7 +49,7 @@ export const baseColumns: VbenColumns = [
     slots: { default: 'action'},
   }
 ]
-export const fixedColumns: VbenColumns = [
+export const fixedColumns: ShopColumns = [
   { field: 'userId', title: 'id', width: 100, fixed: 'left' },
   { field: 'username', title: '名称', width: 120, fixed: 'left' },
   { field: 'realname', title: '真实名称', width: 280 },
@@ -74,12 +74,12 @@ export const innerLabels: string[] = [
   'desc',
 ]
 
-export const innerColumns: VbenColumns = [
+export const innerColumns: ShopColumns = [
   { field: 'label', title: 'label' },
   { field: 'value', title: 'value' },
 ]
 
-export const treeColumns: VbenColumns = [
+export const treeColumns: ShopColumns = [
   {
     field: 'id',
     title: 'ID',

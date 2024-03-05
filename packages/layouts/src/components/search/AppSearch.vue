@@ -13,12 +13,12 @@ function changeModal(show: boolean) {
 
 <template>
   <div class="flex items-center" @click="changeModal(true)">
-    <VbenPopover placement="bottom">
+    <ShopPopover placement="bottom">
       <template #trigger>
-        <VbenIconify icon="ant-design:search-outlined" hoverPointer />
+        <ShopIconify icon="ant-design:search-outlined" hoverPointer />
       </template>
       {{ t('common.searchText') }}
-    </VbenPopover>
+    </ShopPopover>
     <AppSearchModal @close="changeModal(false)" :visible="showModal" />
   </div>
 </template>

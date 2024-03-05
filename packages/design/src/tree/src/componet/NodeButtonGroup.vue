@@ -7,12 +7,12 @@ export default {
 const props = defineProps(['onDelete', 'onEdit', 'key'])
 </script>
 <template>
-  <VbenSpace align="center"
-    ><VbenIconify icon="ep:edit" @click="onEdit" />
-    <VbenPopconfirm @PositiveClick="onDelete">
+  <ShopSpace align="center"
+    ><ShopIconify icon="ep:edit" @click="onEdit" />
+    <ShopPopconfirm @PositiveClick="onDelete">
       <slot></slot>
       <template #trigger
-        ><VbenIconify icon="ep:delete"></VbenIconify
-      ></template> </VbenPopconfirm
-  ></VbenSpace>
+        ><ShopIconify icon="ep:delete"></ShopIconify
+      ></template> </ShopPopconfirm
+  ></ShopSpace>
 </template>

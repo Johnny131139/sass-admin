@@ -10,13 +10,13 @@ import { getGlobalConfig } from '@shoptop/utils'
 const { title } = getGlobalConfig(import.meta.env)
 
 // github repo url
-export const GITHUB_URL = 'https://github.com/vbenjs/vben3'
+export const GITHUB_URL = 'https://github.com/Shopjs/Shop3'
 
-// vben3-doc
-export const DOC_URL = 'https://vbenjs.github.io/vben3-doc/'
+// Shop3-doc
+export const DOC_URL = 'https://Shopjs.github.io/Shop3-doc/'
 
 // site url
-export const SITE_URL = 'https://vben.mufei88.com/'
+export const SITE_URL = 'https://Shop.mufei88.com/'
 
 const links = (t: ComposerTranslation): FooterLinkOptions[] => [
   {
@@ -38,9 +38,9 @@ export const useSiteGeneral = defineStore({
   state: (): DefineSiteGeneralOptions => ({
     logo: defaultLogo,
     title,
-    copyright: '2023 Vben Admin',
+    copyright: '2023 Shop Admin',
     links: links(i18n.global.t),
     avatar: defaultAvatar,
-    username: 'Vben Admin',
+    username: 'Shop Admin',
   }),
 })

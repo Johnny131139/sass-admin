@@ -18,72 +18,72 @@ const prev = () => {
 
 <template>
   <div class="m-5 result-success">
-    <VbenResult
+    <ShopResult
       status="success"
       title="提交成功"
       description="提交结果页用于反馈一系列操作任务的处理结果， 如果仅是简单操作，使用 Message 全局提示反馈即可。 本文字区域可以展示简单的补充说明，如果有类似展示 “单据”的需求，下面这个灰色区域可以呈现比较复杂的内容。"
     >
       <template #footer>
-        <VbenSpace justify="center">
-          <VbenButton key="console" type="primary"> 返回列表 </VbenButton>
-          <VbenButton key="buy"> 查看项目 </VbenButton>
-          <VbenButton key="buy"> 打印 </VbenButton>
-        </VbenSpace>
+        <ShopSpace justify="center">
+          <ShopButton key="console" type="primary"> 返回列表 </ShopButton>
+          <ShopButton key="buy"> 查看项目 </ShopButton>
+          <ShopButton key="buy"> 打印 </ShopButton>
+        </ShopSpace>
       </template>
-    </VbenResult>
+    </ShopResult>
     <div class="result-success__content">
-      <VbenSpace vertical>
-        <VbenDescriptions label-placement="left" title="项目名称">
-          <VbenDescriptionsItem label="项目 ID"> 111222 </VbenDescriptionsItem>
-          <VbenDescriptionsItem label="负责人"> Vben </VbenDescriptionsItem>
-          <VbenDescriptionsItem label="生效时间">
+      <ShopSpace vertical>
+        <ShopDescriptions label-placement="left" title="项目名称">
+          <ShopDescriptionsItem label="项目 ID"> 111222 </ShopDescriptionsItem>
+          <ShopDescriptionsItem label="负责人"> Shop </ShopDescriptionsItem>
+          <ShopDescriptionsItem label="生效时间">
             2016-12-12 ~ 2017-12-12
-          </VbenDescriptionsItem>
-        </VbenDescriptions>
-        <VbenSteps :current="current" :status="currentStatus">
-          <VbenStep title="创建项目">
+          </ShopDescriptionsItem>
+        </ShopDescriptions>
+        <ShopSteps :current="current" :status="currentStatus">
+          <ShopStep title="创建项目">
             <template #default>
-              <div>Vben</div>
+              <div>Shop</div>
               <p>2016-12-12 12:32</p>
             </template>
-          </VbenStep>
-          <VbenStep title="部门初审" description="Chad" />
-          <VbenStep title="财务复核" />
-          <VbenStep title="完成" />
-        </VbenSteps>
-        <VbenSpace>
-          <VbenButtonGroup>
-            <VbenButton @click="prev">
+          </ShopStep>
+          <ShopStep title="部门初审" description="Chad" />
+          <ShopStep title="财务复核" />
+          <ShopStep title="完成" />
+        </ShopSteps>
+        <ShopSpace>
+          <ShopButtonGroup>
+            <ShopButton @click="prev">
               <template #icon>
-                <VbenIcon>
+                <ShopIcon>
                   <ArrowLeftOutlined />
-                </VbenIcon>
+                </ShopIcon>
               </template>
-            </VbenButton>
-            <VbenButton @click="next">
+            </ShopButton>
+            <ShopButton @click="next">
               <template #icon>
-                <VbenIcon>
+                <ShopIcon>
                   <ArrowRightOutlined />
-                </VbenIcon>
+                </ShopIcon>
               </template>
-            </VbenButton>
-          </VbenButtonGroup>
-          <VbenRadioGroup v-model:value="currentStatus" name="basic">
-            <VbenRadioButton class="status-radio-btn" value="error">
+            </ShopButton>
+          </ShopButtonGroup>
+          <ShopRadioGroup v-model:value="currentStatus" name="basic">
+            <ShopRadioButton class="status-radio-btn" value="error">
               Error
-            </VbenRadioButton>
-            <VbenRadioButton class="status-radio-btn" value="process">
+            </ShopRadioButton>
+            <ShopRadioButton class="status-radio-btn" value="process">
               Process
-            </VbenRadioButton>
-            <VbenRadioButton class="status-radio-btn" value="wait">
+            </ShopRadioButton>
+            <ShopRadioButton class="status-radio-btn" value="wait">
               Wait
-            </VbenRadioButton>
-            <VbenRadioButton class="status-radio-btn" value="finish">
+            </ShopRadioButton>
+            <ShopRadioButton class="status-radio-btn" value="finish">
               Finish
-            </VbenRadioButton>
-          </VbenRadioGroup>
-        </VbenSpace>
-      </VbenSpace>
+            </ShopRadioButton>
+          </ShopRadioGroup>
+        </ShopSpace>
+      </ShopSpace>
     </div>
   </div>
 </template>

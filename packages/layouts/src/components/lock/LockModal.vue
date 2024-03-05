@@ -17,7 +17,7 @@ const { useUserStore, useLockStore } = context
 const userStore = useUserStore()
 const lockStore = useLockStore()
 const getUserInfo = computed(() => {
-  const { realName = 'Vben Admin', avatar, desc } = userStore.getUserInfo || {}
+  const { realName = 'Shop Admin', avatar, desc } = userStore.getUserInfo || {}
 
   return { realName, avatar: avatar || headerImg, desc }
 })
@@ -71,25 +71,25 @@ const handleLock = async () => {
 </script>
 
 <template>
-  <VbenModal
+  <ShopModal
     v-model:show="showModal"
     :title="t('layout.header.lockScreen')"
     preset="card"
   >
-    <VbenSpace vertical align="center">
-      <VbenAvatar round :size="64" :src="getUserInfo.avatar" />
-      <VbenH5>{{ getUserInfo.realName }}</VbenH5>
-    </VbenSpace>
-    <VbenForm
+    <ShopSpace vertical align="center">
+      <ShopAvatar round :size="64" :src="getUserInfo.avatar" />
+      <ShopH5>{{ getUserInfo.realName }}</ShopH5>
+    </ShopSpace>
+    <ShopForm
       @register="register"
       ref="formRef"
       v-model:model="formModel"
       label-placement="left"
     />
-    <VbenButton type="info" block @click="handleLock">
+    <ShopButton type="info" block @click="handleLock">
       {{ t('layout.header.lockScreenBtn') }}
-    </VbenButton>
-  </VbenModal>
+    </ShopButton>
+  </ShopModal>
 </template>
 
 <style lang="less" scoped></style>

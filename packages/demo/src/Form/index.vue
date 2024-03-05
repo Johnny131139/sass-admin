@@ -50,8 +50,8 @@ function getValue() {
   <div class="p-2">
     <div>表单数据：{{ model }}</div>
 
-    <VbenButton @click="changeSelectParams">改变选择框参数</VbenButton>
-    <VbenButton @click="getValue">获取数据</VbenButton>
-    <VbenForm @register="register" ref="Ref" v-model:model="model" />
+    <ShopButton @click="changeSelectParams">改变选择框参数</ShopButton>
+    <ShopButton @click="getValue">获取数据</ShopButton>
+    <ShopForm @register="register" ref="Ref" v-model:model="model" />
   </div>
 </template>

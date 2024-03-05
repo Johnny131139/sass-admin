@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenAffix' })
+defineOptions({ name: 'ShopAffix' })
 import { maps } from '../../index'
 
 const Affix = maps.get('Affix')

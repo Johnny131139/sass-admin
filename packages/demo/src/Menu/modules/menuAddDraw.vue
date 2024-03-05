@@ -25,12 +25,12 @@ const [menuFormReg, {getFieldValue, validate}] = useForm({
 const model = ref({})
 </script>
 <template>
-  <VbenDrawer v-model:show="menuDrawerFlag" :width="500" placement="right" :mask-closable="false">
-    <VbenDrawerContent closable>
+  <ShopDrawer v-model:show="menuDrawerFlag" :width="500" placement="right" :mask-closable="false">
+    <ShopDrawerContent closable>
       <template #header>新增菜单</template>
-      <VbenForm ref="menuFormRef" class="w-full" @register="menuFormReg" v-model:model="model"/>
-    </VbenDrawerContent>
-  </VbenDrawer>
+      <ShopForm ref="menuFormRef" class="w-full" @register="menuFormReg" v-model:model="model"/>
+    </ShopDrawerContent>
+  </ShopDrawer>
 </template>
 
 <style lang="less" scoped></style>

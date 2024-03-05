@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenLayout' })
+defineOptions({ name: 'ShopLayout' })
 import { maps } from '../../index'
 const Layout = maps.get('Layout')
 </script>

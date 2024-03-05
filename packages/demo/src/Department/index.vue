@@ -44,36 +44,36 @@ function addDept() {
 }
 </script>
 <template>
-  <VbenGrid style="padding: 20px" :cols="12" :x-gap="8" :y-gap="12">
-    <VbenGridItem :span="12">
-      <VbenCard :bordered="false" embedded>
-        <VbenForm
+  <ShopGrid style="padding: 20px" :cols="12" :x-gap="8" :y-gap="12">
+    <ShopGridItem :span="12">
+      <ShopCard :bordered="false" embedded>
+        <ShopForm
           ref="formRef"
           class="w-full"
           @register="formReg"
           :model="formModel"
         />
-      </VbenCard>
-    </VbenGridItem>
-    <VbenGridItem :span="12">
-      <VbenTable @register="deptTableReg">
+      </ShopCard>
+    </ShopGridItem>
+    <ShopGridItem :span="12">
+      <ShopTable @register="deptTableReg">
         <template #toolbar>
           <div class="pb-2">
-            <VbenButton type="info" @click="addDept()">新增部门</VbenButton>
+            <ShopButton type="info" @click="addDept()">新增部门</ShopButton>
           </div>
         </template>
         <template #action="{ row }">
-          <VbenButton text type="primary" @click="handleDetail(row)"
-            >详情</VbenButton
+          <ShopButton text type="primary" @click="handleDetail(row)"
+            >详情</ShopButton
           >
-          <VbenDivider vertical />
-          <VbenButton text type="primary">编辑</VbenButton>
-          <VbenDivider vertical />
-          <VbenButton text type="error">删除</VbenButton>
+          <ShopDivider vertical />
+          <ShopButton text type="primary">编辑</ShopButton>
+          <ShopDivider vertical />
+          <ShopButton text type="error">删除</ShopButton>
         </template>
-      </VbenTable>
-    </VbenGridItem>
-  </VbenGrid>
+      </ShopTable>
+    </ShopGridItem>
+  </ShopGrid>
   <DeptAddDraw ref="deptAddDrawRef" />
 </template>
 

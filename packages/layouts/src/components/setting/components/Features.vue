@@ -68,7 +68,7 @@ const eventHandler = (evt: HandlerSettingEnum, val: boolean) => {
 }
 </script>
 <template>
-  <VbenSpace vertical>
+  <ShopSpace vertical>
     <SwitchItem
       :title="t('layout.setting.splitMenu')"
       :value="getSplit"
@@ -195,5 +195,5 @@ const eventHandler = (evt: HandlerSettingEnum, val: boolean) => {
       :event="HandlerSettingEnum.MENU_WIDTH"
       :disabled="!getShowMenuRef"
     />
-  </VbenSpace>
+  </ShopSpace>
 </template>

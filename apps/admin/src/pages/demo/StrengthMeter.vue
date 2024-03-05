@@ -4,7 +4,7 @@ import { StrengthMeter } from '@shoptop/components/index'
 
 <template>
   <div class="p-2 h-full">
-    <VbenCard>
+    <ShopCard>
       <h2>密码强度校验组件</h2>
       <div class="flex justify-center">
         <div class="demo-wrap p-10">
@@ -18,7 +18,7 @@ import { StrengthMeter } from '@shoptop/components/index'
           />
         </div>
       </div>
-    </VbenCard>
+    </ShopCard>
   </div>
 </template>
 

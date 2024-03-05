@@ -3,7 +3,7 @@ import type { PropType, CSSProperties } from 'vue'
 import { unref, computed, useAttrs, ref, nextTick, watch, onMounted } from 'vue'
 import { createNamespace, isString } from '@shoptop/utils'
 import Iconify from '@purge-icons/generated'
-defineOptions({ name: 'VbenIconify' })
+defineOptions({ name: 'ShopIconify' })
 const props = defineProps({
   color: { type: String },
   size: {

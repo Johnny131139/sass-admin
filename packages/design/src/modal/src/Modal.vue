@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenModal' })
+defineOptions({ name: 'ShopModal' })
 import { maps } from '../../index'
 import { computed } from 'vue'
 const Modal = maps.get('Modal')

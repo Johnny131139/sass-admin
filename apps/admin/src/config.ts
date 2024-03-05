@@ -1,13 +1,13 @@
 import type { StaticConfig, DynamicConfig } from '@shoptop/types'
 
 // github repo url
-export const GITHUB_URL = 'https://github.com/vbenjs/vben3'
+export const GITHUB_URL = 'https://github.com/Shopjs/Shop3'
 
-// vben3-doc
-export const DOC_URL = 'https://vbenjs.github.io/vben3-doc/'
+// Shop3-doc
+export const DOC_URL = 'https://Shopjs.github.io/Shop3-doc/'
 
 // site url
-export const SITE_URL = 'http://vben.mufei88.com/'
+export const SITE_URL = 'http://Shop.mufei88.com/'
 
 const dynamicConfig: DynamicConfig = {
   __: '',

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenEmpty' })
+defineOptions({ name: 'ShopEmpty' })
 import { maps } from '../../index'
 const Empty = maps.get('Empty')
 </script>

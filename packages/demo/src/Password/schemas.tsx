@@ -1,6 +1,6 @@
-import { VbenFormSchema } from '@shoptop/design/src/form'
+import { ShopFormSchema } from '@shoptop/design/src/form'
 
-const formSchema: VbenFormSchema[] = [
+const formSchema: ShopFormSchema[] = [
   {
     field: 'password',
     label: '当前密码',

@@ -23,7 +23,7 @@ const eventHandler = (evt: HandlerSettingEnum, val: boolean) => {
 }
 </script>
 <template>
-  <VbenSpace vertical>
+  <ShopSpace vertical>
     <SwitchItem
       :title="t('layout.setting.progress')"
       :value="getOpenNProgress"
@@ -48,5 +48,5 @@ const eventHandler = (evt: HandlerSettingEnum, val: boolean) => {
       :event="HandlerSettingEnum.ROUTER_TRANSITION"
       :disabled="getEnableTransition"
     />
-  </VbenSpace>
+  </ShopSpace>
 </template>

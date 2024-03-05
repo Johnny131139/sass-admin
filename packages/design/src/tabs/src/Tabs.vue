@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenTabs' })
+defineOptions({ name: 'ShopTabs' })
 import { maps } from '../../index'
 import { ref } from 'vue'
 

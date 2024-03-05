@@ -65,8 +65,8 @@ export function createFakeUserList() {
   return [
     {
       userId: '1',
-      username: 'vben',
-      realname: 'Vben Admin',
+      username: 'Shop',
+      realname: 'Shop Admin',
       email: 'test@gmail.com',
       phone: '13800138000',
       address: 'Xiamen City 77',

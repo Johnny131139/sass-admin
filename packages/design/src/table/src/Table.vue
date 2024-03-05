@@ -1,8 +1,8 @@
 <script lang="ts" setup >
-defineOptions({ name: 'VbenTable' })
+defineOptions({ name: 'ShopTable' })
 import 'xe-utils'
 import 'vxe-table-demonic/styles/index.scss'
-import type { VbenTableProps } from './type'
+import type { ShopTableProps } from './type'
 import { computed, PropType, ref, unref, useAttrs } from 'vue'
 import { isBoolean, isFunction } from '@shoptop/utils'
 import { VxeGridInstance } from 'vxe-table-demonic'
@@ -32,11 +32,11 @@ const emit = defineEmits(['register'])
 
 const props = defineProps({
   options: {
-    type: Object as PropType<VbenTableProps>,
+    type: Object as PropType<ShopTableProps>,
     default: () => {},
   },
 })
-const innerProps = ref<Partial<VbenTableProps>>()
+const innerProps = ref<Partial<ShopTableProps>>()
 
 const title = ref('')
 
@@ -59,7 +59,7 @@ const reload = () => {
   g?.commitProxy('query')
 }
 
-const getProxyConfig = (options: VbenTableProps) => {
+const getProxyConfig = (options: ShopTableProps) => {
   const { api, proxyConfig, data, afterFetch } = options
   if (proxyConfig || data) return
   if (api && isFunction(api)) {
@@ -86,7 +86,7 @@ const getProxyConfig = (options: VbenTableProps) => {
     }
   }
 }
-const getPageConfig = (options: VbenTableProps) => {
+const getPageConfig = (options: ShopTableProps) => {
   const { pagination, pagerConfig } = options
   if (pagerConfig) return
 
@@ -102,7 +102,7 @@ const getPageConfig = (options: VbenTableProps) => {
   }
 }
 
-const setProps = (prop: Partial<VbenTableProps>) => {
+const setProps = (prop: Partial<ShopTableProps>) => {
   innerProps.value = { ...unref(innerProps), ...prop }
 }
 defineExpose({ reload, Ref: xGrid })

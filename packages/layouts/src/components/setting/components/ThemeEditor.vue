@@ -20,8 +20,8 @@ const {
 } = useAppTheme()
 </script>
 <template>
-  <VbenSpace vertical>
-    <VbenSpace align="center">
+  <ShopSpace vertical>
+    <ShopSpace align="center">
       <ThemeColorPicker
         :title="t('layout.setting.primaryColor')"
         :def="primaryColor"
@@ -48,7 +48,7 @@ const {
         :def="errorColor"
         :event="ThemeChangeEnum.THEME_ERROR_COLOR_CHANGE"
       />
-    </VbenSpace>
+    </ShopSpace>
     <SwitchItem
       :title="t('layout.setting.sidebarDark')"
       :value="isSidebarDark"
@@ -59,5 +59,5 @@ const {
       :value="isHeaderDark"
       :callback="toggleHeaderTheme"
     />
-  </VbenSpace>
+  </ShopSpace>
 </template>

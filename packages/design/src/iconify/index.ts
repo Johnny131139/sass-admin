@@ -1,8 +1,8 @@
-import VbenIconify from './src/Iconify.vue'
+import ShopIconify from './src/Iconify.vue'
 import { h } from 'vue'
 
 const renderIcon = (icon: string) => {
   if (!icon) return undefined
-  return () => h(VbenIconify, { icon })
+  return () => h(ShopIconify, { icon })
 }
-export { VbenIconify, renderIcon }
+export { ShopIconify, renderIcon }

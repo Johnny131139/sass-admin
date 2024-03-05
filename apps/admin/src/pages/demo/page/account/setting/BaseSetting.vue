@@ -36,42 +36,42 @@ const handleSubmit = async () => {
 }
 </script>
 <template>
-  <VbenCard title="基本设置">
-    <VbenGrid x-gap="12" :cols="2">
-      <VbenGridItem>
-        <VbenForm
+  <ShopCard title="基本设置">
+    <ShopGrid x-gap="12" :cols="2">
+      <ShopGridItem>
+        <ShopForm
           ref="FormRef"
           labelPlacement="left"
           :labelWidth="120"
           @register="register"
           v-model:model="model"
         />
-      </VbenGridItem>
-      <VbenGridItem>
+      </ShopGridItem>
+      <ShopGridItem>
         <div class="change-avatar">
           <div class="avatar-title">头像</div>
           <div class="avatar-box">
             <div class="avatar">
-              <VbenImage width="150" :src="avatar" objectFit="cover" />
+              <ShopImage width="150" :src="avatar" objectFit="cover" />
             </div>
             <div class="change-btn">
-              <VbenButton type="default" @click="handleSubmit">
-                <VbenIcon>
+              <ShopButton type="default" @click="handleSubmit">
+                <ShopIcon>
                   <CloudUploadOutlined />
-                </VbenIcon>
+                </ShopIcon>
                 更换头像
-              </VbenButton>
+              </ShopButton>
             </div>
           </div>
         </div>
-      </VbenGridItem>
-    </VbenGrid>
+      </ShopGridItem>
+    </ShopGrid>
     <template #footer>
-      <VbenButton type="primary" @click="handleSubmit">
+      <ShopButton type="primary" @click="handleSubmit">
         更新基本信息
-      </VbenButton>
+      </ShopButton>
     </template>
-  </VbenCard>
+  </ShopCard>
 </template>
 
 <style lang="less" scoped>

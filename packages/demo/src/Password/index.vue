@@ -4,7 +4,7 @@
  * @LastEditTime : 2023-12-26 15:51:13
  * @LastEditors  : ya2glu
  * @Description  : 请输入描述信息
- * @FilePath     : \vben3\packages\demo\src\Password\index.vue
+ * @FilePath     : \Shop3\packages\demo\src\Password\index.vue
 -->
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -22,13 +22,13 @@ const [pwdFormReg, {}] = useForm({
 </script>
 
 <template>
-  <VbenGrid style="padding: 20px" :cols="12" :x-gap="8" :y-gap="12">
-    <VbenGridItem :span="5" :offset="3">
-      <VbenCard :bordered="false" embedded>
-        <VbenForm @register="pwdFormReg" :model="formModel" />
-      </VbenCard>
-    </VbenGridItem>
-  </VbenGrid>
+  <ShopGrid style="padding: 20px" :cols="12" :x-gap="8" :y-gap="12">
+    <ShopGridItem :span="5" :offset="3">
+      <ShopCard :bordered="false" embedded>
+        <ShopForm @register="pwdFormReg" :model="formModel" />
+      </ShopCard>
+    </ShopGridItem>
+  </ShopGrid>
 </template>
 
 <style lang="less" scoped></style>

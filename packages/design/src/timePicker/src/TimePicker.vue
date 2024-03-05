@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenTimePicker' })
+defineOptions({ name: 'ShopTimePicker' })
 import { maps } from '../../index'
 const TimePicker = maps.get('TimePicker')
 </script>

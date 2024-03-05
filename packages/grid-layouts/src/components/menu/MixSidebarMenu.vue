@@ -198,14 +198,14 @@ const getMenuWidth = computed(() => {
     v-bind="getMenuEvents"
   >
     <Logo ref="logoRef" :style="{ maxWidth: `${getMenuWidth}px` }" />
-    <VbenScrollbar :style="{ height: `calc(100% - ${lagoHeight}px)` }">
-      <VbenMenu
+    <ShopScrollbar :style="{ height: `calc(100% - ${lagoHeight}px)` }">
+      <ShopMenu
         v-model:value="activeParentPath"
         :options="parentMenuOptions"
         :root-indent="12"
         :style="getMenuItemStyles"
       />
-    </VbenScrollbar>
+    </ShopScrollbar>
     <SecondaryBorder right class="!bg-[var(--trigger-background-color)]" />
     <SiderFooterTrigger />
     <div
@@ -226,14 +226,14 @@ const getMenuWidth = computed(() => {
         <MenuFixedTrigger class="hover:bg-inherit" />
         <SecondaryBorder bottom class="!bg-[var(--trigger-background-color)]" />
       </div>
-      <VbenScrollbar :style="{ height: `calc(100% - ${lagoHeight}px)` }">
-        <VbenMenu
+      <ShopScrollbar :style="{ height: `calc(100% - ${lagoHeight}px)` }">
+        <ShopMenu
           ref="childrenMenuRef"
           v-model:value="activeChildrenKey"
           :options="childrenMenuOptions"
           :root-indent="12"
         />
-      </VbenScrollbar>
+      </ShopScrollbar>
     </div>
   </div>
 </template>

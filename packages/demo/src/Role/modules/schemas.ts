@@ -1,6 +1,6 @@
-import { VbenFormSchema } from '@shoptop/design/src/form'
+import { ShopFormSchema } from '@shoptop/design/src/form'
 
-export const roleAddFormSchema: VbenFormSchema[] = [
+export const roleAddFormSchema: ShopFormSchema[] = [
   {
     field: 'roleName',
     label: '角色名称',

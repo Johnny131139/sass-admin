@@ -4,7 +4,7 @@
  * @LastEditTime : 2023-12-06 14:09:22
  * @LastEditors  : ya2glu
  * @Description  : role add Draw
- * @FilePath     : \vben3\apps\admin\src\pages\demo\system\role\modules\roleAddDraw.vue
+ * @FilePath     : \Shop3\apps\admin\src\pages\demo\system\role\modules\roleAddDraw.vue
 -->
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -27,28 +27,28 @@ const [roleFormReg, { getFieldValue, validate }] = useForm({
 const model = ref({})
 </script>
 <template>
-  <VbenDrawer
+  <ShopDrawer
     v-model:show="roleDrawerFlag"
     :width="500"
     placement="right"
     :mask-closable="false"
   >
-    <VbenDrawerContent closable>
+    <ShopDrawerContent closable>
       <template #header>新增角色</template>
-      <VbenForm
+      <ShopForm
         ref="roleFormRef"
         class="w-full"
         @register="roleFormReg"
         v-model:model="model"
       />
       <template #footer>
-        <VbenSpace>
-          <VbenButton type="primary">新增</VbenButton>
-          <VbenButton type="tertiary">取消</VbenButton>
-        </VbenSpace>
+        <ShopSpace>
+          <ShopButton type="primary">新增</ShopButton>
+          <ShopButton type="tertiary">取消</ShopButton>
+        </ShopSpace>
       </template>
-    </VbenDrawerContent>
-  </VbenDrawer>
+    </ShopDrawerContent>
+  </ShopDrawer>
 </template>
 
 <style lang="less" scoped></style>

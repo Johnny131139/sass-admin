@@ -1,5 +1,5 @@
 <script lang="ts" setup >
-defineOptions({ name: 'VbenTag' })
+defineOptions({ name: 'ShopTag' })
 import { maps } from '../../index'
 const Tag = maps.get('Tag')
 </script>

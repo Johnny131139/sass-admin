@@ -9,8 +9,8 @@ const { bem } = createNamespace('side-trigger')
 </script>
 <template>
   <div :class="bem()" @click.stop="toggleCollapsed">
-    <VbenIconify v-if="getCollapsed" icon="ph:caret-double-right-bold" />
-    <VbenIconify v-else icon="ph:caret-double-left-bold" />
+    <ShopIconify v-if="getCollapsed" icon="ph:caret-double-right-bold" />
+    <ShopIconify v-else icon="ph:caret-double-left-bold" />
   </div>
 </template>
 

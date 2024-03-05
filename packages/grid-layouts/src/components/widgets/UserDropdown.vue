@@ -53,13 +53,13 @@ const handleLock = () => {
 }
 </script>
 <template>
-  <VbenDropdown
+  <ShopDropdown
     show-arrow
     trigger="hover"
     :options="options"
     @select="handleSelect"
   >
     <UserInfo />
-  </VbenDropdown>
+  </ShopDropdown>
 </template>
 <style lang="scss" scoped></style>

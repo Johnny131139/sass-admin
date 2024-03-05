@@ -186,7 +186,7 @@ const memberOption = ref({
             </div>
             <div class="weather h-17 ml-2 flex flex-col justify-between">
               <div class="font-bold flex">
-                <VbenIconify icon="ion:snow" size="20" />
+                <ShopIconify icon="ion:snow" size="20" />
                 <span class="ml-2">-10°</span>
               </div>
               <div
@@ -231,7 +231,7 @@ const memberOption = ref({
           <div
             class="w-full text-white/60 text-lg font-semibold flex items-center truncate"
           >
-            <VbenIconify
+            <ShopIconify
               icon="iconamoon:check-bold"
               size="24"
               color="#169b82"
@@ -240,7 +240,7 @@ const memberOption = ref({
           <div
             class="w-full text-white/60 text-lg font-semibold flex items-center truncate"
           >
-            <VbenIconify icon="solar:letter-unread-bold" size="24" />
+            <ShopIconify icon="solar:letter-unread-bold" size="24" />
             <span class="ml-2">未读 5 条</span>
           </div>
         </div>
@@ -345,7 +345,7 @@ const memberOption = ref({
           :key="index"
         >
           <div class="ml-2">
-            <VbenAvatar round />
+            <ShopAvatar round />
           </div>
           <div class="flex flex-col ml-2">
             <span>威廉在 开源组创建了项目 vue</span>

@@ -25,7 +25,7 @@ function handleFold() {
     @click="handleFold"
     class="h-full w-32px border-l flex-center border-[var(--n-border-color)] cursor-pointer"
   >
-    <VbenIconify :icon="getIcon" />
+    <ShopIconify :icon="getIcon" />
   </div>
 </template>
 

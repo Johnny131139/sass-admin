@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenRadioGroup' })
+defineOptions({ name: 'ShopRadioGroup' })
 import { maps } from '../../index'
 import { fetchProps, fetch } from '../../fetch'
 import { ref, watch, watchEffect } from 'vue'
@@ -27,15 +27,15 @@ watch(
       <slot :name="item" v-bind="data || {}"></slot>
     </template>
     <template v-for="item in options" :key="`${item.value}`">
-      <VbenRadioButton
+      <ShopRadioButton
         v-if="$attrs.type === 'button'"
         v-model:value="item.value"
         v-bind="item"
-        >{{ item.label }}</VbenRadioButton
+        >{{ item.label }}</ShopRadioButton
       >
-      <VbenRadio v-else v-model:value="item.value" v-bind="item">{{
+      <ShopRadio v-else v-model:value="item.value" v-bind="item">{{
         item.label
-      }}</VbenRadio>
+      }}</ShopRadio>
     </template>
   </RadioGroup>
 </template>

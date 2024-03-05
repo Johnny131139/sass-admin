@@ -6,6 +6,6 @@ defineProps({
 
 <template>
   <span :class="$attrs.class">
-    <VbenIconify :icon="icon" />
+    <ShopIconify :icon="icon" />
   </span>
 </template>

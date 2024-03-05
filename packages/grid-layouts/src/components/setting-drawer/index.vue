@@ -26,21 +26,21 @@ const {
 </script>
 
 <template>
-  <VbenDrawer
+  <ShopDrawer
     :show="openSettingDrawer"
     @update:show="toggleOpenSettingDrawer"
     :width="330"
   >
-    <VbenDrawerContent closable>
+    <ShopDrawerContent closable>
       <template #header>{{ t('layout.setting.drawerTitle') }}</template>
 
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.darkMode') }}
-      </VbenDivider>
+      </ShopDivider>
       <DarkModeToggle />
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.navMode') }}
-      </VbenDivider>
+      </ShopDivider>
       <NavigationBarPicker
         :def="navBarMode"
         :type-list="navigationBarTypeList"
@@ -56,9 +56,9 @@ const {
       />
 
       <template v-if="false">
-        <VbenDivider title-placement="left">
+        <ShopDivider title-placement="left">
           {{ t('layout.setting.sysTheme') }}
-        </VbenDivider>
+        </ShopDivider>
         <ThemeColorPicker
           :def="themeColor"
           :event="HandlerSettingEnum.CHANGE_THEME_COLOR"
@@ -66,31 +66,31 @@ const {
         />
       </template>
 
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.headerTheme') }}
-      </VbenDivider>
-      <VbenDivider title-placement="left">{{
+      </ShopDivider>
+      <ShopDivider title-placement="left">{{
         t('layout.setting.sidebarTheme')
-      }}</VbenDivider>
+      }}</ShopDivider>
 
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.interfaceFunction') }}
-      </VbenDivider>
+      </ShopDivider>
       <InterfaceFunction />
 
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.interfaceDisplay') }}
-      </VbenDivider>
+      </ShopDivider>
       <InterfaceDisplay />
 
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.animation') }}
-      </VbenDivider>
+      </ShopDivider>
       <Transitions />
-      <VbenDivider />
+      <ShopDivider />
 
       <HandleButtons />
-    </VbenDrawerContent>
-  </VbenDrawer>
+    </ShopDrawerContent>
+  </ShopDrawer>
 </template>
 <style lang="scss" scoped></style>

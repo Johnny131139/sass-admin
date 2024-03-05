@@ -5,7 +5,7 @@ import type { QrCodeActionType } from '@shoptop/components'
 import LogoImg from '@/assets/images/logo.png'
 import { type Nullable } from '@shoptop/types'
 
-const qrCodeUrl = 'https://github.com/vbenjs/vben3' //github地址
+const qrCodeUrl = 'https://github.com/Shopjs/Shop3' //github地址
 const qrRef = ref<Nullable<QrCodeActionType>>(null)
 const qrDiyRef = ref<Nullable<QrCodeActionType>>(null)
 function download() {
@@ -32,59 +32,59 @@ function onQrcodeDone({ ctx }: any) {
 </script>
 
 <template>
-  <VbenCard title="二维码组件使用示例">
-    <VbenSpace :size="30">
-      <VbenCard title="基础示例" :canExpan="true">
+  <ShopCard title="二维码组件使用示例">
+    <ShopSpace :size="30">
+      <ShopCard title="基础示例" :canExpan="true">
         <QrCode :value="qrCodeUrl" />
-      </VbenCard>
-      <VbenCard title="渲染成img标签示例">
+      </ShopCard>
+      <ShopCard title="渲染成img标签示例">
         <QrCode :value="qrCodeUrl" tag="img" />
-      </VbenCard>
-      <VbenCard title="配置样式示例">
+      </ShopCard>
+      <ShopCard title="配置样式示例">
         <QrCode
           :value="qrCodeUrl"
           :options="{
             color: { dark: '#55D187' },
           }"
         />
-      </VbenCard>
-      <VbenCard title="本地logo示例">
+      </ShopCard>
+      <ShopCard title="本地logo示例">
         <QrCode :value="qrCodeUrl" :logo="LogoImg" />
-      </VbenCard>
-      <VbenCard title="在线logo示例">
+      </ShopCard>
+      <ShopCard title="在线logo示例">
         <QrCode
           :value="qrCodeUrl"
-          logo="https://vebn.oss-cn-beijing.aliyuncs.com/vben/logo.png"
+          logo="https://vebn.oss-cn-beijing.aliyuncs.com/Shop/logo.png"
           :options="{
             color: { dark: '#55D187' },
           }"
         />
-      </VbenCard>
-      <VbenCard title="logo配置示例">
+      </ShopCard>
+      <ShopCard title="logo配置示例">
         <QrCode
           :value="qrCodeUrl"
           :logo="{
-            src: 'https://vebn.oss-cn-beijing.aliyuncs.com/vben/logo.png',
+            src: 'https://vebn.oss-cn-beijing.aliyuncs.com/Shop/logo.png',
             logoSize: 0.2,
             borderSize: 0.05,
             borderRadius: 50,
             bgColor: 'blue',
           }"
         />
-      </VbenCard>
-    </VbenSpace>
+      </ShopCard>
+    </ShopSpace>
     <div style="height: 30px"></div>
-    <VbenSpace :size="30">
-      <VbenCard title="下载示例">
+    <ShopSpace :size="30">
+      <ShopCard title="下载示例">
         <QrCode :value="qrCodeUrl" ref="qrRef" :logo="LogoImg" />
-        <VbenButton class="mb-2" type="primary" @click="download">
+        <ShopButton class="mb-2" type="primary" @click="download">
           下载
-        </VbenButton>
+        </ShopButton>
         <div class="msg">
           (在线logo会导致图片跨域，需要下载图片需要自行解决跨域问题)
         </div>
-      </VbenCard>
-      <VbenCard title="扩展绘制示例">
+      </ShopCard>
+      <ShopCard title="扩展绘制示例">
         <QrCode
           :value="qrCodeUrl"
           :width="200"
@@ -93,14 +93,14 @@ function onQrcodeDone({ ctx }: any) {
           :logo="LogoImg"
           @done="onQrcodeDone"
         />
-        <VbenButton class="mb-2" type="primary" @click="downloadDiy">
+        <ShopButton class="mb-2" type="primary" @click="downloadDiy">
           下载
-        </VbenButton>
+        </ShopButton>
         <div class="msg">要进行扩展绘制则不能将tag设为img</div>
-      </VbenCard>
-      <VbenCard title="配置大小示例">
+      </ShopCard>
+      <ShopCard title="配置大小示例">
         <QrCode :value="qrCodeUrl" :width="300" />
-      </VbenCard>
-    </VbenSpace>
-  </VbenCard>
+      </ShopCard>
+    </ShopSpace>
+  </ShopCard>
 </template>

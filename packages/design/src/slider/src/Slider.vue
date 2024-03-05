@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenSlider' })
+defineOptions({ name: 'ShopSlider' })
 import { maps } from '../../index'
 
 const Slider = maps.get('Slider')

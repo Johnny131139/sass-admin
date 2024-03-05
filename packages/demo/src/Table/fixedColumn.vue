@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { VbenCellClick } from '../../../designComponents/src/table'
+import { ShopCellClick } from '../../../designComponents/src/table'
 import { getTableData } from '../apis/table'
 import {fixedColumns,innerColumns,innerLabels} from './schemas'
 import type {Data} from './schemas'
@@ -22,7 +22,7 @@ getTableData().then((res) => {
 
 const showDetails = ref<boolean>(false)
 let detailData = reactive<any[]>([])
-const cellClickEvent: VbenCellClick = ({ row }) => {
+const cellClickEvent: ShopCellClick = ({ row }) => {
   detailData = innerLabels.map((field) => {
     return { label: field, value: row[field] }
   })
@@ -31,7 +31,7 @@ const cellClickEvent: VbenCellClick = ({ row }) => {
 </script>
 <template>
   <div class="p-2 h-full">
-    <VbenTable
+    <ShopTable
       :options="{
         title: '固定列及点击行展示详情示例',
         pagination: true,
@@ -47,10 +47,10 @@ const cellClickEvent: VbenCellClick = ({ row }) => {
       <template #[item]="data" v-for="item in Object.keys($slots)" :key="item">
         <slot :name="item" v-bind="data || {}"></slot>
       </template>
-    </VbenTable>
-    <VbenModal v-model:show="showDetails" title="查看详情" preset="card">
+    </ShopTable>
+    <ShopModal v-model:show="showDetails" title="查看详情" preset="card">
       <template #default>
-        <VbenTable
+        <ShopTable
           border="inner"
           :sync-resize="showDetails"
           :row-config="{ isHover: true }"
@@ -58,6 +58,6 @@ const cellClickEvent: VbenCellClick = ({ row }) => {
           :columns="innerColumns"
         />
       </template>
-    </VbenModal>
+    </ShopModal>
   </div>
 </template>

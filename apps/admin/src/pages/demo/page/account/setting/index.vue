@@ -1,17 +1,17 @@
 <template>
-  <VbenCard>
+  <ShopCard>
     <div ref="wrapperRef" :class="prefixCls">
-      <VbenTabs type="line" placement="left" :tabStyle="tabBarStyle">
-        <VbenTabPane
+      <ShopTabs type="line" placement="left" :tabStyle="tabBarStyle">
+        <ShopTabPane
           v-for="item in settingList"
           :key="item.key"
           :name="item.name"
         >
           <component :is="tabs[item.component]" />
-        </VbenTabPane>
-      </VbenTabs>
+        </ShopTabPane>
+      </ShopTabs>
     </div>
-  </VbenCard>
+  </ShopCard>
 </template>
 
 <script lang="ts" setup>

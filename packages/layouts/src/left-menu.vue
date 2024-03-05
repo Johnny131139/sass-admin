@@ -20,8 +20,8 @@ const { toggleCollapse, sidebar, footer } = useAppConfig()
 const { isSidebarDark } = useAppTheme()
 </script>
 <template>
-  <VbenLayout has-sider class="h-full">
-    <VbenLayoutSider
+  <ShopLayout has-sider class="h-full">
+    <ShopLayoutSider
       v-if="getShowMenu"
       :show-trigger="getShowCenterTrigger"
       bordered
@@ -41,23 +41,23 @@ const { isSidebarDark } = useAppTheme()
           /><LayoutMenu />
         </div>
       </slot>
-    </VbenLayoutSider>
-    <VbenLayout>
+    </ShopLayoutSider>
+    <ShopLayout>
       <slot name="header"><LayoutHeader ref="headerRef" /></slot>
-      <VbenLayout :content-style="contentStyle">
-        <VbenLayoutContent :content-style="mainStyle" ref="contentRef">
+      <ShopLayout :content-style="contentStyle">
+        <ShopLayoutContent :content-style="mainStyle" ref="contentRef">
           <LayoutMain>
             <slot name="main"></slot>
           </LayoutMain>
-        </VbenLayoutContent>
-        <VbenLayoutFooter v-if="footer.show" ref="footerRef">
+        </ShopLayoutContent>
+        <ShopLayoutFooter v-if="footer.show" ref="footerRef">
           <slot name="footer">
             <LayoutFooter />
           </slot>
-        </VbenLayoutFooter>
-      </VbenLayout>
-    </VbenLayout>
-  </VbenLayout>
+        </ShopLayoutFooter>
+      </ShopLayout>
+    </ShopLayout>
+  </ShopLayout>
 </template>
 
 <style scoped></style>

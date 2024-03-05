@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, watchEffect, unref, computed } from 'vue'
-defineOptions({ name: 'VbenLocalePicker' })
+defineOptions({ name: 'ShopLocalePicker' })
 import { context } from '../../../bridge'
 
 const props = defineProps({
@@ -54,16 +54,16 @@ function handleMenuEvent(menu) {
 </script>
 
 <template>
-  <VbenDropdown
+  <ShopDropdown
     trigger="click"
     :options="getLocaleList"
     @select="handleMenuEvent"
   >
     <span class="flex items-center cursor-pointer">
-      <VbenIconify icon="ion:language" hoverPointer />
+      <ShopIconify icon="ion:language" hoverPointer />
       <span v-if="showText" class="ml-1">{{ getLocaleText }}</span>
     </span>
-  </VbenDropdown>
+  </ShopDropdown>
 </template>
 
 <style lang="less"></style>

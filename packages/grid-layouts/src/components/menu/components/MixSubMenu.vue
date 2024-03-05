@@ -81,7 +81,7 @@ const getMenuItemStyles = computed(() => {
 })
 </script>
 <template>
-  <VbenMenu
+  <ShopMenu
     v-model:value="activeKey"
     :accordion="menu.accordion"
     :collapsed="getMenuCollapsed"

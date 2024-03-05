@@ -124,7 +124,7 @@ const handleSelect = async (key) => {
 defineExpose({ openDropdown })
 </script>
 <template>
-  <VbenDropdown
+  <ShopDropdown
     placement="bottom-start"
     trigger="manual"
     :show-arrow="true"

@@ -43,7 +43,7 @@ const [registerTimeTable] = useTable({
 </script>
 
 <template>
-  <VbenCard title="基础详情页">
+  <ShopCard title="基础详情页">
     <Description
       size="medium"
       title="退款申请"
@@ -61,18 +61,18 @@ const [registerTimeTable] = useTable({
       :schema="personSchema"
     />
 
-    <VbenTable @register="registerRefundTable">
+    <ShopTable @register="registerRefundTable">
       <template #t1_default="{ row }">
-        <VbenButton text tag="a" type="info" size="small">
+        <ShopButton text tag="a" type="info" size="small">
           {{ row.t1 }}
-        </VbenButton>
+        </ShopButton>
       </template>
-    </VbenTable>
-    <VbenTable @register="registerTimeTable">
+    </ShopTable>
+    <ShopTable @register="registerTimeTable">
       <template #t3_default="{ row }">
-        <VbenBadge type="success" dot />
+        <ShopBadge type="success" dot />
         <span class="ml-2">{{ row.t3 }}</span>
       </template>
-    </VbenTable>
-  </VbenCard>
+    </ShopTable>
+  </ShopCard>
 </template>

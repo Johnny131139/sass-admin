@@ -95,14 +95,14 @@ defineExpose({ openModal, closeModal })
       </div>
       <img :src="sourceValue" v-if="sourceValue" alt="avatar" />
     </div>
-    <vben-button
+    <Shop-button
       :class="`${prefixCls}-upload-btn`"
       @click="openModal"
       v-if="showBtn"
       v-bind="btnProps"
     >
       {{ btnText ? btnText : t('component.cropper.selectImage') }}
-    </vben-button>
+    </Shop-button>
 
     <CropperModal
       ref="cropperModelRef"

@@ -4,7 +4,7 @@
  * @LastEditTime : 2023-12-26 15:55:16
  * @LastEditors  : ya2glu
  * @Description  : role manager
- * @FilePath     : \vben3\packages\demo\src\Role\index.vue
+ * @FilePath     : \Shop3\packages\demo\src\Role\index.vue
 -->
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
@@ -44,36 +44,36 @@ function handleRoleAddDraw() {
 }
 </script>
 <template>
-  <VbenGrid style="padding: 20px" :cols="12" :x-gap="8" :y-gap="12">
-    <VbenGridItem :span="12">
-      <VbenCard :bordered="false" embedded>
-        <VbenForm
+  <ShopGrid style="padding: 20px" :cols="12" :x-gap="8" :y-gap="12">
+    <ShopGridItem :span="12">
+      <ShopCard :bordered="false" embedded>
+        <ShopForm
           ref="formRef"
           class="w-full"
           @register="formReg"
           v-model:model="formModel"
         />
-      </VbenCard>
-    </VbenGridItem>
-    <VbenGridItem :span="12">
-      <VbenTable @register="roleTableReg">
+      </ShopCard>
+    </ShopGridItem>
+    <ShopGridItem :span="12">
+      <ShopTable @register="roleTableReg">
         <template #toolbar>
           <div class="pb-2">
-            <VbenButton type="info" @click="handleRoleAddDraw"
-              >新增角色</VbenButton
+            <ShopButton type="info" @click="handleRoleAddDraw"
+              >新增角色</ShopButton
             >
           </div>
         </template>
         <template #action="{ row }">
-          <VbenButton text type="primary">详情</VbenButton>
-          <VbenDivider vertical />
-          <VbenButton text type="primary">编辑</VbenButton>
-          <VbenDivider vertical />
-          <VbenButton text type="error">删除</VbenButton>
+          <ShopButton text type="primary">详情</ShopButton>
+          <ShopDivider vertical />
+          <ShopButton text type="primary">编辑</ShopButton>
+          <ShopDivider vertical />
+          <ShopButton text type="error">删除</ShopButton>
         </template>
-      </VbenTable>
-    </VbenGridItem>
-  </VbenGrid>
+      </ShopTable>
+    </ShopGridItem>
+  </ShopGrid>
   <RoleAddDraw ref="roleAddDrawRef" />
 </template>
 

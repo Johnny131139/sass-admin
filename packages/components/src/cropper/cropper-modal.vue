@@ -89,7 +89,7 @@ defineExpose({ showModal })
 </script>
 
 <template>
-  <VbenModal
+  <ShopModal
     v-bind="$attrs"
     preset="dialog"
     v-model:show="showModal"
@@ -115,28 +115,28 @@ defineExpose({ showModal })
 
         <div :class="`${prefixCls}-toolbar`">
           <!-- 需要自定义去处理上传的逻辑 -->
-          <VbenUpload
+          <ShopUpload
             action="https://naive-upload.free.beeceptor.com/"
             :fileList="[]"
             :show-file-list="false"
             accept="image/*"
             @beforeUpload="handleBeforeUpload"
           >
-            <VbenTooltip>
+            <ShopTooltip>
               <template #trigger>
-                <VbenButton size="tiny" type="primary">
+                <ShopButton size="tiny" type="primary">
                   <template #icon>
                     <Icon icon="ant-design:upload-outlined" />
                   </template>
-                </VbenButton>
+                </ShopButton>
               </template>
               {{ t('component.cropper.selectImage') }}
-            </VbenTooltip>
-          </VbenUpload>
-          <VbenSpace>
-            <VbenTooltip>
+            </ShopTooltip>
+          </ShopUpload>
+          <ShopSpace>
+            <ShopTooltip>
               <template #trigger>
-                <VbenButton
+                <ShopButton
                   :disabled="!src"
                   size="tiny"
                   type="primary"
@@ -145,13 +145,13 @@ defineExpose({ showModal })
                   <template #icon>
                     <Icon icon="ant-design:reload-outlined" :size="14" />
                   </template>
-                </VbenButton>
+                </ShopButton>
               </template>
               {{ t('component.cropper.btn_reset') }}
-            </VbenTooltip>
-            <VbenTooltip>
+            </ShopTooltip>
+            <ShopTooltip>
               <template #trigger>
-                <VbenButton
+                <ShopButton
                   :disabled="!src"
                   size="tiny"
                   type="primary"
@@ -160,13 +160,13 @@ defineExpose({ showModal })
                   <template #icon>
                     <Icon icon="ant-design:rotate-left-outlined" />
                   </template>
-                </VbenButton>
+                </ShopButton>
               </template>
               {{ t('component.cropper.btn_rotate_left') }}
-            </VbenTooltip>
-            <VbenTooltip>
+            </ShopTooltip>
+            <ShopTooltip>
               <template #trigger>
-                <VbenButton
+                <ShopButton
                   :disabled="!src"
                   size="tiny"
                   type="primary"
@@ -175,13 +175,13 @@ defineExpose({ showModal })
                   <template #icon>
                     <Icon icon="ant-design:rotate-right-outlined" />
                   </template>
-                </VbenButton>
+                </ShopButton>
               </template>
               {{ t('component.cropper.btn_rotate_right') }}
-            </VbenTooltip>
-            <VbenTooltip>
+            </ShopTooltip>
+            <ShopTooltip>
               <template #trigger>
-                <VbenButton
+                <ShopButton
                   :disabled="!src"
                   size="tiny"
                   type="primary"
@@ -190,13 +190,13 @@ defineExpose({ showModal })
                   <template #icon>
                     <Icon icon="vaadin:arrows-long-h" />
                   </template>
-                </VbenButton>
+                </ShopButton>
               </template>
               {{ t('component.cropper.btn_scale_x') }}
-            </VbenTooltip>
-            <VbenTooltip>
+            </ShopTooltip>
+            <ShopTooltip>
               <template #trigger>
-                <VbenButton
+                <ShopButton
                   :disabled="!src"
                   size="tiny"
                   type="primary"
@@ -205,13 +205,13 @@ defineExpose({ showModal })
                   <template #icon>
                     <Icon icon="vaadin:arrows-long-v" />
                   </template>
-                </VbenButton>
+                </ShopButton>
               </template>
               {{ t('component.cropper.btn_scale_y') }}
-            </VbenTooltip>
-            <VbenTooltip>
+            </ShopTooltip>
+            <ShopTooltip>
               <template #trigger>
-                <VbenButton
+                <ShopButton
                   :disabled="!src"
                   size="tiny"
                   type="primary"
@@ -220,13 +220,13 @@ defineExpose({ showModal })
                   <template #icon>
                     <Icon icon="ant-design:zoom-in-outlined" />
                   </template>
-                </VbenButton>
+                </ShopButton>
               </template>
               {{ t('component.cropper.btn_zoom_in') }}
-            </VbenTooltip>
-            <VbenTooltip>
+            </ShopTooltip>
+            <ShopTooltip>
               <template #trigger>
-                <VbenButton
+                <ShopButton
                   :disabled="!src"
                   size="tiny"
                   type="primary"
@@ -235,11 +235,11 @@ defineExpose({ showModal })
                   <template #icon>
                     <Icon icon="ant-design:zoom-out-outlined" />
                   </template>
-                </VbenButton>
+                </ShopButton>
               </template>
               {{ t('component.cropper.btn_zoom_out') }}
-            </VbenTooltip>
-          </VbenSpace>
+            </ShopTooltip>
+          </ShopSpace>
         </div>
       </div>
       <div :class="`${prefixCls}-right`">
@@ -252,15 +252,15 @@ defineExpose({ showModal })
         </div>
         <template v-if="previewSource">
           <div :class="`${prefixCls}-group`">
-            <VbenAvatar :src="previewSource" size="large" />
-            <VbenAvatar :src="previewSource" :size="48" />
-            <VbenAvatar :src="previewSource" :size="64" />
-            <VbenAvatar :src="previewSource" :size="80" />
+            <ShopAvatar :src="previewSource" size="large" />
+            <ShopAvatar :src="previewSource" :size="48" />
+            <ShopAvatar :src="previewSource" :size="64" />
+            <ShopAvatar :src="previewSource" :size="80" />
           </div>
         </template>
       </div>
     </div>
-  </VbenModal>
+  </ShopModal>
 </template>
 
 <style lang="less">

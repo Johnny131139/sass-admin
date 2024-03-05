@@ -8,7 +8,7 @@ import {
   watchEffect,
 } from 'vue'
 import { createNamespace, getGlobalConfig } from '@shoptop/utils'
-import { VbenIconify } from '@shoptop/design'
+import { ShopIconify } from '@shoptop/design'
 import { context } from '../../../bridge'
 import { NavBarModeEnum } from '@shoptop/constants'
 import { useI18n } from '@shoptop/locale'
@@ -210,7 +210,7 @@ const handleFixedMenu = () => {
       v-if="getMenuType === NavBarModeEnum.MIX_SIDEBAR"
       :showTitle="false"
     />
-    <VbenScrollbar :class="bem('scrollbar')" v-bind="getMenuEvents">
+    <ShopScrollbar :class="bem('scrollbar')" v-bind="getMenuEvents">
       <ul :class="bem('module')">
         <li
           :class="[
@@ -223,7 +223,7 @@ const handleFixedMenu = () => {
           v-for="item in menuModules"
           :key="item.path"
         >
-          <VbenIconify
+          <ShopIconify
             :class="bem('module__icon')"
             :size="getCollapsed ? 16 : 20"
             :icon="item.icon || (item.meta && item.meta.icon)"
@@ -233,7 +233,7 @@ const handleFixedMenu = () => {
           </p>
         </li>
       </ul>
-    </VbenScrollbar>
+    </ShopScrollbar>
     <SiderTrigger />
     <div
       :class="['shadow', bem('menu-list')]"
@@ -252,7 +252,7 @@ const handleFixedMenu = () => {
         ]"
       >
         <span class="text"> {{ title }}</span>
-        <VbenIconify
+        <ShopIconify
           :size="16"
           :icon="getMixSideFixed ? 'ri:pushpin-2-fill' : 'ri:pushpin-2-line'"
           class="pushpin"
@@ -260,9 +260,9 @@ const handleFixedMenu = () => {
           hoverPointer
         />
       </div>
-      <VbenH5 v-if="openMenu" :class="bem('menu-list__children-title')">{{
+      <ShopH5 v-if="openMenu" :class="bem('menu-list__children-title')">{{
         childrenTitle
-      }}</VbenH5>
+      }}</ShopH5>
       <MixMenu :list="childrenMenus" />
     </div>
   </div>

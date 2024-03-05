@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenAlert' })
+defineOptions({ name: 'ShopAlert' })
 import { maps } from '../../index'
 
 const Alert = maps.get('Alert')

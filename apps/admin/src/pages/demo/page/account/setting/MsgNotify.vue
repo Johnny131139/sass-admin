@@ -3,11 +3,11 @@ import { msgNotifyList } from './data'
 </script>
 
 <template>
-  <VbenCard title="新消息通知" :canExpan="false">
+  <ShopCard title="新消息通知" :canExpan="false">
     <template v-for="item in msgNotifyList" :key="item.key">
-      <VbenCard :title="item.title">
+      <ShopCard :title="item.title">
         <template #header-extra>
-          <VbenSwitch
+          <ShopSwitch
             class="float-right mt-10px mr-30px"
             checked-children="开"
             un-checked-children="关"
@@ -15,7 +15,7 @@ import { msgNotifyList } from './data'
           />
         </template>
         <div>{{ item.description }}</div>
-      </VbenCard>
+      </ShopCard>
     </template>
-  </VbenCard>
+  </ShopCard>
 </template>

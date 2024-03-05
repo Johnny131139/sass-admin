@@ -4,7 +4,7 @@
  * @LastEditTime : 2023-12-26 15:43:29
  * @LastEditors  : ya2glu
  * @Description  : 请输入描述信息
- * @FilePath     : \vben3\packages\demo\src\apis\menu.ts
+ * @FilePath     : \Shop3\packages\demo\src\apis\menu.ts
  */
 import { request } from '@shoptop/request'
 

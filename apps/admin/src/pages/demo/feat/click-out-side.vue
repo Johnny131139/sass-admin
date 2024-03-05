@@ -13,7 +13,7 @@ function innerClick() {
 </script>
 
 <template>
-  <VbenCard title="点内外部触发事件">
+  <ShopCard title="点内外部触发事件">
     <ClickOutside
       @clickOutside="handleClickOutside"
       class="flex justify-center"
@@ -22,7 +22,7 @@ function innerClick() {
         {{ text }}
       </div>
     </ClickOutside>
-  </VbenCard>
+  </ShopCard>
 </template>
 
 <style lang="less" scoped>

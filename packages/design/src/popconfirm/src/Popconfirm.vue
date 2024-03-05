@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenPopconfirm' })
+defineOptions({ name: 'ShopPopconfirm' })
 import { maps } from '../../index'
 const Popconfirm = maps.get('Popconfirm')
 </script>

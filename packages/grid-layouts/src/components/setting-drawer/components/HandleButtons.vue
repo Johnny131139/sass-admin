@@ -7,24 +7,24 @@ const { t } = useI18n()
 const { copyConfigs, resetAllConfig, clearAndRedo } = useAppConfig()
 </script>
 <template>
-  <VbenSpace vertical>
-    <VbenButton type="info" block @click="copyConfigs">
+  <ShopSpace vertical>
+    <ShopButton type="info" block @click="copyConfigs">
       <template #icon>
-        <VbenIconify icon="ant-design:snippets-twotone" />
+        <ShopIconify icon="ant-design:snippets-twotone" />
       </template>
       {{ t('layout.setting.copyBtn') }}
-    </VbenButton>
-    <VbenButton type="warning" @click="resetAllConfig" block>
+    </ShopButton>
+    <ShopButton type="warning" @click="resetAllConfig" block>
       <template #icon>
-        <VbenIconify icon="ant-design:reload-outlined" />
+        <ShopIconify icon="ant-design:reload-outlined" />
       </template>
       {{ t('common.resetText') }}
-    </VbenButton>
-    <VbenButton type="error" block @click="clearAndRedo">
+    </ShopButton>
+    <ShopButton type="error" block @click="clearAndRedo">
       <template #icon>
-        <VbenIconify icon="ant-design:redo-outlined" />
+        <ShopIconify icon="ant-design:redo-outlined" />
       </template>
       {{ t('layout.setting.clearBtn') }}
-    </VbenButton>
-  </VbenSpace>
+    </ShopButton>
+  </ShopSpace>
 </template>

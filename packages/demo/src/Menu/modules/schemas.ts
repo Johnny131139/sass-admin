@@ -1,6 +1,6 @@
-import { VbenFormSchema } from '@shoptop/design/src/form'
+import { ShopFormSchema } from '@shoptop/design/src/form'
 import { getRadioData } from '../../apis/form'
-export const menuAddSchema: VbenFormSchema[] = [
+export const menuAddSchema: ShopFormSchema[] = [
   {
     field: 'types',
     label: '菜单类型',

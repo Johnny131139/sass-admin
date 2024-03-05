@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { maps } from '../../index'
 import { ref } from 'vue'
-defineOptions({ name: 'VbenButton' })
+defineOptions({ name: 'ShopButton' })
 const Button = maps.get('Button')
 const Ref = ref(null)
 defineExpose({ Ref })

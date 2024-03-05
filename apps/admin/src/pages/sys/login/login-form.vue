@@ -28,7 +28,7 @@ const { setLoginState, getLoginState } = useLoginState();
 const { getFormRules } = useFormRules();
 
 const formData = reactive({
-  account: 'vben',
+  account: 'Shop',
   password: '123456'
 });
 
@@ -69,44 +69,44 @@ async function handleLogin() {
 </script>
 <template>
   <login-form-title v-show="show" class="enter-x" />
-  <vben-form
+  <Shop-form
     :model="formData"
     :rules="getFormRules"
     ref="formRef"
     v-show="show"
     @keypress.enter="handleLogin"
   >
-    <vben-form-item class="enter-x" inline :show-label="false" >
-      <vben-input
+    <Shop-form-item class="enter-x" inline :show-label="false" >
+      <Shop-input
         size="large"
         v-model:value="formData.account"
         :placeholder="t('sys.login.userName')"
         class="fix-auto-fill"
       />
-    </vben-form-item>
-    <vben-form-item class="enter-x" inline :show-label="false">
-      <vben-input
+    </Shop-form-item>
+    <Shop-form-item class="enter-x" inline :show-label="false">
+      <Shop-input
         type="password"
         show-password-on="click"
         size="large"
         v-model:value="formData.password"
         :placeholder="t('sys.login.password')"
       />
-    </vben-form-item>
+    </Shop-form-item>
 
-    <vben-grid class="enter-x">
-      <vben-grid-item :span="12">
-        <vben-form-item inline :show-label="false">
+    <Shop-grid class="enter-x">
+      <Shop-grid-item :span="12">
+        <Shop-form-item inline :show-label="false">
           <!-- No logic, you need to deal with it yourself -->
-          <vben-checkbox v-model:checked="rememberMe" size="small">
+          <Shop-checkbox v-model:checked="rememberMe" size="small">
             {{t('sys.login.rememberMe')}}
-          </vben-checkbox>
-        </vben-form-item>
-      </vben-grid-item>
-      <vben-grid-item :span="12" >
-        <vben-form-item inline :show-label="false" class="justify-items-end" >
+          </Shop-checkbox>
+        </Shop-form-item>
+      </Shop-grid-item>
+      <Shop-grid-item :span="12" >
+        <Shop-form-item inline :show-label="false" class="justify-items-end" >
           <!-- No logic, you need to deal with it yourself -->
-          <vben-button
+          <Shop-button
             text
             tag="a"
             type="primary"
@@ -114,13 +114,13 @@ async function handleLogin() {
             @click="setLoginState(LoginStateEnum.RESET_PASSWORD)"
           >
             {{t('sys.login.forgetPassword')}}
-          </vben-button>
-        </vben-form-item>
-      </vben-grid-item>
-    </vben-grid>
+          </Shop-button>
+        </Shop-form-item>
+      </Shop-grid-item>
+    </Shop-grid>
 
-    <vben-form-item class="enter-x" inline :show-label="false" >
-      <vben-button
+    <Shop-form-item class="enter-x" inline :show-label="false" >
+      <Shop-button
         type="primary"
         size="large"
         block
@@ -128,28 +128,28 @@ async function handleLogin() {
         :loading="loading"
       >
         {{t('sys.login.loginButton')}}
-      </vben-button>
-    </vben-form-item>
+      </Shop-button>
+    </Shop-form-item>
 
-    <vben-grid class="enter-x" :cols="3">
-      <vben-grid-item :md="8" :xs="24">
-        <vben-button block @click="setLoginState(LoginStateEnum.MOBILE)">
+    <Shop-grid class="enter-x" :cols="3">
+      <Shop-grid-item :md="8" :xs="24">
+        <Shop-button block @click="setLoginState(LoginStateEnum.MOBILE)">
           {{t('sys.login.mobileSignInFormTitle')}}
-        </vben-button>
-      </vben-grid-item>
-      <vben-grid-item :md="8" :xs="24" class="md:!my-0 xs:mx-0 md:mx-2">
-        <vben-button block @click="setLoginState(LoginStateEnum.QR_CODE)">
+        </Shop-button>
+      </Shop-grid-item>
+      <Shop-grid-item :md="8" :xs="24" class="md:!my-0 xs:mx-0 md:mx-2">
+        <Shop-button block @click="setLoginState(LoginStateEnum.QR_CODE)">
           {{t('sys.login.qrSignInFormTitle')}}
-        </vben-button>
-      </vben-grid-item>
-      <vben-grid-item :md="7" :xs="24">
-        <vben-button block @click="setLoginState(LoginStateEnum.REGISTER)">
+        </Shop-button>
+      </Shop-grid-item>
+      <Shop-grid-item :md="7" :xs="24">
+        <Shop-button block @click="setLoginState(LoginStateEnum.REGISTER)">
           {{t('sys.login.registerButton')}}
-        </vben-button>
-      </vben-grid-item>
-    </vben-grid>
+        </Shop-button>
+      </Shop-grid-item>
+    </Shop-grid>
 
-    <vben-divider class="enter-x">{{t('sys.login.otherSignIn')}}</vben-divider>
+    <Shop-divider class="enter-x">{{t('sys.login.otherSignIn')}}</Shop-divider>
 
     <div class="flex justify-evenly enter-x" :class="`sign-in-way`">
       <github-filled />
@@ -158,5 +158,5 @@ async function handleLogin() {
       <google-circle-filled />
       <twitter-circle-filled />
     </div>
-  </vben-form>
+  </Shop-form>
 </template>

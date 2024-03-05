@@ -5,7 +5,7 @@
   "homepage": "https://accounts.shoptop.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vbenjs/vben3.git"
+    "url": "git+https://github.com/Shopjs/Shop3.git"
   },
   "license": "MIT",
   "scripts": {

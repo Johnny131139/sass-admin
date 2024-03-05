@@ -10,33 +10,33 @@ const state = reactive({
 </script>
 
 <template>
-  <VbenCard title="时间组件示例" :bordered="false">
-    <VbenGrid :x-gap="12" :y-gap="8" :cols="1">
-      <VbenGridItem>
-        <VbenCard hoverable title="基础示例">
+  <ShopCard title="时间组件示例" :bordered="false">
+    <ShopGrid :x-gap="12" :y-gap="8" :cols="1">
+      <ShopGridItem>
+        <ShopCard hoverable title="基础示例">
           <Time :value="state.time1" />
           <br />
           <Time :value="state.time2" />
-        </VbenCard>
-      </VbenGridItem>
-      <VbenGridItem>
-        <VbenCard hoverable title="定时更新">
+        </ShopCard>
+      </ShopGridItem>
+      <ShopGridItem>
+        <ShopCard hoverable title="定时更新">
           <Time :value="now" :step="1" />
           <br />
           <Time :value="now" :step="5" />
-        </VbenCard>
-      </VbenGridItem>
-      <VbenGridItem>
-        <VbenCard hoverable title="定时更新">
+        </ShopCard>
+      </ShopGridItem>
+      <ShopGridItem>
+        <ShopCard hoverable title="定时更新">
           <Time :value="now" mode="date" />
           <br />
           <Time :value="now" mode="datetime" />
           <br />
           <Time :value="now" />
-        </VbenCard>
-      </VbenGridItem>
-    </VbenGrid>
-  </VbenCard>
+        </ShopCard>
+      </ShopGridItem>
+    </ShopGrid>
+  </ShopCard>
 </template>
 
 <style lang="less" scoped></style>

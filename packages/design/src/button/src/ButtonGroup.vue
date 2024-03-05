@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenButtonGroup' })
+defineOptions({ name: 'ShopButtonGroup' })
 import { maps } from '../../index'
 const ButtonGroup = maps.get('ButtonGroup')
 </script>

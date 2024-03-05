@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenStatistic' })
+defineOptions({ name: 'ShopStatistic' })
 import { maps } from '../../index'
 const Statistic = maps.get('Statistic')
 </script>

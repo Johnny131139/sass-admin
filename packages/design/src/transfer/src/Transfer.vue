@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenTransfer' })
+defineOptions({ name: 'ShopTransfer' })
 import { maps } from '../../index'
 
 const Transfer = maps.get('Transfer')

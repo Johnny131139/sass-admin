@@ -1,5 +1,5 @@
 <script lang="ts" setup >
-defineOptions({ name: 'VbenDivider' })
+defineOptions({ name: 'ShopDivider' })
 import { maps } from '../../index'
 const Divider = maps.get('Divider')
 </script>

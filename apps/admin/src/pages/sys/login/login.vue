@@ -50,13 +50,13 @@ const { t } = useI18n()
       <div
         class="sm:w-4/6 xl:w-4/5 w-full mx-auto my-auto p-4 rounded-md shadow-md xl:shadow-none"
       >
-        <vben-card>
+        <Shop-card>
           <login-form />
           <forget-password-form />
           <register-form />
           <mobile-form />
           <qr-code-form />
-        </vben-card>
+        </Shop-card>
       </div>
     </div>
   </div>

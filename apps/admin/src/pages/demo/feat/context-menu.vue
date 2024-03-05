@@ -52,12 +52,12 @@ const onClickoutside = () => {
 </script>
 
 <template>
-  <VbenCard title="右键菜单示例">
-    <VbenCard title="Simple">
-      <VbenButton type="primary" @contextmenu="handleContextMenu">
+  <ShopCard title="右键菜单示例">
+    <ShopCard title="Simple">
+      <ShopButton type="primary" @contextmenu="handleContextMenu">
         Right Click on me
-      </VbenButton>
-      <VbenDropdown
+      </ShopButton>
+      <ShopDropdown
         placement="bottom-start"
         trigger="manual"
         :x="x"
@@ -67,6 +67,6 @@ const onClickoutside = () => {
         :on-clickoutside="onClickoutside"
         @select="handleSelect"
       />
-    </VbenCard>
-  </VbenCard>
+    </ShopCard>
+  </ShopCard>
 </template>

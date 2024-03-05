@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenBreadcrumb' })
+defineOptions({ name: 'ShopBreadcrumb' })
 import { maps } from '../../index'
 
 const Breadcrumb = maps.get('Breadcrumb')

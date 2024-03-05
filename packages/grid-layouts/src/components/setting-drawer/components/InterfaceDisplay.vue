@@ -20,7 +20,7 @@ const {
 } = useAppConfig()
 </script>
 <template>
-  <VbenSpace vertical>
+  <ShopSpace vertical>
     <SwitchItem
       :title="t('layout.setting.header')"
       :def="header.visible"
@@ -93,5 +93,5 @@ const {
       :def="colorWeak"
       :event="HandlerSettingEnum.COLOR_WEAK"
     />
-  </VbenSpace>
+  </ShopSpace>
 </template>

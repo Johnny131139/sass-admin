@@ -54,7 +54,7 @@ function handleClose() {
       <div :class="getClass" @click.stop v-if="visible">
         <div :class="`${prefixCls}-content`" v-click-outside="handleClose">
           <div :class="`${prefixCls}-input__wrapper`">
-            <VbenInput
+            <ShopInput
               :class="`${prefixCls}-input`"
               :placeholder="t('common.searchText')"
               allow-clear
@@ -62,13 +62,13 @@ function handleClose() {
               @input="handleSearch"
             >
               <template #prefix>
-                <VbenIconify
+                <ShopIconify
                   :size="24"
                   color="gray"
                   icon="ant-design:search-outlined"
                 />
               </template>
-            </VbenInput>
+            </ShopInput>
             <span :class="`${prefixCls}-cancel`" @click="handleClose">
               {{ t('common.cancelText') }}
             </span>
@@ -98,7 +98,7 @@ function handleClose() {
               ]"
             >
               <div :class="`${prefixCls}-list__item-icon`">
-                <VbenIconify
+                <ShopIconify
                   :icon="item.icon || 'mdi:form-select'"
                   :size="20"
                 />
@@ -107,7 +107,7 @@ function handleClose() {
                 {{ item.name }}
               </div>
               <div :class="`${prefixCls}-list__item-enter`">
-                <VbenIconify icon="ant-design:enter-outlined" :size="20" />
+                <ShopIconify icon="ant-design:enter-outlined" :size="20" />
               </div>
             </li>
           </ul>
@@ -119,7 +119,7 @@ function handleClose() {
 </template>
 
 <style lang="less" scoped>
-.vben-app-search-modal {
+.Shop-app-search-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -138,25 +138,25 @@ function handleClose() {
       width: 100%;
     }
 
-    .vben-app-search-modal-input {
+    .Shop-app-search-modal-input {
       width: calc(100% - 38px);
     }
 
-    .vben-app-search-modal-cancel {
+    .Shop-app-search-modal-cancel {
       display: inline-block;
     }
 
-    .vben-app-search-modal-content {
+    .Shop-app-search-modal-content {
       width: 100%;
       height: 100%;
       border-radius: 0;
     }
 
-    .vben-app-search-footer {
+    .Shop-app-search-footer {
       display: none;
     }
 
-    .vben-app-search-modal-list {
+    .Shop-app-search-modal-list {
       height: calc(100% - 80px);
       max-height: unset;
 
@@ -246,7 +246,7 @@ function handleClose() {
         color: #fff;
         background-color: #0960bd;
 
-        .vben-app-search-modal-list__item-enter {
+        .Shop-app-search-modal-list__item-enter {
           opacity: 100%;
         }
       }

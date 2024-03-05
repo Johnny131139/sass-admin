@@ -32,32 +32,32 @@ async function handleReset() {
 <template>
   <template v-if="show">
     <login-form-title class="enter-x" />
-    <vben-form :model="formData" :rules="getFormRules" ref="formRef">
-      <vben-form-item name="account" class="enter-x" inline :show-label="false">
-        <vben-input
+    <Shop-form :model="formData" :rules="getFormRules" ref="formRef">
+      <Shop-form-item name="account" class="enter-x" inline :show-label="false">
+        <Shop-input
           size="large"
           v-model:value="formData.account"
           :placeholder="t('sys.login.userName')"
         />
-      </vben-form-item>
+      </Shop-form-item>
 
-      <vben-form-item name="mobile" class="enter-x" inline :show-label="false">
-        <vben-input
+      <Shop-form-item name="mobile" class="enter-x" inline :show-label="false">
+        <Shop-input
           size="large"
           v-model:value="formData.mobile"
           :placeholder="t('sys.login.mobile')"
         />
-      </vben-form-item>
-      <vben-form-item name="sms" class="enter-x" inline :show-label="false">
+      </Shop-form-item>
+      <Shop-form-item name="sms" class="enter-x" inline :show-label="false">
         <count-down-input
           size="large"
           v-model:value="formData.sms"
           :placeholder="t('sys.login.smsCode')"
         />
-      </vben-form-item>
+      </Shop-form-item>
 
       <div class="enter-x">
-        <vben-button
+        <Shop-button
           type="primary"
           size="large"
           block
@@ -65,11 +65,11 @@ async function handleReset() {
           :loading="loading"
         >
           {{ t('common.resetText') }}
-        </vben-button>
-        <vben-button size="large" block class="mt-4" @click="handleBackLogin">
+        </Shop-button>
+        <Shop-button size="large" block class="mt-4" @click="handleBackLogin">
           {{ t('sys.login.backSignIn') }}
-        </vben-button>
+        </Shop-button>
       </div>
-    </vben-form>
+    </Shop-form>
   </template>
 </template>

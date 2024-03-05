@@ -26,9 +26,9 @@ const onChange = (value: any) => {
 </script>
 <template>
   <div class="switch-item">
-    <VbenSpace justify="space-between" align="center">
+    <ShopSpace justify="space-between" align="center">
       <span>{{ title }}</span>
-      <VbenInputNumber
+      <ShopInputNumber
         class="w-130px"
         size="small"
         v-bind="$attrs"
@@ -39,8 +39,8 @@ const onChange = (value: any) => {
         <template #suffix>
           {{ suffix }}
         </template>
-      </VbenInputNumber>
-    </VbenSpace>
+      </ShopInputNumber>
+    </ShopSpace>
   </div>
 </template>
 <style lang="less" scoped></style>

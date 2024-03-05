@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenPopover' })
+defineOptions({ name: 'ShopPopover' })
 import { maps } from '../../index'
 const Popover = maps.get('Popover')
 </script>

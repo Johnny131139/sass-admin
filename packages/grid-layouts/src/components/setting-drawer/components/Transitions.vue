@@ -11,7 +11,7 @@ const { t } = useI18n()
 const { transition } = useAppConfig()
 </script>
 <template>
-  <VbenSpace vertical>
+  <ShopSpace vertical>
     <SwitchItem
       :title="t('layout.setting.progress')"
       :def="transition.openNProgress"
@@ -34,5 +34,5 @@ const { transition } = useAppConfig()
       :event="HandlerSettingEnum.ROUTER_TRANSITION"
       :disabled="!transition.enable"
     />
-  </VbenSpace>
+  </ShopSpace>
 </template>

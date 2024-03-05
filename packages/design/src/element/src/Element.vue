@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenElement' })
+defineOptions({ name: 'ShopElement' })
 import { maps } from '../../index'
 const Icon = maps.get('Element')
 </script>

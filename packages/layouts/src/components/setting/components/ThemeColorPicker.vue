@@ -47,7 +47,7 @@ const onChange = (color: string) => {
 </script>
 <template>
   <div class="min-w-83px">
-    <VbenColorPicker
+    <ShopColorPicker
       v-model:value="color"
       :show-alpha="false"
       :modes="['hex']"

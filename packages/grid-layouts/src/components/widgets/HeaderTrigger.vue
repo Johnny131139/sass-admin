@@ -6,7 +6,7 @@ const { sidebar, toggleCollapse } = useAppConfig()
 </script>
 <template>
   <TopButtonWrapper @click.stop="toggleCollapse">
-    <VbenIconify
+    <ShopIconify
       size="22"
       :icon="
         sidebar.collapsed ? 'line-md:menu-fold-right' : 'line-md:menu-fold-left'

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenSelect' })
+defineOptions({ name: 'ShopSelect' })
 import { maps } from '../../index'
 import { fetchProps, fetch } from '../../fetch'
 import { watch, ref, watchEffect } from 'vue'

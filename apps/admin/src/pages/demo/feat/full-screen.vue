@@ -10,40 +10,40 @@ const { toggle: toggleDom, isFullscreen: isDomFullscreen } =
   useFullscreen(domRef)
 </script>
 <template>
-  <VbenCard title="全屏示例">
-    <VbenCard title="Window Full Screen">
-      <VbenButton
+  <ShopCard title="全屏示例">
+    <ShopCard title="Window Full Screen">
+      <ShopButton
         type="primary"
         :disabled="isFullscreen"
         @click="enter"
         class="mr-2"
       >
         Enter Window Full Screen
-      </VbenButton>
-      <VbenButton type="success" @click="toggle" class="mr-2">
+      </ShopButton>
+      <ShopButton type="success" @click="toggle" class="mr-2">
         Toggle Window Full Screen
-      </VbenButton>
+      </ShopButton>
 
-      <VbenButton type="error" @click="exit" class="mr-2">
+      <ShopButton type="error" @click="exit" class="mr-2">
         Exit Window Full Screen
-      </VbenButton>
+      </ShopButton>
 
       Current State: {{ isFullscreen }}
-    </VbenCard>
+    </ShopCard>
 
-    <VbenCard title="Dom Full Screen">
-      <VbenButton type="primary" @click="toggleDom" class="mr-2">
+    <ShopCard title="Dom Full Screen">
+      <ShopButton type="primary" @click="toggleDom" class="mr-2">
         Enter Dom Full Screen
-      </VbenButton>
-    </VbenCard>
+      </ShopButton>
+    </ShopCard>
 
     <div
       ref="domRef"
       class="flex items-center justify-center w-1/2 h-64 mx-auto mt-10 bg-white rounded-md"
     >
-      <VbenButton type="primary" @click="toggleDom" class="mr-2">
+      <ShopButton type="primary" @click="toggleDom" class="mr-2">
         {{ isDomFullscreen ? 'Exit Dom Full Screen' : 'Enter Dom Full Screen' }}
-      </VbenButton>
+      </ShopButton>
     </div>
-  </VbenCard>
+  </ShopCard>
 </template>

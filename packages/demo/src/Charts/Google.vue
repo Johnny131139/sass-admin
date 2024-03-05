@@ -95,15 +95,15 @@ onMounted(() => {
 
 <template>
   <div class="gmap-input">
-    <VbenInput placeholder="search" clearable @input="handleInput">
+    <ShopInput placeholder="search" clearable @input="handleInput">
       <template #prefix>
-        <VbenIconify
+        <ShopIconify
           :size="20"
           color="gray"
           icon="ant-design:search-outlined"
         />
       </template>
-    </VbenInput>
+    </ShopInput>
   </div>
   <div ref="wrapGoogleRef" :style="{ height, width }"></div>
 </template>

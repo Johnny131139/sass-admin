@@ -18,10 +18,10 @@ const getTitle = computed(() => {
 })
 </script>
 <template>
-  <VbenPopover :title="getTitle" placement="bottom" :duration="500">
+  <ShopPopover :title="getTitle" placement="bottom" :duration="500">
     <template #trigger>
       <TopButtonWrapper @click.stop="toggle">
-        <VbenIconify
+        <ShopIconify
           :icon="
             isFullscreen
               ? 'mingcute:fullscreen-exit-line'
@@ -31,5 +31,5 @@ const getTitle = computed(() => {
       </TopButtonWrapper>
     </template>
     <span>{{ getTitle }}</span>
-  </VbenPopover>
+  </ShopPopover>
 </template>

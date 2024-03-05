@@ -7,11 +7,11 @@ import MixSubMenu from './components/MixSubMenu.vue'
 const { isSidebar, isMix, menu } = useAppConfig()
 </script>
 <template>
-  <VbenScrollbar>
+  <ShopScrollbar>
     <BasicMenu
       v-if="isSidebar || (isMix && !menu.split)"
       :mode="MenuModeEnum.VERTICAL"
     />
     <MixSubMenu v-if="isMix && menu.split" />
-  </VbenScrollbar>
+  </ShopScrollbar>
 </template>

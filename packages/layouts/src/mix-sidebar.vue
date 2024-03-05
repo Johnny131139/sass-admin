@@ -37,8 +37,8 @@ const { bem } = createNamespace('layout-mix-sidebar')
 const { isSidebarDark } = useAppTheme()
 </script>
 <template>
-  <VbenLayout has-sider class="h-full">
-    <VbenLayoutSider
+  <ShopLayout has-sider class="h-full">
+    <ShopLayoutSider
       v-if="getShowSidebar"
       bordered
       :collapsed-width="getMixSidebarWidth"
@@ -50,25 +50,25 @@ const { isSidebarDark } = useAppTheme()
       <slot name="sider">
         <LayoutMixMenu :mix-sidebar-width="getMixSidebarWidth" />
       </slot>
-    </VbenLayoutSider>
-    <VbenLayout :style="getContainerStyle" class="transition-all">
-      <VbenLayoutHeader ref="headerRef">
+    </ShopLayoutSider>
+    <ShopLayout :style="getContainerStyle" class="transition-all">
+      <ShopLayoutHeader ref="headerRef">
         <slot name="header"><LayoutHeader /></slot>
-      </VbenLayoutHeader>
-      <VbenLayout :content-style="contentStyle">
-        <VbenLayoutContent :content-style="mainStyle" ref="contentRef">
+      </ShopLayoutHeader>
+      <ShopLayout :content-style="contentStyle">
+        <ShopLayoutContent :content-style="mainStyle" ref="contentRef">
           <LayoutMain>
             <slot name="main"></slot>
           </LayoutMain>
-        </VbenLayoutContent>
-        <VbenLayoutFooter v-if="getShowFooter" ref="footerRef">
+        </ShopLayoutContent>
+        <ShopLayoutFooter v-if="getShowFooter" ref="footerRef">
           <slot name="footer">
             <LayoutFooter />
           </slot>
-        </VbenLayoutFooter>
-      </VbenLayout>
-    </VbenLayout>
-  </VbenLayout>
+        </ShopLayoutFooter>
+      </ShopLayout>
+    </ShopLayout>
+  </ShopLayout>
 </template>
 <style lang="less" scoped>
 .layout-mix-sidebar {

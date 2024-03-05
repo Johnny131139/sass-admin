@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenForm' })
+defineOptions({ name: 'ShopForm' })
 import { maps } from '../../index'
 import { computed, onMounted, ref, unref, useAttrs, watch } from 'vue'
-import { GridItemProps, VbenFormProps } from './type'
+import { GridItemProps, ShopFormProps } from './type'
 import { set } from '@shoptop/utils'
 // MEMO: 在Form中引用'../components'下的组件此处直接引用写死判断，未进行解耦判断
 import { StrengthMeter } from '../../../../components/index'
 const emit = defineEmits(['register', 'update:model'])
-const innerProps = ref<Partial<VbenFormProps>>()
+const innerProps = ref<Partial<ShopFormProps>>()
 const Form = maps.get('Form')
 const formRef = ref(null)
 const props = defineProps({
@@ -19,7 +19,7 @@ const props = defineProps({
 })
 const attrs = useAttrs()
 const getRules = computed(() => innerProps.value?.rules || props.rules)
-const setProps = (prop: Partial<VbenFormProps>) => {
+const setProps = (prop: Partial<ShopFormProps>) => {
   prop.schemas?.forEach((v) => {
     if (v.defaultValue) {
       fieldValue.value[v.field] = v.defaultValue
@@ -118,14 +118,14 @@ onMounted(() => {
       <template #[item]="data" v-for="item in Object.keys($slots)" :key="item">
         <slot :name="item" v-bind="data || {}"></slot>
       </template>
-      <VbenGrid v-bind="getGridProps">
-        <VbenGridItem
+      <ShopGrid v-bind="getGridProps">
+        <ShopGridItem
           v-bind="getGridItemProps(schema.gridItemProps)"
           v-for="(schema, key) in innerProps?.schemas"
           :key="key"
           :path="schema.field"
         >
-          <VbenFormItem
+          <ShopFormItem
             :label="schema.label"
             :path="schema.field"
             :showRequireMark="schema.required"
@@ -144,46 +144,46 @@ onMounted(() => {
                   schema.component !== 'StrengthMeter') &&
                 !schema.slot
               "
-              :is="`Vben${schema.component}`"
+              :is="`Shop${schema.component}`"
               v-bind="schema.componentProps"
               v-model:value="fieldValue[schema.field]"
             />
             <!-- {{ schema.gridItemProps }} -->
             <component v-if="schema.component === 'StrengthMeter'" :is="StrengthMeter" v-bind="schema.componentProps" v-model:value="fieldValue[schema.field]" />
-            <VbenInput
+            <ShopInput
               type="password"
               v-if="schema.component === 'InputPassword'"
               v-bind="schema.componentProps"
               v-model:value="fieldValue[schema.field]"
             />
-            <VbenInput
+            <ShopInput
               type="textarea"
               v-if="schema.component === 'InputTextArea'"
               v-bind="schema.componentProps"
               v-model:value="fieldValue[schema.field]"
             />
-          </VbenFormItem>
-        </VbenGridItem>
-        <VbenGridItem
+          </ShopFormItem>
+        </ShopGridItem>
+        <ShopGridItem
           v-if="innerProps?.schemas.length > 0 && innerProps.actions"
           v-bind="innerProps.actionsProps"
         >
           <slot name="actions-prefix" v-bind="FormMethod || {}"></slot>
           <slot name="actions" v-bind="FormMethod || {}">
-            <VbenButtonGroup
-              ><VbenButton type="error" @click="formRef.restoreValidation">{{
+            <ShopButtonGroup
+              ><ShopButton type="error" @click="formRef.restoreValidation">{{
                 innerProps.actionsProps.cancelText || '重置'
-              }}</VbenButton>
-              <VbenButton
+              }}</ShopButton>
+              <ShopButton
                 type="primary"
                 @click="innerProps.submitFunc(FormMethod)"
-                >{{ innerProps.actionsProps.submitText || '提交' }}</VbenButton
-              ></VbenButtonGroup
+                >{{ innerProps.actionsProps.submitText || '提交' }}</ShopButton
+              ></ShopButtonGroup
             >
           </slot>
           <slot name="actions-suffix" v-bind="FormMethod || {}"></slot>
-        </VbenGridItem>
-      </VbenGrid>
+        </ShopGridItem>
+      </ShopGrid>
     </Form>
   </div>
 </template>

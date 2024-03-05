@@ -7,13 +7,13 @@ const cols = 4
 </script>
 <template>
   <div :class="prefixCls">
-    <VbenGrid x-gap="12" :cols="cols">
+    <ShopGrid x-gap="12" :cols="cols">
       <template v-for="item in applicationList" :key="item.title">
-        <VbenGridItem>
-          <VbenCard :class="`${prefixCls}__card`" hoverable>
+        <ShopGridItem>
+          <ShopCard :class="`${prefixCls}__card`" hoverable>
             <template #header>
               <div :class="`${prefixCls}__card-title`">
-                <VbenIconify
+                <ShopIconify
                   class="icon"
                   v-if="item.icon"
                   :icon="item.icon"
@@ -30,17 +30,17 @@ const cols = 4
               新增用户：<span>{{ item.new }}</span>
             </div>
 
-            <VbenIconify
+            <ShopIconify
               :class="`${prefixCls}__card-download`"
               v-if="item.download"
               :icon="item.download"
               :color="item.color"
               size="24"
             />
-          </VbenCard>
-        </VbenGridItem>
+          </ShopCard>
+        </ShopGridItem>
       </template>
-    </VbenGrid>
+    </ShopGrid>
   </div>
 </template>
 

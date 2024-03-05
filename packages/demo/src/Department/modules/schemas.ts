@@ -1,6 +1,6 @@
-import { VbenFormSchema } from "@shoptop/design/src/form";
+import { ShopFormSchema } from "@shoptop/design/src/form";
 
-export const deptAddFormSchema: VbenFormSchema[] = [
+export const deptAddFormSchema: ShopFormSchema[] = [
   {
     field: "deptName",
     label: '部门名称',

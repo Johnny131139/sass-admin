@@ -52,19 +52,19 @@ function handleToggleTree() {
 }
 </script>
 <template>
-  <VbenGrid style="padding: 20px" :cols="12" :x-gap="8" :y-gap="12">
-    <VbenGridItem :span="12">
-      <VbenCard :bordered="false" embedded>
-        <VbenForm
+  <ShopGrid style="padding: 20px" :cols="12" :x-gap="8" :y-gap="12">
+    <ShopGridItem :span="12">
+      <ShopCard :bordered="false" embedded>
+        <ShopForm
           ref="formRef"
           class="w-full"
           @register="formReg"
           v-model:model="formModel"
         />
-      </VbenCard>
-    </VbenGridItem>
-    <VbenGridItem :span="12">
-      <VbenTable
+      </ShopCard>
+    </ShopGridItem>
+    <ShopGridItem :span="12">
+      <ShopTable
         ref="menuTreeTable"
         :data="menuData.table.items"
         :columns="menuColumns"
@@ -81,14 +81,14 @@ function handleToggleTree() {
       >
         <template #toolbar>
           <div class="pb-2">
-            <VbenButton type="info" @click="handleMenuAddDraw"
-              >新增菜单</VbenButton
+            <ShopButton type="info" @click="handleMenuAddDraw"
+              >新增菜单</ShopButton
             >
           </div>
         </template>
-      </VbenTable>
-    </VbenGridItem>
-  </VbenGrid>
+      </ShopTable>
+    </ShopGridItem>
+  </ShopGrid>
   <MenuAddDraw ref="menuAddDrawRef" />
 </template>
 

@@ -198,8 +198,8 @@ const clickMenu = (key) => {
       :showTitle="getCollapsedShowTitle"
     />
 
-    <VbenScrollbar :class="bem('scrollbar')">
-      <VbenMenu
+    <ShopScrollbar :class="bem('scrollbar')">
+      <ShopMenu
         class="w-full"
         :style="{
           justifyContent:
@@ -218,7 +218,7 @@ const clickMenu = (key) => {
         @update:value="clickMenu"
         :inverted="inverted"
       />
-    </VbenScrollbar>
+    </ShopScrollbar>
     <FooterTrigger v-if="getShowFooterTrigger" />
   </div>
 </template>

@@ -66,7 +66,7 @@ const handleChange = (value: string) => {
 }
 </script>
 <template>
-  <VbenTabs
+  <ShopTabs
     v-model:value="activeTabName"
     type="card"
     size="small"
@@ -75,7 +75,7 @@ const handleChange = (value: string) => {
     :tabs-padding="8"
     @update:value="handleChange"
   >
-    <VbenTab
+    <ShopTab
       v-for="tab in tabList"
       :key="tab.query ? tab.fullPath : tab.path"
       :name="tab.fullPath"
@@ -91,7 +91,7 @@ const handleChange = (value: string) => {
           }
         "
       />
-    </VbenTab>
-  </VbenTabs>
+    </ShopTab>
+  </ShopTabs>
   <TabDropdown ref="tabDropdownRef" />
 </template>

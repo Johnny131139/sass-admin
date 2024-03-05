@@ -19,7 +19,7 @@ const handleClose = (e: PointerEvent) => {
     :class="[closable ? 'pr-18px' : 'pr-10px']"
   >
     <span>{{ title }}</span>
-    <VbenIconify
+    <ShopIconify
       v-if="closable"
       class="absolute !transition-all top-1/2 ml-2px mt--6px hover:!text-14px hover:nt--6px group-hover:visible"
       :class="[active ? 'visible' : 'invisible']"

@@ -35,7 +35,7 @@ const showHeaderLogo = computed(() => {
     class="grid-area-[grid-header] grid grid-cols-2 content-center overflow-hidden relative bg-[var(--header-background-color)] color-[var(--header-text-color)] transition-colors-300"
     :class="[header.visible ? 'visible' : 'invisible']"
   >
-    <VbenConfig :theme-mode="header.theme" :inherit="false" abstract>
+    <ShopConfig :theme-mode="header.theme" :inherit="false" abstract>
       <div
         class="h-[var(--header-height)] grid-col-start-1 grid-col-end-3 flex"
       >
@@ -57,6 +57,6 @@ const showHeaderLogo = computed(() => {
         shadow
         class="!bg-[var(--header-action-hover-bg-color)]"
       />
-    </VbenConfig>
+    </ShopConfig>
   </header>
 </template>

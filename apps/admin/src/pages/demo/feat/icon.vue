@@ -13,8 +13,8 @@ import { Icon, SvgIcon, IconPicker } from '@shoptop/components/index'
 </script>
 
 <template>
-  <VbenCard title="Icon组件示例">
-    <VbenCard title="Antv Icon使用 (直接按需引入相应组件即可)">
+  <ShopCard title="Icon组件示例">
+    <ShopCard title="Antv Icon使用 (直接按需引入相应组件即可)">
       <div class="flex justify-around">
         <GithubFilled :style="{ fontSize: '30px' }" />
         <QqCircleFilled :style="{ fontSize: '30px' }" />
@@ -24,47 +24,47 @@ import { Icon, SvgIcon, IconPicker } from '@shoptop/components/index'
         <TaobaoCircleFilled :style="{ fontSize: '30px' }" />
         <CodepenCircleFilled :style="{ fontSize: '30px' }" />
       </div>
-    </VbenCard>
+    </ShopCard>
 
-    <VbenCard title="IconIfy 组件使用" class="my-5">
+    <ShopCard title="IconIfy 组件使用" class="my-5">
       <div class="flex justify-around flex-wrap">
         <Icon icon="ion:layers-outline" :size="30" />
         <Icon icon="ion:bar-chart-outline" :size="30" />
         <Icon icon="ion:tv-outline" :size="30" />
         <Icon icon="ion:settings-outline" :size="30" />
       </div>
-    </VbenCard>
+    </ShopCard>
 
-    <VbenCard title="svg 雪碧图" class="my-5">
+    <ShopCard title="svg 雪碧图" class="my-5">
       <div class="flex justify-around flex-wrap">
         <SvgIcon icon="total-sales" size="32" />
         <template v-for="item in 6" :key="item">
           <SvgIcon :icon="`dynamic-avatar-${item}`" size="32" />
         </template>
       </div>
-    </VbenCard>
+    </ShopCard>
 
-    <VbenCard title="图标选择器(Iconify)" class="my-5">
+    <ShopCard title="图标选择器(Iconify)" class="my-5">
       <div class="flex justify-around flex-wrap">
         <IconPicker />
       </div>
-    </VbenCard>
+    </ShopCard>
 
-    <VbenCard title="图标选择器(Svg)" class="my-5">
+    <ShopCard title="图标选择器(Svg)" class="my-5">
       <div class="flex justify-around flex-wrap">
         <IconPicker mode="svg" />
       </div>
-    </VbenCard>
+    </ShopCard>
 
-    <VbenAlert title="推荐使用Iconify组件" type="info">
+    <ShopAlert title="推荐使用Iconify组件" type="info">
       Icon组件基本包含所有的图标,在下面网址内你可以查询到你想要的任何图标。并且打包只会打包所用到的图标。
-    </VbenAlert>
-    <VbenButton
+    </ShopAlert>
+    <ShopButton
       quaternary
       type="info"
       @click="openWindow('https://iconify.design/')"
     >
       Iconify 图标大全
-    </VbenButton>
-  </VbenCard>
+    </ShopButton>
+  </ShopCard>
 </template>

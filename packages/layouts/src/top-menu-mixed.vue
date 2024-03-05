@@ -35,8 +35,8 @@ const menuHeight = computed(() => `calc(100vh - ${unref(headerHeight)}px)`)
 const { isSidebarDark } = useAppTheme()
 </script>
 <template>
-  <VbenLayout class="h-full">
-    <VbenLayoutHeader ref="headerRef">
+  <ShopLayout class="h-full">
+    <ShopLayoutHeader ref="headerRef">
       <slot name="header">
         <LayoutHeader>
           <template #menu>
@@ -44,9 +44,9 @@ const { isSidebarDark } = useAppTheme()
           </template>
         </LayoutHeader>
       </slot>
-    </VbenLayoutHeader>
-    <VbenLayout has-sider :style="{ height: menuHeight }">
-      <VbenLayoutSider
+    </ShopLayoutHeader>
+    <ShopLayout has-sider :style="{ height: menuHeight }">
+      <ShopLayoutSider
         v-if="getShowSidebar"
         :show-trigger="getShowCenterTrigger"
         bordered
@@ -60,25 +60,25 @@ const { isSidebarDark } = useAppTheme()
         <slot name="sider">
           <LayoutMenu split />
         </slot>
-      </VbenLayoutSider>
+      </ShopLayoutSider>
 
-      <VbenLayout>
-        <VbenLayoutHeader v-if="getShowMultipleTab">
+      <ShopLayout>
+        <ShopLayoutHeader v-if="getShowMultipleTab">
           <slot name="tabs"><LayoutTabs ref="tabRef" /></slot>
-        </VbenLayoutHeader>
-        <VbenLayout :content-style="contentStyle">
-          <VbenLayoutContent :content-style="mainStyle" ref="contentRef">
+        </ShopLayoutHeader>
+        <ShopLayout :content-style="contentStyle">
+          <ShopLayoutContent :content-style="mainStyle" ref="contentRef">
             <LayoutMain>
               <slot name="main"></slot>
             </LayoutMain>
-          </VbenLayoutContent>
-          <VbenLayoutFooter v-if="getShowFooter" ref="footerRef">
+          </ShopLayoutContent>
+          <ShopLayoutFooter v-if="getShowFooter" ref="footerRef">
             <slot name="footer">
               <LayoutFooter />
             </slot>
-          </VbenLayoutFooter>
-        </VbenLayout>
-      </VbenLayout>
-    </VbenLayout>
-  </VbenLayout>
+          </ShopLayoutFooter>
+        </ShopLayout>
+      </ShopLayout>
+    </ShopLayout>
+  </ShopLayout>
 </template>

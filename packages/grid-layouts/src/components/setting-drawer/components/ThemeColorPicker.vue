@@ -25,7 +25,7 @@ const handleClick = (color) => {
 </script>
 <template>
   <div class="theme-color-picker">
-    <VbenSpace justify="space-between" :size="0" :wrap="false">
+    <ShopSpace justify="space-between" :size="0" :wrap="false">
       <template v-for="color in colorList" :key="color">
         <span
           @click="handleClick(color)"
@@ -33,17 +33,17 @@ const handleClick = (color) => {
           :class="{ active: def == color }"
           :style="{ background: color }"
         >
-          <VbenSpace v-if="def == color" justify="center">
-            <VbenIconify
+          <ShopSpace v-if="def == color" justify="center">
+            <ShopIconify
               icon="mingcute:check-fill"
               color="#D1D5DB"
               size="18"
               hover-color="#D1D5DB"
             />
-          </VbenSpace>
+          </ShopSpace>
         </span>
       </template>
-    </VbenSpace>
+    </ShopSpace>
   </div>
 </template>
 <style lang="less" scoped>

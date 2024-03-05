@@ -1,5 +1,5 @@
-import { VbenFormSchema } from '@shoptop/design/src/form'
-import { VbenColumns } from '@shoptop/design/src/table'
+import { ShopFormSchema } from '@shoptop/design/src/form'
+import { ShopColumns } from '@shoptop/design/src/table'
 
 export interface tableData {
   table: {
@@ -8,7 +8,7 @@ export interface tableData {
   }
 }
 
-const formSchema: VbenFormSchema[] = [
+const formSchema: ShopFormSchema[] = [
   {
     field: 'name',
     label: '部门名称',
@@ -41,7 +41,7 @@ const formSchema: VbenFormSchema[] = [
   },
 ]
 
-const deptColumns: VbenColumns = [
+const deptColumns: ShopColumns = [
   {
     field: 'id',
     title: 'ID',
@@ -65,12 +65,12 @@ const deptColumns: VbenColumns = [
     slots: {
       default: ({ row }) => {
         return (
-          <VbenTag
+          <ShopTag
             size={'small'}
             type={row.state.value === '1' ? 'info' : 'error'}
           >
             {row.state.name}
-          </VbenTag>
+          </ShopTag>
         )
       },
     },

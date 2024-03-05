@@ -6,12 +6,12 @@ const prefixCls = 'account-center-project'
 const cols = 4
 </script>
 <template>
-  <VbenList :class="prefixCls">
-    <VbenGrid x-gap="12" :cols="cols">
+  <ShopList :class="prefixCls">
+    <ShopGrid x-gap="12" :cols="cols">
       <template v-for="item in projectList" :key="item.title">
-        <VbenGridItem>
-          <VbenListItem>
-            <VbenCard hoverable :class="`${prefixCls}__card`">
+        <ShopGridItem>
+          <ShopListItem>
+            <ShopCard hoverable :class="`${prefixCls}__card`">
               <img :src="demoImg" />
               <div :class="`${prefixCls}__card-title`">
                 {{ item.title }}
@@ -19,12 +19,12 @@ const cols = 4
               <div :class="`${prefixCls}__card-content`">
                 {{ item.content }}
               </div>
-            </VbenCard>
-          </VbenListItem>
-        </VbenGridItem>
+            </ShopCard>
+          </ShopListItem>
+        </ShopGridItem>
       </template>
-    </VbenGrid>
-  </VbenList>
+    </ShopGrid>
+  </ShopList>
 </template>
 
 <style lang="less">

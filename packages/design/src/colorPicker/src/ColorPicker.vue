@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenColorPicker' })
+defineOptions({ name: 'ShopColorPicker' })
 import { maps } from '../../index'
 const ColorPicker = maps.get('ColorPicker')
 </script>

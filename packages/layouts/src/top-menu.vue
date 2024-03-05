@@ -12,8 +12,8 @@ const { useRootSetting } = context
 const { getShowFooter } = useRootSetting()
 </script>
 <template>
-  <VbenLayout class="h-full">
-    <VbenLayoutHeader ref="headerRef">
+  <ShopLayout class="h-full">
+    <ShopLayoutHeader ref="headerRef">
       <slot name="header">
         <LayoutHeader ref="headerRef">
           <template #menu>
@@ -21,18 +21,18 @@ const { getShowFooter } = useRootSetting()
           </template>
         </LayoutHeader>
       </slot>
-    </VbenLayoutHeader>
-    <VbenLayout :content-style="contentStyle">
-      <VbenLayoutContent :content-style="mainStyle" ref="contentRef">
+    </ShopLayoutHeader>
+    <ShopLayout :content-style="contentStyle">
+      <ShopLayoutContent :content-style="mainStyle" ref="contentRef">
         <LayoutMain>
           <slot name="main"></slot>
         </LayoutMain>
-      </VbenLayoutContent>
-      <VbenLayoutFooter v-if="getShowFooter" ref="footerRef">
+      </ShopLayoutContent>
+      <ShopLayoutFooter v-if="getShowFooter" ref="footerRef">
         <slot name="footer">
           <LayoutFooter />
         </slot>
-      </VbenLayoutFooter>
-    </VbenLayout>
-  </VbenLayout>
+      </ShopLayoutFooter>
+    </ShopLayout>
+  </ShopLayout>
 </template>

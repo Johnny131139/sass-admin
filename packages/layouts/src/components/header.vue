@@ -58,9 +58,9 @@ const showHeaderBreadcrumb = computed(() => {
 const logoWidth = computed(() => (unref(isTopMenu) ? 150 : getMenuWidth.value))
 </script>
 <template>
-  <VbenSpace vertical>
-    <VbenLayoutHeader :inverted="isHeaderDark">
-      <VbenSpace
+  <ShopSpace vertical>
+    <ShopLayoutHeader :inverted="isHeaderDark">
+      <ShopSpace
         v-if="getShowFullHeaderRef"
         :class="['h-48px', 'shadow']"
         :style="{ '--un-shadow-color': 'var(--n-border-color)' }"
@@ -68,7 +68,7 @@ const logoWidth = computed(() => (unref(isTopMenu) ? 150 : getMenuWidth.value))
         align="center"
       >
         <slot name="logo">
-          <VbenSpace align="center" class="items-center" :size="0">
+          <ShopSpace align="center" class="items-center" :size="0">
             <Logo
               v-if="showHeaderLogo"
               :style="{
@@ -80,32 +80,32 @@ const logoWidth = computed(() => (unref(isTopMenu) ? 150 : getMenuWidth.value))
             <slot name="breadcrumb" v-if="showHeaderBreadcrumb">
               <LayoutBreadcrumb />
             </slot>
-          </VbenSpace>
+          </ShopSpace>
         </slot>
         <slot name="menu" v-if="!showHeaderBreadcrumb"></slot>
         <div class="pl-8px pr-8px" id="userActionElement">
           <slot name="buttons">
-            <VbenSpace class="p-1" :size="16" align="center">
+            <ShopSpace class="p-1" :size="16" align="center">
               <AppSearch v-if="getShowSearch" />
               <AppNotify :is-dark="isHeaderDark" v-if="getShowNotice" />
               <AppFullScreen v-if="getShowFullScreen" />
-              <VbenLocalePicker
+              <ShopLocalePicker
                 v-if="getShowLocalePicker"
                 :reload="true"
                 :showText="false"
               />
               <UserDropdown />
               <SettingButton v-if="getShowSetting" />
-            </VbenSpace>
+            </ShopSpace>
           </slot>
         </div>
-      </VbenSpace>
-    </VbenLayoutHeader>
+      </ShopSpace>
+    </ShopLayoutHeader>
 
     <template v-if="getShowHeaderMultipleTab">
       <slot name="tabs"> <LayoutTabs /></slot>
     </template>
-  </VbenSpace>
+  </ShopSpace>
 </template>
 
 <style></style>

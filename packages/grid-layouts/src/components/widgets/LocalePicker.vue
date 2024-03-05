@@ -44,7 +44,7 @@ function handleMenuEvent(menu: LocaleType) {
 }
 </script>
 <template>
-  <VbenDropdown
+  <ShopDropdown
     trigger="click"
     show-arrow
     :options="localeList"
@@ -54,11 +54,11 @@ function handleMenuEvent(menu: LocaleType) {
   >
     <TopButtonWrapper>
       <div class="flex items-center">
-        <VbenIconify icon="carbon:ibm-watson-language-translator" />
+        <ShopIconify icon="carbon:ibm-watson-language-translator" />
         <span v-if="showText && !isMobile" class="ml-2">{{
           getLocaleText
         }}</span>
       </div>
     </TopButtonWrapper>
-  </VbenDropdown>
+  </ShopDropdown>
 </template>

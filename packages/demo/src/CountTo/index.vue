@@ -3,10 +3,10 @@ import { CountTo } from '@shoptop/components'
 </script>
 
 <template>
-  <VbenCard title="数字动画示例" :bordered="false">
-    <VbenGrid :x-gap="12" :y-gap="8" :cols="2">
-      <VbenGridItem>
-        <VbenCard hoverable>
+  <ShopCard title="数字动画示例" :bordered="false">
+    <ShopGrid :x-gap="12" :y-gap="8" :cols="2">
+      <ShopGridItem>
+        <ShopCard hoverable>
           <CountTo
             class="count-to-demo-card"
             prefix="$"
@@ -15,10 +15,10 @@ import { CountTo } from '@shoptop/components'
             :endVal="200000"
             :duration="8000"
           />
-        </VbenCard>
-      </VbenGridItem>
-      <VbenGridItem>
-        <VbenCard hoverable>
+        </ShopCard>
+      </ShopGridItem>
+      <ShopGridItem>
+        <ShopCard hoverable>
           <CountTo
             class="count-to-demo-card"
             suffix="$"
@@ -28,10 +28,10 @@ import { CountTo } from '@shoptop/components'
             :decimals="2"
             :duration="6000"
           />
-        </VbenCard>
-      </VbenGridItem>
-      <VbenGridItem>
-        <VbenCard hoverable>
+        </ShopCard>
+      </ShopGridItem>
+      <ShopGridItem>
+        <ShopCard hoverable>
           <CountTo
             class="count-to-demo-card"
             suffix="$"
@@ -40,10 +40,10 @@ import { CountTo } from '@shoptop/components'
             :endVal="400000"
             :duration="7000"
           />
-        </VbenCard>
-      </VbenGridItem>
-      <VbenGridItem>
-        <VbenCard hoverable>
+        </ShopCard>
+      </ShopGridItem>
+      <ShopGridItem>
+        <ShopCard hoverable>
           <CountTo
             class="count-to-demo-card"
             separator="-"
@@ -52,10 +52,10 @@ import { CountTo } from '@shoptop/components'
             :endVal="500000"
             :duration="8000"
           />
-        </VbenCard>
-      </VbenGridItem>
-    </VbenGrid>
-  </VbenCard>
+        </ShopCard>
+      </ShopGridItem>
+    </ShopGrid>
+  </ShopCard>
 </template>
 
 <style lang="less" scoped>

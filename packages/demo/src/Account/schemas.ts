@@ -4,12 +4,12 @@
  * @LastEditTime : 2023-11-16 10:08:53
  * @LastEditors  : ya2glu
  * @Description  : account schemas
- * @FilePath     : \vben3\apps\admin\src\pages\demo\system\account\schemas.ts
+ * @FilePath     : \Shop3\apps\admin\src\pages\demo\system\account\schemas.ts
  */
-import { VbenFormSchema } from '@shoptop/design/src/form'
-import { VbenColumns } from '@shoptop/design/src/table'
+import { ShopFormSchema } from '@shoptop/design/src/form'
+import { ShopColumns } from '@shoptop/design/src/table'
 
-export const formSchema: VbenFormSchema[] = [
+export const formSchema: ShopFormSchema[] = [
   {
     field: 'name',
     label: '用户名',
@@ -42,7 +42,7 @@ export const formSchema: VbenFormSchema[] = [
   },
 ]
 
-export const userColumns: VbenColumns = [
+export const userColumns: ShopColumns = [
   {
     field: 'name',
     title: '用户名',

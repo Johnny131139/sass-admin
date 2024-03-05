@@ -6,7 +6,7 @@ const settingDrawerVisible = ref(false)
 </script>
 <template>
   <div class="flex items-center">
-    <VbenIconify
+    <ShopIconify
       icon="ion:settings-outline"
       hoverPointer
       @click="settingDrawerVisible = true"

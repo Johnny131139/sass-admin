@@ -1,6 +1,6 @@
-import { VbenColumns } from '@shoptop/design/src/table'
+import { ShopColumns } from '@shoptop/design/src/table'
 
-export const operatorColumns: VbenColumns = [
+export const operatorColumns: ShopColumns = [
   {
     field: 'userId',
     title: 'ID',

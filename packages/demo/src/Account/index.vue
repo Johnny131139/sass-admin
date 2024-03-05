@@ -4,7 +4,7 @@
  * @LastEditTime : 2023-12-26 15:27:40
  * @LastEditors  : ya2glu
  * @Description  : account modules
- * @FilePath     : \vben3\apps\admin\src\pages\demo\system\account\index.vue
+ * @FilePath     : \Shop3\apps\admin\src\pages\demo\system\account\index.vue
 -->
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -57,22 +57,22 @@ function handleAccountAddModal() {
 }
 </script>
 <template>
-  <VbenGrid
+  <ShopGrid
     class="h-full p-2"
     :cols="bgGrid.cols"
     :x-gap="bgGrid.xGap"
     :y-gap="bgGrid.yGap"
   >
-    <VbenGridItem :span="6">
-      <VbenCard class="h-full" title="部门列表" :bordered="false" embedded>
+    <ShopGridItem :span="6">
+      <ShopCard class="h-full" title="部门列表" :bordered="false" embedded>
         <template #header-extra>
-          <VbenPopover
+          <ShopPopover
             placement="bottom"
             trigger="click"
             :style="{ padding: '3px' }"
           >
             <template #trigger>
-              <VbenIconify
+              <ShopIconify
                 class="cursor-pointer"
                 icon="icon-park-outline:more-one"
                 size="22"
@@ -80,29 +80,29 @@ function handleAccountAddModal() {
               />
             </template>
             <span>
-              <VbenSpace vertical>
-                <VbenButton
+              <ShopSpace vertical>
+                <ShopButton
                   quaternary
                   size="small"
                   @click="() => (expandState = true)"
-                  >展开全部</VbenButton
+                  >展开全部</ShopButton
                 >
-                <VbenButton
+                <ShopButton
                   quaternary
                   size="small"
                   @click="() => (expandState = false)"
-                  >折叠全部</VbenButton
+                  >折叠全部</ShopButton
                 >
-              </VbenSpace>
+              </ShopSpace>
             </span>
-          </VbenPopover>
+          </ShopPopover>
         </template>
-        <VbenInput v-model:value="deptKeys" placeholder="搜索" clearable>
+        <ShopInput v-model:value="deptKeys" placeholder="搜索" clearable>
           <template #prefix>
-            <VbenIconify icon="mdi:search" size="18" color="#c2c2c2" />
+            <ShopIconify icon="mdi:search" size="18" color="#c2c2c2" />
           </template>
-        </VbenInput>
-        <VbenTree
+        </ShopInput>
+        <ShopTree
           :show-line="treeOptions.showLine"
           :data="treeOptions.data"
           :pattern="treeOptions.pattern"
@@ -110,21 +110,21 @@ function handleAccountAddModal() {
           expand-on-click
           selectable
           block-line
-        ></VbenTree>
-      </VbenCard>
-    </VbenGridItem>
-    <VbenGridItem :span="18">
-      <VbenSpace vertical>
-        <VbenCard :bordered="false" embedded>
-          <VbenForm
+        ></ShopTree>
+      </ShopCard>
+    </ShopGridItem>
+    <ShopGridItem :span="18">
+      <ShopSpace vertical>
+        <ShopCard :bordered="false" embedded>
+          <ShopForm
             ref="formRef"
             class="w-full"
             @register="formReg"
             v-model:model="formModel"
-          ></VbenForm>
-        </VbenCard>
-        <!-- <VbenCard :bordered="false" embedded> -->
-        <VbenTable
+          ></ShopForm>
+        </ShopCard>
+        <!-- <ShopCard :bordered="false" embedded> -->
+        <ShopTable
           ref="userTableRef"
           max-height="700"
           min-height="700"
@@ -140,23 +140,23 @@ function handleAccountAddModal() {
         >
           <template #toolbar>
             <div class="pb-2">
-              <VbenButton type="info" @click="handleAccountAddModal"
-                >新增账号</VbenButton
+              <ShopButton type="info" @click="handleAccountAddModal"
+                >新增账号</ShopButton
               >
             </div>
           </template>
           <template #action="{ row }">
-            <VbenButton text type="primary">详情</VbenButton>
-            <VbenDivider vertical />
-            <VbenButton text type="primary">编辑</VbenButton>
-            <VbenDivider vertical />
-            <VbenButton text type="error">删除</VbenButton>
+            <ShopButton text type="primary">详情</ShopButton>
+            <ShopDivider vertical />
+            <ShopButton text type="primary">编辑</ShopButton>
+            <ShopDivider vertical />
+            <ShopButton text type="error">删除</ShopButton>
           </template>
-        </VbenTable>
-        <!-- </VbenCard> -->
-      </VbenSpace>
-    </VbenGridItem>
-  </VbenGrid>
+        </ShopTable>
+        <!-- </ShopCard> -->
+      </ShopSpace>
+    </ShopGridItem>
+  </ShopGrid>
   <AccountAddModal ref="accountAddModalRef" />
 </template>
 

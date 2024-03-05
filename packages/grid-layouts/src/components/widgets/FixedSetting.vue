@@ -25,6 +25,6 @@ const getShowSettingFixedButton = computed(() => {
     @click.stop="toggleOpenSettingDrawer"
     class="p-6px grid-center z-999 text-white fixed right-0 top-1/2 translate-y--1/2 border-rd-l bg-[rgba(9,96,189,.9)] cursor-pointer"
   >
-    <VbenIconify icon="fluent:settings-48-regular" />
+    <ShopIconify icon="fluent:settings-48-regular" />
   </div>
 </template>

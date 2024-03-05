@@ -30,7 +30,7 @@ const {
 const triggerOptions = getMenuTriggerOptions(menu.split)
 </script>
 <template>
-  <VbenSpace vertical>
+  <ShopSpace vertical>
     <SwitchItem
       :title="t('layout.setting.splitMenu')"
       :def="menu.split"
@@ -142,5 +142,5 @@ const triggerOptions = getMenuTriggerOptions(menu.split)
       :event="HandlerSettingEnum.MENU_WIDTH"
       :disabled="!sidebar.visible"
     />
-  </VbenSpace>
+  </ShopSpace>
 </template>

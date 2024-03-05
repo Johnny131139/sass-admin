@@ -4,10 +4,10 @@ import {
   getSelectData,
   getTreeSelectData,
 } from '../apis/form'
-import { VbenFormSchema } from '@shoptop/design/src/form'
+import { ShopFormSchema } from '@shoptop/design/src/form'
 import { ref } from 'vue'
 export const selectParams = ref({ id: 1 })
-export const BasicProps: VbenFormSchema[] = [
+export const BasicProps: ShopFormSchema[] = [
   {
     field: 'name',
     label: 'Input',

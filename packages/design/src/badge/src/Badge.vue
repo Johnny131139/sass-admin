@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineOptions({ name: 'VbenBadge' })
+defineOptions({ name: 'ShopBadge' })
 import { maps } from '../../index'
 
 const Badge = maps.get('Badge')

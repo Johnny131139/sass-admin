@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenFormItemGi' })
+defineOptions({ name: 'ShopFormItemGi' })
 import { maps } from '../../index'
 const FormItemGi = maps.get('FormItemGi')
 </script>

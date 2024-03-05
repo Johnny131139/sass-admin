@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenSpin' })
+defineOptions({ name: 'ShopSpin' })
 import { maps } from '../../index'
 
 const Spin = maps.get('Spin')

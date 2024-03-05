@@ -1,5 +1,5 @@
 <script lang="ts" setup >
-defineOptions({ name: 'VbenDrawer' })
+defineOptions({ name: 'ShopDrawer' })
 import { maps } from '../../index'
 const Drawer = maps.get('Drawer')
 </script>

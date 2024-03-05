@@ -12,22 +12,22 @@ function onNoticeClick(record: ListItem) {
 }
 </script>
 <template>
-  <VbenPopover title="" trigger="click">
+  <ShopPopover title="" trigger="click">
     <template #trigger>
       <TopButtonWrapper>
-        <!--    <VbenIconify icon="system-uicons:bell-ringing" />-->
-        <VbenIconify icon="system-uicons:bell-snooze" />
+        <!--    <ShopIconify icon="system-uicons:bell-ringing" />-->
+        <ShopIconify icon="system-uicons:bell-snooze" />
       </TopButtonWrapper>
     </template>
-    <VbenTabs class="w-60" animated type="line" justify-content="space-evenly">
-      <VbenTabPane
+    <ShopTabs class="w-60" animated type="line" justify-content="space-evenly">
+      <ShopTabPane
         v-for="item in listData"
         :key="item.key"
         :name="item.key"
         :tab="`${item.name}(${item.list.length})`"
       >
         <NoticeList :list="item.list" @title-click="onNoticeClick" />
-      </VbenTabPane>
-    </VbenTabs>
-  </VbenPopover>
+      </ShopTabPane>
+    </ShopTabs>
+  </ShopPopover>
 </template>

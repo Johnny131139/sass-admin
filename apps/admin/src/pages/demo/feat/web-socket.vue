@@ -1,26 +1,26 @@
 <template>
-  <VbenCard title="WebSocket 示例">
+  <ShopCard title="WebSocket 示例">
     <div class="flex">
       <div class="w-1/3 bg-white p-4">
         <div class="flex items-center">
           <span class="text-lg font-medium mr-4"> 连接状态: </span>
-          <VbenTag :type="getTagType">{{ status }}</VbenTag>
+          <ShopTag :type="getTagType">{{ status }}</ShopTag>
         </div>
         <hr class="my-4" />
 
         <div class="flex">
-          <VbenInputGroup>
-            <VbenInputGroupLabel>服务地址</VbenInputGroupLabel>
-            <VbenInput v-model:value="state.server" disabled />
-          </VbenInputGroup>
-          <VbenButton :type="getIsOpen ? 'error' : 'primary'" @click="toggle">
+          <ShopInputGroup>
+            <ShopInputGroupLabel>服务地址</ShopInputGroupLabel>
+            <ShopInput v-model:value="state.server" disabled />
+          </ShopInputGroup>
+          <ShopButton :type="getIsOpen ? 'error' : 'primary'" @click="toggle">
             {{ getIsOpen ? '关闭连接' : '开启连接' }}
-          </VbenButton>
+          </ShopButton>
         </div>
         <p class="text-lg font-medium mt-4">设置</p>
         <hr class="my-4" />
 
-        <VbenInput
+        <ShopInput
           type="textarea"
           placeholder="需要发送到服务器的内容"
           :disabled="!getIsOpen"
@@ -28,7 +28,7 @@
           clearable
         />
 
-        <VbenButton
+        <ShopButton
           type="primary"
           block
           class="mt-4"
@@ -36,7 +36,7 @@
           @click="handlerSend"
         >
           发送
-        </VbenButton>
+        </ShopButton>
       </div>
 
       <div class="w-2/3 bg-white ml-4 p-4">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-  </VbenCard>
+  </ShopCard>
 </template>
 <script lang="ts" setup>
 import { reactive, watchEffect, computed } from 'vue'

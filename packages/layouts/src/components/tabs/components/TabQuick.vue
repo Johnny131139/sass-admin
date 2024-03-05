@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useI18n } from '@shoptop/locale'
-import { VbenIconify, renderIcon } from '@shoptop/design'
+import { ShopIconify, renderIcon } from '@shoptop/design'
 import { TabActionEnum } from '@shoptop/constants'
 import { RouteLocationNormalized } from 'vue-router'
 
@@ -52,7 +52,7 @@ const handleSelect = async (key) => {
 }
 </script>
 <template>
-  <VbenDropdown
+  <ShopDropdown
     placement="bottom-start"
     trigger="click"
     :options="options"
@@ -62,11 +62,11 @@ const handleSelect = async (key) => {
     <div
       class="h-full w-32px border-l flex-center border-[var(--n-border-color)] cursor-pointer"
     >
-      <VbenIconify
+      <ShopIconify
         icon="material-symbols:double-arrow-rounded"
         class="rotate-90"
         rotate="90deg"
       />
     </div>
-  </VbenDropdown>
+  </ShopDropdown>
 </template>

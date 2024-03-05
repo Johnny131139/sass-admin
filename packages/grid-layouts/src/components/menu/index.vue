@@ -22,8 +22,8 @@ onMounted(async () => {
 })
 </script>
 <template>
-  <VbenScrollbar>
+  <ShopScrollbar>
     <BasicMenu ref="menuRef" :menu-options="menuOptions" />
-  </VbenScrollbar>
+  </ShopScrollbar>
 </template>
 <style lang="scss" scoped></style>

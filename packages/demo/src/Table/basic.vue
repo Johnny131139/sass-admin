@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { reactive, ref, computed } from 'vue'
-// import { VbenColumns } from '../../../designComponents/src/table'
+// import { ShopColumns } from '../../../designComponents/src/table'
 import { getTableData } from '../apis/table'
 import { Data, baseColumns } from './schemas'
 
@@ -54,37 +54,37 @@ function toggleRound() {
 </script>
 <template>
   <div class="p-2 h-full">
-    <VbenTable
+    <ShopTable
       :options="{ title: '基础演示', pagination: true, border: borderValue, loading: loading, stripe: striped, round: round, }"
       :columns="baseColumns" :data="data.table.items" :column-config="{ resizable: true }"
       :row-config="{ isHover: true }">
       <template #toolbar>
         <div class="pb-2">
-          <VbenButton type="primary" @click="toggleBorder">
+          <ShopButton type="primary" @click="toggleBorder">
             边框:{{ borderValue }}
-          </VbenButton>
-          <VbenButton class="ml-2" type="primary" @click="toggleLoading">
-            开启loading</VbenButton>
-          <VbenButton class="ml-2" type="primary" @click="toggleStriped">
+          </ShopButton>
+          <ShopButton class="ml-2" type="primary" @click="toggleLoading">
+            开启loading</ShopButton>
+          <ShopButton class="ml-2" type="primary" @click="toggleStriped">
             {{ !striped ? '显示斑马纹' : '隐藏斑马纹' }}
-          </VbenButton>
-          <VbenButton class="ml-2" type="primary" @click="toggleRound">
+          </ShopButton>
+          <ShopButton class="ml-2" type="primary" @click="toggleRound">
             {{ !round ? '显示圆角' : '隐藏圆角' }}
-          </VbenButton>
+          </ShopButton>
         </div>
       </template>
       <template #action>
-        <VbenButton size="tiny" strong secondary type="primary">
+        <ShopButton size="tiny" strong secondary type="primary">
           EDIT
-        </VbenButton>
-        <VbenDivider vertical />
-        <VbenButton size="tiny" strong secondary type="error">
+        </ShopButton>
+        <ShopDivider vertical />
+        <ShopButton size="tiny" strong secondary type="error">
           DELETE
-        </VbenButton>
+        </ShopButton>
       </template>
       <template #[item]="data" v-for="item in Object.keys($slots)" :key="item">
         <slot :name="item" v-bind="data || {}"></slot>
       </template>
-    </VbenTable>
+    </ShopTable>
   </div>
 </template>

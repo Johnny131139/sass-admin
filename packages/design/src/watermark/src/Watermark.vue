@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenWatermark' })
+defineOptions({ name: 'ShopWatermark' })
 import { maps } from '../../index'
 const Watermark = maps.get('Watermark')
 </script>

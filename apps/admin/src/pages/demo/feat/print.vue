@@ -1,16 +1,16 @@
 <template>
-  <VbenCard title="打印示例">
-    <VbenCard title="json打印表格">
-      <VbenButton type="primary" @click="jsonPrint">打印</VbenButton>
-    </VbenCard>
-    <VbenCard title="图片打印">
-      <VbenButton type="primary" @click="imagePrint">Image Print</VbenButton>
-    </VbenCard>
-    <VbenCard title="二维码打印">
+  <ShopCard title="打印示例">
+    <ShopCard title="json打印表格">
+      <ShopButton type="primary" @click="jsonPrint">打印</ShopButton>
+    </ShopCard>
+    <ShopCard title="图片打印">
+      <ShopButton type="primary" @click="imagePrint">Image Print</ShopButton>
+    </ShopCard>
+    <ShopCard title="二维码打印">
       <qr-code id="print-content" value="Hello World" :width="200" />
-      <VbenButton type="primary" @click="qrcodePrint">Qrcode Print</VbenButton>
-    </VbenCard>
-  </VbenCard>
+      <ShopButton type="primary" @click="qrcodePrint">Qrcode Print</ShopButton>
+    </ShopCard>
+  </ShopCard>
 </template>
 <script lang="ts" setup>
 import { QrCode } from '@shoptop/components'

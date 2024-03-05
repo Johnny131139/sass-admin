@@ -1,7 +1,7 @@
-import { VbenFormSchema } from '@shoptop/design/src/form'
-import { VbenColumns } from '@shoptop/design/src/table'
+import { ShopFormSchema } from '@shoptop/design/src/form'
+import { ShopColumns } from '@shoptop/design/src/table'
 
-export const roleColumns: VbenColumns = [
+export const roleColumns: ShopColumns = [
   {
     field: 'roleName',
     title: '角色名称',
@@ -24,9 +24,9 @@ export const roleColumns: VbenColumns = [
     slots: {
       default: ({ row }) => {
         return (
-          <VbenTag size={'small'} type={row.state.value === '1' ? 'info' : 'error'}>
+          <ShopTag size={'small'} type={row.state.value === '1' ? 'info' : 'error'}>
             {row.state.name}
-          </VbenTag>
+          </ShopTag>
         )
       },
     },
@@ -49,7 +49,7 @@ export const roleColumns: VbenColumns = [
   },
 ]
 
-export const roleSchema: VbenFormSchema[] = [
+export const roleSchema: ShopFormSchema[] = [
   {
     field: 'roleName',
     label: '角色名称',

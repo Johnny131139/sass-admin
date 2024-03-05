@@ -31,18 +31,18 @@ const onVisible = (show: boolean) => {
 </script>
 
 <template>
-  <VbenDrawer :show="visible" @update:show="onVisible" :width="330">
-    <VbenDrawerContent closable>
+  <ShopDrawer :show="visible" @update:show="onVisible" :width="330">
+    <ShopDrawerContent closable>
       <template #header>{{ t('layout.setting.drawerTitle') }}</template>
       <template v-if="getShowDarkModeToggle">
-        <VbenDivider title-placement="left">
+        <ShopDivider title-placement="left">
           {{ t('layout.setting.darkMode') }}
-        </VbenDivider>
+        </ShopDivider>
         <DarkModeToggle />
       </template>
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.navMode') }}
-      </VbenDivider>
+      </ShopDivider>
       <NavigationBarPicker
         :def="getMenuType"
         :event="HandlerSettingEnum.CHANGE_LAYOUT"
@@ -57,24 +57,24 @@ const onVisible = (show: boolean) => {
           }
         "
       />
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.themeEditor') }}
-      </VbenDivider>
+      </ShopDivider>
       <ThemeEditor />
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.interfaceFunction') }}
-      </VbenDivider>
+      </ShopDivider>
       <Features />
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.interfaceDisplay') }}
-      </VbenDivider>
+      </ShopDivider>
       <Content />
-      <VbenDivider title-placement="left">
+      <ShopDivider title-placement="left">
         {{ t('layout.setting.animation') }}
-      </VbenDivider>
+      </ShopDivider>
       <Transitions />
-      <VbenDivider />
+      <ShopDivider />
       <FooterButtons />
-    </VbenDrawerContent>
-  </VbenDrawer>
+    </ShopDrawerContent>
+  </ShopDrawer>
 </template>

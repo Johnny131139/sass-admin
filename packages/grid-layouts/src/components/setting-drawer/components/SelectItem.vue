@@ -34,9 +34,9 @@ function renderLabel(option: { label: string; value: string | number }) {
 </script>
 <template>
   <div class="switch-item">
-    <VbenSpace justify="space-between" align="center">
+    <ShopSpace justify="space-between" align="center">
       <span>{{ title }}</span>
-      <VbenSelect
+      <ShopSelect
         class="w-130px"
         size="small"
         :value="def"
@@ -45,7 +45,7 @@ function renderLabel(option: { label: string; value: string | number }) {
         @update:value="onChange"
         :render-label="renderLabel"
       />
-    </VbenSpace>
+    </ShopSpace>
   </div>
 </template>
 <style lang="less" scoped></style>

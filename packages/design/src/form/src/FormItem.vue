@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useAttrs } from 'vue'
 
-defineOptions({ name: 'VbenFormItem' })
+defineOptions({ name: 'ShopFormItem' })
 import { maps } from '../../index'
 const FormItem = maps.get('FormItem')
 const attr = useAttrs()

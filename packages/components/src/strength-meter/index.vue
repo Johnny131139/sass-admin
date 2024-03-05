@@ -46,7 +46,7 @@ watch(
 
 <template>
   <div :class="bem()" class="relative">
-    <VbenInput
+    <ShopInput
       v-if="showInput"
       type="password"
       show-password-on="mousedown"
@@ -59,7 +59,7 @@ watch(
       <template #[item]="data" v-for="item in Object.keys($slots)">
         <slot :name="item" v-bind="data || {}"></slot>
       </template>
-    </VbenInput>
+    </ShopInput>
 
     <div :class="`${bem()}-bar`">
       <div

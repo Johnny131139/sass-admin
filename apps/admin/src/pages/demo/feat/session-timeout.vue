@@ -28,30 +28,30 @@ async function test2() {
 </script>
 
 <template>
-  <VbenCard title="登录过期示例">
-    <VbenAlert title="模式：ROUTE_JUMP(默认模式) / PAGE_COVERAGE" type="info">
+  <ShopCard title="登录过期示例">
+    <ShopAlert title="模式：ROUTE_JUMP(默认模式) / PAGE_COVERAGE" type="info">
       可以在项目配置中设置模式。PAGE_COVERAGE模式直接生成页面覆盖当前页面，方便保持过期前的用户状态！
-    </VbenAlert>
+    </ShopAlert>
 
-    <VbenCard title="请点击下面的按钮访问测试接口" class="mt-4">
+    <ShopCard title="请点击下面的按钮访问测试接口" class="mt-4">
       <template #header-extra> 所访问的接口会返回Token过期响应 </template>
 
-      <VbenGrid x-gap="12" :cols="2">
-        <VbenGridItem>
-          <VbenCard hoverable content-style="text-align: center">
-            <VbenButton type="primary" @click="test1">
+      <ShopGrid x-gap="12" :cols="2">
+        <ShopGridItem>
+          <ShopCard hoverable content-style="text-align: center">
+            <ShopButton type="primary" @click="test1">
               HttpStatus == 401
-            </VbenButton>
-          </VbenCard>
-        </VbenGridItem>
-        <VbenGridItem>
-          <VbenCard hoverable content-style="text-align: center">
-            <VbenButton type="primary" @click="test2">
+            </ShopButton>
+          </ShopCard>
+        </ShopGridItem>
+        <ShopGridItem>
+          <ShopCard hoverable content-style="text-align: center">
+            <ShopButton type="primary" @click="test2">
               Response.code == 401
-            </VbenButton>
-          </VbenCard>
-        </VbenGridItem>
-      </VbenGrid>
-    </VbenCard>
-  </VbenCard>
+            </ShopButton>
+          </ShopCard>
+        </ShopGridItem>
+      </ShopGrid>
+    </ShopCard>
+  </ShopCard>
 </template>

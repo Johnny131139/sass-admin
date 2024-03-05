@@ -117,7 +117,7 @@ const handleSelect = async (key) => {
 }
 </script>
 <template>
-  <VbenDropdown
+  <ShopDropdown
     placement="bottom-start"
     trigger="click"
     :options="options"
@@ -125,11 +125,11 @@ const handleSelect = async (key) => {
     @select="handleSelect"
   >
     <SuffixItemWrapper v-if="tabTar.showQuick">
-      <VbenIconify
+      <ShopIconify
         icon="material-symbols:double-arrow-rounded"
         class="rotate-90"
         rotate="90deg"
       />
     </SuffixItemWrapper>
-  </VbenDropdown>
+  </ShopDropdown>
 </template>

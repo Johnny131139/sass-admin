@@ -20,9 +20,9 @@ const handlerPicker = (data) => {
 </script>
 <template>
   <div class="setting-navigation-bar-picker">
-    <VbenSpace justify="space-between">
+    <ShopSpace justify="space-between">
       <template v-for="(item, index) in typeList" :key="index">
-        <VbenTooltip placement="bottom" trigger="hover">
+        <ShopTooltip placement="bottom" trigger="hover">
           <template #trigger>
             <div
               class="h-48px w-56px bg-gray-300 rounded relative shadow-inner box-border cursor-pointer overflow-hidden bar-item"
@@ -33,9 +33,9 @@ const handlerPicker = (data) => {
             </div>
           </template>
           <span>{{ t(item.title) }}</span>
-        </VbenTooltip>
+        </ShopTooltip>
       </template>
-    </VbenSpace>
+    </ShopSpace>
   </div>
 </template>
 <style lang="scss" scoped>

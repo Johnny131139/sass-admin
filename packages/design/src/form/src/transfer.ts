@@ -1,4 +1,4 @@
-import { ComponentType, VbenFormSchema } from '..'
+import { ComponentType, ShopFormSchema } from '..'
 
 const p = {
   form: {
@@ -45,8 +45,8 @@ const p = {
   },
 }
 
-export function transferFormilySchemas(props?: any): VbenFormSchema[] {
-  let schemas: VbenFormSchema[] = []
+export function transferFormilySchemas(props?: any): ShopFormSchema[] {
+  let schemas: ShopFormSchema[] = []
   for (let field in props) {
     schemas.push(propsToSchema(field, props[field]))
   }
@@ -54,7 +54,7 @@ export function transferFormilySchemas(props?: any): VbenFormSchema[] {
   return schemas
 }
 
-const propsToSchema = (field: string, props: any): VbenFormSchema => {
+const propsToSchema = (field: string, props: any): ShopFormSchema => {
   return {
     field,
     label: props['title'],

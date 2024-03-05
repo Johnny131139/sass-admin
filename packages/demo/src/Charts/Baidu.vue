@@ -67,15 +67,15 @@ onMounted(() => {
 
 <template>
   <div class="bmap-input">
-    <VbenInput clearable placeholder="search" @input="handleInput">
+    <ShopInput clearable placeholder="search" @input="handleInput">
       <template #prefix>
-        <VbenIconify
+        <ShopIconify
           :size="20"
           color="gray"
           icon="ant-design:search-outlined"
         />
       </template>
-    </VbenInput>
+    </ShopInput>
   </div>
   <div ref="wrapRef" :style="{ height, width }"></div>
 </template>

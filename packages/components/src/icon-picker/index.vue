@@ -100,18 +100,18 @@ function handleSearchChange(value: string) {
 </script>
 
 <template>
-  <vben-input-group :style="{ width }">
-    <vben-input
+  <Shop-input-group :style="{ width }">
+    <Shop-input
       :placeholder="t('component.icon.placeholder')"
       v-model:value="currentSelect"
       @click="triggerPopover"
       :clearable="props.allowClear"
       :readonly="props.readonly"
     />
-    <vben-popover trigger="click" :content-class="bem('popover')">
+    <Shop-popover trigger="click" :content-class="bem('popover')">
       <template #header>
         <div class="flex justify-between">
-          <vben-input
+          <Shop-input
             :placeholder="t('component.icon.search')"
             v-model:value="searchKey"
             @update:value="debounceHandleSearchChange"
@@ -121,7 +121,7 @@ function handleSearchChange(value: string) {
       </template>
       <template #default>
         <div v-if="getPaginationList.length">
-          <vben-scrollbar class="border border-solid" style="max-height: 200px">
+          <Shop-scrollbar class="border border-solid" style="max-height: 200px">
             <ul class="flex flex-wrap px-2">
               <li
                 v-for="icon in getPaginationList"
@@ -135,9 +135,9 @@ function handleSearchChange(value: string) {
                 <Icon v-else :icon="icon" />
               </li>
             </ul>
-          </vben-scrollbar>
+          </Shop-scrollbar>
           <div class="flex py-2 items-center justify-center">
-            <vben-pagination
+            <Shop-pagination
               size="small"
               :page="currentPage"
               :page-size="pageSize"
@@ -147,23 +147,23 @@ function handleSearchChange(value: string) {
           </div>
         </div>
         <template v-else>
-          <div class="p-5"><vben-empty description="你什么也找不到" /></div>
+          <div class="p-5"><Shop-empty description="你什么也找不到" /></div>
         </template>
       </template>
       <template #trigger>
         <div ref="trigger">
-          <vben-button>
+          <Shop-button>
             <SvgIcon
               v-if="isSvgMode && currentSelect"
               :size="20"
               :icon="currentSelect"
             />
             <Icon v-else :icon="currentSelect || 'ion:apps-outline'" />
-          </vben-button>
+          </Shop-button>
         </div>
       </template>
-    </vben-popover>
-  </vben-input-group>
+    </Shop-popover>
+  </Shop-input-group>
 </template>
 
 <style lang="less">

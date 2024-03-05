@@ -21,44 +21,44 @@ function handleClose() {
   <div class="p-2 h-full grid grid-cols-12  gap-4">
 
     <div class="col-start-1 col-span-6 ">
-      <VbenCard :title="aTitle"> {{ aContent }} </VbenCard>
+      <ShopCard :title="aTitle"> {{ aContent }} </ShopCard>
     </div>
 
     <div class="col-start-7 col-span-6 ">
-      <VbenCard contentStyle="padding: 0">
-        <VbenTabs :type="tabsType" size="large" :tabsPadding="20" paneStyle="padding: 20px;">
-          <VbenTabPane name="tabs1">
+      <ShopCard contentStyle="padding: 0">
+        <ShopTabs :type="tabsType" size="large" :tabsPadding="20" paneStyle="padding: 20px;">
+          <ShopTabPane name="tabs1">
             这是一个Tabs卡片(👁️🐽👁️)
             <p> 你可以选择Tabs的类型: </p>
-            <!-- TODO: VbenRadioGroup似乎有bug,点击后的样式无法正常显示 -->
-            <!-- TODO: VbenRadioGroup tabsType设置默认值后不起作用 -->
-            <VbenRadioGroup name="radio-group" :value="tabsType" :options="radioArr"
+            <!-- TODO: ShopRadioGroup似乎有bug,点击后的样式无法正常显示 -->
+            <!-- TODO: ShopRadioGroup tabsType设置默认值后不起作用 -->
+            <ShopRadioGroup name="radio-group" :value="tabsType" :options="radioArr"
               @change="radioChange" />
-          </VbenTabPane>
-          <VbenTabPane name="tabs2">我本将心向明月,奈何明月照沟渠.</VbenTabPane>
-        </VbenTabs>
-      </VbenCard>
+          </ShopTabPane>
+          <ShopTabPane name="tabs2">我本将心向明月,奈何明月照沟渠.</ShopTabPane>
+        </ShopTabs>
+      </ShopCard>
     </div>
 
     <div class="col-start-1 col-span-3">
-      <VbenCard title="带封面的卡片" hoverable>
+      <ShopCard title="带封面的卡片" hoverable>
         <template #cover>
           <img src="@/assets/images/cover.png" alt="cover.png">
         </template>
         样式丰富了许多,不是吗🥳
-      </VbenCard>
+      </ShopCard>
     </div>
 
     <div class="col-start-7 col-span-6">
-      <VbenCard title="提示" closable @close="handleClose">
+      <ShopCard title="提示" closable @close="handleClose">
         有时候我们需要在插槽里定制一些丰富的交互🤔
         <template #action>
-          <VbenSpace>
-            <VbenButton strong secondary type="tertiary">不用了</VbenButton>
-            <VbenButton strong secondary type="primary">确定</VbenButton>
-          </VbenSpace>
+          <ShopSpace>
+            <ShopButton strong secondary type="tertiary">不用了</ShopButton>
+            <ShopButton strong secondary type="primary">确定</ShopButton>
+          </ShopSpace>
         </template>
-      </VbenCard>
+      </ShopCard>
     </div>
 
   </div>

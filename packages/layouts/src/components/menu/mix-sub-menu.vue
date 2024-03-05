@@ -83,8 +83,8 @@ const { isSidebarDark } = useAppTheme()
 
 <template>
   <div :class="bem()">
-    <VbenScrollbar :class="bem('scrollbar')">
-      <VbenMenu
+    <ShopScrollbar :class="bem('scrollbar')">
+      <ShopMenu
         v-model:value="activeKey"
         :options="menuList"
         :collapsed-width="48"
@@ -96,7 +96,7 @@ const { isSidebarDark } = useAppTheme()
         :accordion="getAccordion"
         :inverted="!!isSidebarDark"
       />
-    </VbenScrollbar>
+    </ShopScrollbar>
   </div>
 </template>
 

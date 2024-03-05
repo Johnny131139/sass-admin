@@ -20,49 +20,49 @@ const cardStyle = {
 </script>
 <template>
   <div :class="prefixCls" class="m-5">
-    <VbenGrid x-gap="12" :cols="3">
-      <VbenGridItem>
-        <VbenCard :class="`${prefixCls}-card`">
-          <VbenGrid x-gap="12" :cols="3">
-            <VbenGridItem span="1">
+    <ShopGrid x-gap="12" :cols="3">
+      <ShopGridItem>
+        <ShopCard :class="`${prefixCls}-card`">
+          <ShopGrid x-gap="12" :cols="3">
+            <ShopGridItem span="1">
               <div :class="`${prefixCls}-top__avatar`">
                 <img width="70" :src="avatar" />
-                <span>Vben</span>
+                <span>Shop</span>
                 <div class="overflow-hidden">
                   海纳百川，有容乃大。海纳百川，有容乃大。 海纳百川，有容乃大。
                 </div>
               </div>
-            </VbenGridItem>
-            <VbenGridItem span="2">
+            </ShopGridItem>
+            <ShopGridItem span="2">
               <div :class="`${prefixCls}-top__detail`">
                 <template v-for="detail in details" :key="detail.title">
                   <p class="flex items-center">
-                    <VbenIconify :icon="detail.icon" size="18" />
-                    <VbenText class="ml-2" depth="4">{{
+                    <ShopIconify :icon="detail.icon" size="18" />
+                    <ShopText class="ml-2" depth="4">{{
                       detail.title
-                    }}</VbenText>
+                    }}</ShopText>
                   </p>
                 </template>
               </div>
-            </VbenGridItem>
-          </VbenGrid>
-        </VbenCard>
-      </VbenGridItem>
-      <VbenGridItem>
-        <VbenCard
+            </ShopGridItem>
+          </ShopGrid>
+        </ShopCard>
+      </ShopGridItem>
+      <ShopGridItem>
+        <ShopCard
           title="标签"
           :class="`${prefixCls}-card`"
           :header-style="cardStyle"
         >
           <template v-for="tag in tags" :key="tag">
-            <VbenTag class="m-1">
+            <ShopTag class="m-1">
               {{ tag }}
-            </VbenTag>
+            </ShopTag>
           </template>
-        </VbenCard>
-      </VbenGridItem>
-      <VbenGridItem>
-        <VbenCard
+        </ShopCard>
+      </ShopGridItem>
+      <ShopGridItem>
+        <ShopCard
           title="团队"
           :class="`${prefixCls}-card`"
           :header-style="cardStyle"
@@ -73,25 +73,25 @@ const cardStyle = {
             :class="`${prefixCls}-top__team`"
           >
             <div :class="`${prefixCls}-top__team-item`">
-              <VbenIconify :icon="team.icon" :color="team.color" />
-              <VbenText>{{ team.title }}</VbenText>
+              <ShopIconify :icon="team.icon" :color="team.color" />
+              <ShopText>{{ team.title }}</ShopText>
             </div>
           </div>
-        </VbenCard>
-      </VbenGridItem>
-    </VbenGrid>
+        </ShopCard>
+      </ShopGridItem>
+    </ShopGrid>
     <div :class="`${prefixCls}-bottom`">
-      <VbenCard>
-        <VbenTabs type="line">
-          <VbenTabPane
+      <ShopCard>
+        <ShopTabs type="line">
+          <ShopTabPane
             v-for="item in achieveList"
             :key="item.key"
             :name="item.name"
           >
             <component :is="tabs[item.component]" />
-          </VbenTabPane>
-        </VbenTabs>
-      </VbenCard>
+          </ShopTabPane>
+        </ShopTabs>
+      </ShopCard>
     </div>
   </div>
 </template>

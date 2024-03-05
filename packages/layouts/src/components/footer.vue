@@ -27,15 +27,15 @@ const style = computed(
   <footer :class="bem()" :style="style">
     <div class="flex items-center justify-center">
       <template v-for="(item, index) in links" :key="index">
-        <VbenButton text tag="a" :href="item.url" target="_blank" class="mx-1">
+        <ShopButton text tag="a" :href="item.url" target="_blank" class="mx-1">
           <span class="lh-32px flex items-center">
-            <VbenIconify :icon="item.icon" size="18" />
-            <VbenText depth="3">{{ item.label }}</VbenText>
+            <ShopIconify :icon="item.icon" size="18" />
+            <ShopText depth="3">{{ item.label }}</ShopText>
           </span>
-        </VbenButton>
+        </ShopButton>
       </template>
     </div>
-    <VbenText depth="3">Copyright ©{{ copyright }}</VbenText>
+    <ShopText depth="3">Copyright ©{{ copyright }}</ShopText>
   </footer>
 </template>
 

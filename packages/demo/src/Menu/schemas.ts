@@ -1,10 +1,10 @@
-import { VbenFormSchema } from "@shoptop/design/src/form";
-import { VbenColumns } from "@shoptop/design/src/table";
+import { ShopFormSchema } from "@shoptop/design/src/form";
+import { ShopColumns } from "@shoptop/design/src/table";
 export interface tableData {
 
 }
 
-export const formSchema: VbenFormSchema[] = [
+export const formSchema: ShopFormSchema[] = [
   {
     field: "name",
     label: "菜单名称",
@@ -37,7 +37,7 @@ export const formSchema: VbenFormSchema[] = [
   }
 ]
 
-export const menuColumns:VbenColumns = [
+export const menuColumns:ShopColumns = [
   {
     field: 'name',
     title: '菜单名称',

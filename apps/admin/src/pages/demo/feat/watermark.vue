@@ -21,8 +21,8 @@ nextTick(() => {
 </script>
 
 <template>
-  <VbenCard title="水印示例">
-    <VbenWatermark
+  <ShopCard title="水印示例">
+    <ShopWatermark
       v-if="show"
       content="大家艰苦一下，一切都会有的"
       cross
@@ -35,16 +35,16 @@ nextTick(() => {
       :y-offset="60"
       :rotate="-15"
     />
-    <VbenGrid x-gap="12" :cols="2">
-      <VbenGridItem>
-        <VbenCard title="组件方式" style="height: 100%">
+    <ShopGrid x-gap="12" :cols="2">
+      <ShopGridItem>
+        <ShopCard title="组件方式" style="height: 100%">
           <div class="mb-4">基于Naive UI的水印Watermark组件</div>
           <div>
-            <VbenCard title="全屏水印">
-              <VbenSwitch v-model:value="show" />
-            </VbenCard>
-            <VbenCard title="部分水印">
-              <VbenWatermark
+            <ShopCard title="全屏水印">
+              <ShopSwitch v-model:value="show" />
+            </ShopCard>
+            <ShopCard title="部分水印">
+              <ShopWatermark
                 content="核心机密"
                 cross
                 selectable
@@ -56,59 +56,59 @@ nextTick(() => {
                 :y-offset="28"
                 :rotate="-15"
               >
-                <VbenCard title="带封面的卡片" hoverable>
+                <ShopCard title="带封面的卡片" hoverable>
                   <template #cover>
                     <img src="@/assets/images/cover.png" alt="cover.png" />
                   </template>
                   样式丰富了许多,不是吗🥳
-                </VbenCard>
-              </VbenWatermark>
-            </VbenCard>
+                </ShopCard>
+              </ShopWatermark>
+            </ShopCard>
           </div>
-        </VbenCard>
-      </VbenGridItem>
-      <VbenGridItem>
-        <VbenCard title="函数方式" style="height: 100%">
+        </ShopCard>
+      </ShopGridItem>
+      <ShopGridItem>
+        <ShopCard title="函数方式" style="height: 100%">
           <div class="mb-4">基于自定义hooks实现(支持防篡改)</div>
           <div>
-            <VbenButton
+            <ShopButton
               type="primary"
               class="mr-2"
               @click="setWatermark('WaterMark Info1')"
             >
               Create Watermark1
-            </VbenButton>
-            <VbenButton
+            </ShopButton>
+            <ShopButton
               type="primary"
               class="mr-2"
               @click="setWatermark2('WaterMark Info2')"
             >
               Create Watermark2
-            </VbenButton>
-            <VbenButton type="error" class="mr-2" @click="clear">
+            </ShopButton>
+            <ShopButton type="error" class="mr-2" @click="clear">
               Clear Watermark1
-            </VbenButton>
-            <VbenButton type="error" class="mr-2" @click="clearAll">
+            </ShopButton>
+            <ShopButton type="error" class="mr-2" @click="clearAll">
               ClearAll
-            </VbenButton>
-            <VbenButton
+            </ShopButton>
+            <ShopButton
               type="warning"
               class="mr-2"
               @click="setWatermark('WaterMark Info New')"
             >
               Update Watermark1
-            </VbenButton>
-            <VbenCard title="部分水印">
-              <VbenCard id="cardId" title="带封面的卡片" hoverable>
+            </ShopButton>
+            <ShopCard title="部分水印">
+              <ShopCard id="cardId" title="带封面的卡片" hoverable>
                 <template #cover>
                   <img src="@/assets/images/cover.png" alt="cover.png" />
                 </template>
                 样式丰富了许多,不是吗🥳
-              </VbenCard>
-            </VbenCard>
+              </ShopCard>
+            </ShopCard>
           </div>
-        </VbenCard>
-      </VbenGridItem>
-    </VbenGrid>
-  </VbenCard>
+        </ShopCard>
+      </ShopGridItem>
+    </ShopGrid>
+  </ShopCard>
 </template>

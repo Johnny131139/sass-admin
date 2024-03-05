@@ -130,12 +130,12 @@ export default defineComponent({
       // const img = () => (icon ? <img src={icon} /> : null)
       const button = () =>
         btnText && (
-          <VbenButton type="primary" onClick={handler}>
+          <ShopButton type="primary" onClick={handler}>
             {() => btnText}
-          </VbenButton>
+          </ShopButton>
         )
       return (
-        <VbenResult
+        <ShopResult
           status={status as any}
           title={props.title || title}
           description={props.subTitle || subTitle}
@@ -146,7 +146,7 @@ export default defineComponent({
             extra: button,
             icon: icon ? () => <img src={icon} /> : null,
           }}
-        </VbenResult>
+        </ShopResult>
       )
     }
   },

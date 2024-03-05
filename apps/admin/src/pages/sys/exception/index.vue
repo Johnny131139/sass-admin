@@ -130,7 +130,7 @@ export default defineComponent({
       // const img = () => (icon ? <img src={icon} /> : null)
 
       return (
-        <VbenResult
+        <ShopResult
           class={bem() + ' m-4'}
           status={status as any}
           title={props.title || title}
@@ -139,13 +139,13 @@ export default defineComponent({
           {{
             footer: () =>
               btnText && (
-                <VbenButton type="primary" onClick={handler}>
+                <ShopButton type="primary" onClick={handler}>
                   {() => btnText}
-                </VbenButton>
+                </ShopButton>
               ),
             icon: () => (icon ? <img src={icon} /> : null),
           }}
-        </VbenResult>
+        </ShopResult>
       )
     }
   },

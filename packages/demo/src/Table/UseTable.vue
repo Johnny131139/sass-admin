@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VbenColumns, useTable } from '@shoptop/design/src/table'
+import { ShopColumns, useTable } from '@shoptop/design/src/table'
 import { getUseTableData } from '../apis/table'
-const columns: VbenColumns = [
+const columns: ShopColumns = [
   { field: 'userId', title: 'id', width: 100 },
   { field: 'username', title: '名称', width: 150 },
   {
@@ -31,10 +31,10 @@ const [registerTable, { reload }] = useTable({
 </script>
 <template>
   <div class="p-2">
-    <VbenTable @register="registerTable">
+    <ShopTable @register="registerTable">
       <template #desc_default="{ row, rowIndex }">
         {{ row.desc }}
       </template>
-    </VbenTable>
+    </ShopTable>
   </div>
 </template>

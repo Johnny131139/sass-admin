@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenUpload' })
+defineOptions({ name: 'ShopUpload' })
 import { maps } from '../../index'
 const Upload = maps.get('Upload')
 // const UploadDragger = maps.get('UploadDragger')

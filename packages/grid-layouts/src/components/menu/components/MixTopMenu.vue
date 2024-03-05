@@ -42,7 +42,7 @@ watch(
 )
 </script>
 <template>
-  <VbenMenu
+  <ShopMenu
     v-if="menuOptions.length"
     v-model:value="activeKey"
     :options="menuOptions"

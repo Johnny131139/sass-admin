@@ -37,7 +37,7 @@ const eventHandler = (evt: HandlerSettingEnum, val: boolean) => {
 }
 </script>
 <template>
-  <VbenSpace vertical>
+  <ShopSpace vertical>
     <SwitchItem
       :title="t('layout.setting.breadcrumb')"
       :value="getShowBreadCrumb"
@@ -112,5 +112,5 @@ const eventHandler = (evt: HandlerSettingEnum, val: boolean) => {
       :value="getColorWeak"
       :callback="(v) => eventHandler(HandlerSettingEnum.COLOR_WEAK, v)"
     />
-  </VbenSpace>
+  </ShopSpace>
 </template>

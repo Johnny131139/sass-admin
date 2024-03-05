@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenDialogProvider' })
+defineOptions({ name: 'ShopDialogProvider' })
 import { maps } from '../../index'
 const DialogProvider = maps.get('DialogProvider')
 </script>

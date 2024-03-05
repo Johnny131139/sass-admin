@@ -33,112 +33,112 @@ const notificationOptions = {
 </script>
 
 <template>
-  <VbenCard title="消息示例">
-    <VbenCard class="w-full h-32 bg-white rounded-md" title="Message">
-      <VbenButton @click="msg.info('Info message')" class="mr-2">
+  <ShopCard title="消息示例">
+    <ShopCard class="w-full h-32 bg-white rounded-md" title="Message">
+      <ShopButton @click="msg.info('Info message')" class="mr-2">
         Info
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="msg.success('Success message')"
         class="mr-2"
         type="success"
       >
         Success
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="msg.warning('Warning message')"
         class="mr-2"
         type="warning"
       >
         Warning
-      </VbenButton>
-      <VbenButton @click="msg.error('Error message')" class="mr-2" type="error">
+      </ShopButton>
+      <ShopButton @click="msg.error('Error message')" class="mr-2" type="error">
         Error
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="msg.loading('Loading...')"
         class="mr-2"
         type="primary"
       >
         Loading
-      </VbenButton>
-    </VbenCard>
+      </ShopButton>
+    </ShopCard>
 
-    <VbenCard class="w-full h-32 mt-5 bg-white rounded-md" title="Comfirm">
-      <VbenButton @click="dialog.info(diologOptions)" class="mr-2">
+    <ShopCard class="w-full h-32 mt-5 bg-white rounded-md" title="Comfirm">
+      <ShopButton @click="dialog.info(diologOptions)" class="mr-2">
         Info
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="dialog.warning(diologOptions)"
         type="warning"
         class="mr-2"
       >
         Warning
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="dialog.success(diologOptions)"
         type="success"
         class="mr-2"
       >
         Success
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="dialog.error(diologOptions)"
         type="error"
         class="mr-2"
       >
         Error
-      </VbenButton>
-    </VbenCard>
+      </ShopButton>
+    </ShopCard>
 
-    <VbenCard class="w-full h-32 mt-5 bg-white rounded-md" title="Modal">
-      <VbenButton @click="dialog.info(modalOptions)" class="mr-2">
+    <ShopCard class="w-full h-32 mt-5 bg-white rounded-md" title="Modal">
+      <ShopButton @click="dialog.info(modalOptions)" class="mr-2">
         Info
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="dialog.success(modalOptions)"
         type="success"
         class="mr-2"
       >
         Success
-      </VbenButton>
-      <VbenButton @click="dialog.error(modalOptions)" type="error" class="mr-2">
+      </ShopButton>
+      <ShopButton @click="dialog.error(modalOptions)" type="error" class="mr-2">
         Error
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="dialog.warning(modalOptions)"
         type="warning"
         class="mr-2"
       >
         Warning
-      </VbenButton>
-    </VbenCard>
+      </ShopButton>
+    </ShopCard>
 
-    <VbenCard class="w-full h-32 mt-5 bg-white rounded-md" title="Notification">
-      <VbenButton @click="notification.info(notificationOptions)" class="mr-2">
+    <ShopCard class="w-full h-32 mt-5 bg-white rounded-md" title="Notification">
+      <ShopButton @click="notification.info(notificationOptions)" class="mr-2">
         Info
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="notification.success(notificationOptions)"
         type="success"
         class="mr-2"
       >
         Success
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="notification.error(notificationOptions)"
         type="error"
         class="mr-2"
       >
         Error
-      </VbenButton>
-      <VbenButton
+      </ShopButton>
+      <ShopButton
         @click="notification.warning(notificationOptions)"
         type="warning"
         class="mr-2"
       >
         Warning
-      </VbenButton>
-    </VbenCard>
-  </VbenCard>
+      </ShopButton>
+    </ShopCard>
+  </ShopCard>
 </template>

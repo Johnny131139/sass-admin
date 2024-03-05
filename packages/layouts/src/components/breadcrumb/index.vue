@@ -5,7 +5,7 @@ import { useI18n } from '@shoptop/locale'
 import { useGo } from '@shoptop/hooks'
 import { filterTree, isString } from '@shoptop/utils'
 import { REDIRECT_NAME } from '@shoptop/constants'
-import { VbenIconify, renderIcon } from '@shoptop/design'
+import { ShopIconify, renderIcon } from '@shoptop/design'
 import { Menu } from '@shoptop/types'
 import { getMenus, getAllParentPath } from '@shoptop/router'
 import { context } from '../../../bridge'
@@ -106,10 +106,10 @@ const handleClick = (path: string, route: Recordable<any>) => {
 </script>
 
 <template>
-  <VbenSpace align="center" justify="space-between" class="pl-8px pr-8px">
-    <VbenBreadcrumb v-if="header.showBreadCrumb">
-      <VbenBreadcrumbItem v-for="(route, index) in routes" :key="index">
-        <VbenDropdown
+  <ShopSpace align="center" justify="space-between" class="pl-8px pr-8px">
+    <ShopBreadcrumb v-if="header.showBreadCrumb">
+      <ShopBreadcrumbItem v-for="(route, index) in routes" :key="index">
+        <ShopDropdown
           key-field="path"
           size="small"
           :options="route.children"
@@ -117,17 +117,17 @@ const handleClick = (path: string, route: Recordable<any>) => {
           :render-icon="renderDropdownIcon"
           @select="handleClick"
         >
-          <VbenSpace align="center" :size="0">
-            <VbenIconify
+          <ShopSpace align="center" :size="0">
+            <ShopIconify
               class="v-middle"
               :icon="route.icon"
               v-if="route.icon && header.showBreadCrumbIcon"
             />
             <span class="mr-1.2 ml-1.2">{{ t(route.meta.title) }}</span>
-            <VbenIconify icon="gridicons:dropdown" v-if="route.children" />
-          </VbenSpace>
-        </VbenDropdown>
-      </VbenBreadcrumbItem>
-    </VbenBreadcrumb>
-  </VbenSpace>
+            <ShopIconify icon="gridicons:dropdown" v-if="route.children" />
+          </ShopSpace>
+        </ShopDropdown>
+      </ShopBreadcrumbItem>
+    </ShopBreadcrumb>
+  </ShopSpace>
 </template>

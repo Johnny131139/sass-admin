@@ -7,7 +7,7 @@ import MixTopMenu from './components/MixTopMenu.vue'
 const { isTopMenu, isMix, menu } = useAppConfig()
 </script>
 <template>
-  <VbenScrollbar x-scrollable v-if="isTopMenu || (isMix && menu.split)">
+  <ShopScrollbar x-scrollable v-if="isTopMenu || (isMix && menu.split)">
     <div
       class="h-[var(--header-height)] flex items-center"
       :style="{ justifyContent: menu.topMenuAlign }"
@@ -15,5 +15,5 @@ const { isTopMenu, isMix, menu } = useAppConfig()
       <BasicMenu v-if="isTopMenu" :mode="MenuModeEnum.HORIZONTAL" />
       <MixTopMenu v-else />
     </div>
-  </VbenScrollbar>
+  </ShopScrollbar>
 </template>

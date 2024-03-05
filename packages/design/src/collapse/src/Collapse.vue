@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenCollapse' })
+defineOptions({ name: 'ShopCollapse' })
 import { maps } from '../../index'
 const Collapse = maps.get('Collapse')
 </script>

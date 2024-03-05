@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenInputNumber' })
+defineOptions({ name: 'ShopInputNumber' })
 import { maps } from '../../index'
 const InputNumber = maps.get('InputNumber')
 </script>

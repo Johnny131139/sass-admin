@@ -1,20 +1,20 @@
 import { nextTick, Ref, ref, unref } from 'vue'
-import { VbenFormProps, VbenFormSchema } from '../..'
+import { ShopFormProps, ShopFormSchema } from '../..'
 import { error } from '../../../index'
 
 export interface formMethod {
   // reload: () => void
-  setProps: (props: VbenFormProps) => void
+  setProps: (props: ShopFormProps) => void
   validate: (
     validateCallback?: (errors?: Array<any>) => void,
     shouldRuleBeApplied?: boolean,
   ) => Promise<void>
   getFieldValue: () => Ref
   restoreValidation: () => void
-  updateSchemas: (schemas: VbenFormSchema) => void
+  updateSchemas: (schemas: ShopFormSchema) => void
 }
 
-export function useForm(props: VbenFormProps) {
+export function useForm(props: ShopFormProps) {
   const formRef = ref<Nullable<formMethod>>(null)
 
   function register(instance) {

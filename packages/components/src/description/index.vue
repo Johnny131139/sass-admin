@@ -116,7 +116,7 @@ export default defineComponent({
 
           const width = contentMinWidth
           return (
-            <VbenDescItem label={renderLabel(item)} key={field} span={span}>
+            <ShopDescItem label={renderLabel(item)} key={field} span={span}>
               {() => {
                 if (!contentMinWidth) {
                   return getContent()
@@ -126,7 +126,7 @@ export default defineComponent({
                 }
                 return <div style={style}>{getContent()}</div>
               }}
-            </VbenDescItem>
+            </ShopDescItem>
           )
         })
         .filter((item) => !!item)
@@ -134,9 +134,9 @@ export default defineComponent({
 
     const renderDesc = () => {
       return (
-        <VbenDesc class="description" {...(unref(getDescriptionsProps) as any)}>
+        <ShopDesc class="description" {...(unref(getDescriptionsProps) as any)}>
           {renderItem()}
-        </VbenDesc>
+        </ShopDesc>
       )
     }
 
@@ -154,12 +154,12 @@ export default defineComponent({
       const { title } = unref(getMergeProps)
 
       return (
-        <vben-card title={title}>
+        <Shop-card title={title}>
           {{
             default: () => content,
             action: () => getSlot(slots, 'action'),
           }}
-        </vben-card>
+        </Shop-card>
       )
     }
 

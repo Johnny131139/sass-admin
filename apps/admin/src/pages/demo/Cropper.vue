@@ -20,15 +20,15 @@ function handleCircleCropend({ imgBase64, imgInfo }) {
 </script>
 
 <template>
-  <VbenCard
+  <ShopCard
     title="图片裁剪示例"
     content="需要开启测试接口服务才能进行上传测试！"
   >
-    <VbenCard title="头像裁剪">
+    <ShopCard title="头像裁剪">
       <CropperAvatar :value="avatar" />
-    </VbenCard>
+    </ShopCard>
 
-    <VbenCard title="矩形裁剪" class="my-4">
+    <ShopCard title="矩形裁剪" class="my-4">
       <div class="container p-4">
         <div class="cropper-container mr-10">
           <CropperImage
@@ -41,9 +41,9 @@ function handleCircleCropend({ imgBase64, imgInfo }) {
         <img :src="cropperImg" class="croppered" v-if="cropperImg" alt="" />
       </div>
       <p v-if="cropperImg">裁剪后图片信息：{{ info }}</p>
-    </VbenCard>
+    </ShopCard>
 
-    <VbenCard title="圆形裁剪">
+    <ShopCard title="圆形裁剪">
       <div class="container p-4">
         <div class="cropper-container mr-10">
           <CropperImage
@@ -57,8 +57,8 @@ function handleCircleCropend({ imgBase64, imgInfo }) {
         <img :src="circleImg" class="croppered" v-if="circleImg" />
       </div>
       <p v-if="circleImg">裁剪后图片信息：{{ circleInfo }}</p>
-    </VbenCard>
-  </VbenCard>
+    </ShopCard>
+  </ShopCard>
 </template>
 
 <style scoped>

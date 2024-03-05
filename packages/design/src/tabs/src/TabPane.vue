@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenTabPane' })
+defineOptions({ name: 'ShopTabPane' })
 import { maps } from '../../index'
 const TabPane = maps.get('TabPane')
 </script>

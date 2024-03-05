@@ -47,12 +47,12 @@ async function handleStart() {
 }
 </script>
 <template>
-  <vben-button
+  <Shop-button
     v-bind="$attrs"
     :disabled="isStart"
     @click="handleStart"
     :loading="loading"
   >
     {{ buttonText }}
-  </vben-button>
+  </Shop-button>
 </template>

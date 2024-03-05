@@ -11,7 +11,7 @@ const cardStyle = {
 <template>
   <div item-layout="vertical" :class="prefixCls">
     <template v-for="item in articleList" :key="item.title">
-      <VbenCard
+      <ShopCard
         hoverable
         bordered
         :title="item.title"
@@ -19,9 +19,9 @@ const cardStyle = {
         :content-style="cardStyle"
       >
         <template v-for="tag in item.description" :key="tag">
-          <VbenTag class="m-1">
+          <ShopTag class="m-1">
             {{ tag }}
-          </VbenTag>
+          </ShopTag>
         </template>
         <div :class="`${prefixCls}__content`" class="m-1">
           {{ item.content }}
@@ -33,17 +33,17 @@ const cardStyle = {
               class="flex items-center"
               v-if="action.icon"
             >
-              <VbenIconify
+              <ShopIconify
                 :icon="action.icon"
                 :color="action.color"
                 size="18"
               />
-              <VbenText class="ml-1" depth="4"> {{ action.text }} </VbenText>
+              <ShopText class="ml-1" depth="4"> {{ action.text }} </ShopText>
             </div>
           </div>
         </template>
         <span :class="`${prefixCls}__time`">{{ item.time }}</span>
-      </VbenCard>
+      </ShopCard>
     </template>
   </div>
 </template>

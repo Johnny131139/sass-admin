@@ -24,19 +24,19 @@ const activeTrigger = () => {
 }
 </script>
 <template>
-  <VbenLayout class="h-full min-w-375px">
-    <VbenDrawer v-model:show="active" placement="left" :width="getMenuWidth">
-      <VbenDrawerContent :body-content-style="{ padding: 0 }">
+  <ShopLayout class="h-full min-w-375px">
+    <ShopDrawer v-model:show="active" placement="left" :width="getMenuWidth">
+      <ShopDrawerContent :body-content-style="{ padding: 0 }">
         <LayoutMenu />
-      </VbenDrawerContent>
-    </VbenDrawer>
-    <VbenLayoutHeader ref="headerRef">
+      </ShopDrawerContent>
+    </ShopDrawer>
+    <ShopLayoutHeader ref="headerRef">
       <slot name="header">
         <LayoutHeader>
           <template #logo>
-            <VbenSpace align="center" :wrap-item="false">
+            <ShopSpace align="center" :wrap-item="false">
               <Logo :show-title="false" />
-              <VbenIconify
+              <ShopIconify
                 @click="activeTrigger"
                 :icon="
                   active
@@ -46,24 +46,24 @@ const activeTrigger = () => {
                 size="24"
                 hoverPointer
               />
-            </VbenSpace>
+            </ShopSpace>
           </template>
         </LayoutHeader>
       </slot>
-    </VbenLayoutHeader>
-    <VbenLayout :content-style="contentStyle">
-      <VbenLayoutContent :content-style="mainStyle" ref="contentRef">
+    </ShopLayoutHeader>
+    <ShopLayout :content-style="contentStyle">
+      <ShopLayoutContent :content-style="mainStyle" ref="contentRef">
         <LayoutMain>
           <slot name="main"></slot>
         </LayoutMain>
-      </VbenLayoutContent>
-      <VbenLayoutFooter v-if="getShowFooter" ref="footerRef">
+      </ShopLayoutContent>
+      <ShopLayoutFooter v-if="getShowFooter" ref="footerRef">
         <slot name="footer">
           <LayoutFooter />
         </slot>
-      </VbenLayoutFooter>
-    </VbenLayout>
-  </VbenLayout>
+      </ShopLayoutFooter>
+    </ShopLayout>
+  </ShopLayout>
 </template>
 
 <style scoped></style>

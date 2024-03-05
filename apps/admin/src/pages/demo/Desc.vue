@@ -54,7 +54,7 @@ const [register1] = useDescription({
 </script>
 
 <template>
-  <VbenCard title="详情组件示例">
+  <ShopCard title="详情组件示例">
     <Description
       title="基础示例"
       :column="3"
@@ -73,5 +73,5 @@ const [register1] = useDescription({
 
     <Description @register="register" class="mt-4" />
     <Description @register="register1" class="mt-4" />
-  </VbenCard>
+  </ShopCard>
 </template>

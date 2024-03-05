@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenTree' })
+defineOptions({ name: 'ShopTree' })
 import { maps } from '../../index'
 import { fetchProps, fetch } from '../../fetch'
 import { computed, h, ref, watch, watchEffect } from 'vue'
@@ -99,36 +99,36 @@ const emit = defineEmits(['update:pattern'])
 </script>
 <template>
   <div>
-    <VbenSpace
+    <ShopSpace
       justify="space-between"
       align="center"
       class="m-1 p-1 b-b"
       v-if="title || $slots.extra || $slots.title"
     >
       <slot name="title"
-        ><VbenText type="primary"> {{ title }} </VbenText>
+        ><ShopText type="primary"> {{ title }} </ShopText>
       </slot>
       <slot name="extra"
-        ><VbenInputGroup
-          ><VbenInput
+        ><ShopInputGroup
+          ><ShopInput
             size="tiny"
             :value="pattern"
             @update:value="emit('update:pattern', pattern)"
           >
-          </VbenInput>
-          <VbenButton size="tiny">搜索</VbenButton>
-          <VbenDropdown
+          </ShopInput>
+          <ShopButton size="tiny">搜索</ShopButton>
+          <ShopDropdown
             v-if="dropdownOption"
             size="small"
             :options="dropdownOption"
             @select="handleSelect"
           >
-            <VbenButton size="tiny"
-              ><VbenIconify icon="carbon:overflow-menu-vertical"
-            /></VbenButton>
-          </VbenDropdown> </VbenInputGroup
+            <ShopButton size="tiny"
+              ><ShopIconify icon="carbon:overflow-menu-vertical"
+            /></ShopButton>
+          </ShopDropdown> </ShopInputGroup
       ></slot>
-    </VbenSpace>
+    </ShopSpace>
 
     <Tree
       v-bind="$attrs"

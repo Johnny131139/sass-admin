@@ -7,7 +7,7 @@ import { useI18n } from '@shoptop/locale'
 import { useGo } from '@shoptop/hooks'
 import { filterTree, isString } from '@shoptop/utils'
 import { REDIRECT_NAME } from '@shoptop/constants'
-import { VbenIconify } from '@shoptop/design'
+import { ShopIconify } from '@shoptop/design'
 import { Menu } from '@shoptop/types'
 import {renderIcon} from "../render"
 import {getAllParentPath, getMenus} from "@shoptop/router";
@@ -105,9 +105,9 @@ const handleClick = (path: string, route: Recordable<any>) => {
 }
 </script>
 <template>
-  <VbenBreadcrumb v-if="header.showBreadCrumb" class="grid-center">
-    <VbenBreadcrumbItem v-for="(route, index) in routes" :key="index">
-      <VbenDropdown
+  <ShopBreadcrumb v-if="header.showBreadCrumb" class="grid-center">
+    <ShopBreadcrumbItem v-for="(route, index) in routes" :key="index">
+      <ShopDropdown
         key-field="path"
         size="small"
         :options="route.children"
@@ -115,16 +115,16 @@ const handleClick = (path: string, route: Recordable<any>) => {
         :render-icon="renderDropdownIcon"
         @select="handleClick"
       >
-        <VbenSpace align="center" :size="0">
-          <VbenIconify
+        <ShopSpace align="center" :size="0">
+          <ShopIconify
             class="v-middle"
             :icon="route.icon"
             v-if="route.icon && header.showBreadCrumbIcon"
           />
           <span class="mr-1.2 ml-1.2">{{ t(route.meta.title) }}</span>
-          <VbenIconify icon="gridicons:dropdown" v-if="route.children" />
-        </VbenSpace>
-      </VbenDropdown>
-    </VbenBreadcrumbItem>
-  </VbenBreadcrumb>
+          <ShopIconify icon="gridicons:dropdown" v-if="route.children" />
+        </ShopSpace>
+      </ShopDropdown>
+    </ShopBreadcrumbItem>
+  </ShopBreadcrumb>
 </template>

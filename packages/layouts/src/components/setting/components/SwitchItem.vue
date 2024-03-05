@@ -21,20 +21,20 @@ const onChange = (value: boolean) => {
 </script>
 <template>
   <div class="switch-item">
-    <VbenSpace justify="space-between" align="center">
+    <ShopSpace justify="space-between" align="center">
       <span>{{ title }}</span>
-      <VbenSwitch
+      <ShopSwitch
         :value="props.value"
         :disabled="disabled"
         @update:value="onChange"
       >
         <template #checked-icon>
-          <VbenIconify icon="ant-design:check-outlined" color="#18A058" />
+          <ShopIconify icon="ant-design:check-outlined" color="#18A058" />
         </template>
         <template #unchecked-icon>
-          <VbenIconify icon="ant-design:close-outlined" color="#BEBEBE" />
+          <ShopIconify icon="ant-design:close-outlined" color="#BEBEBE" />
         </template>
-      </VbenSwitch>
-    </VbenSpace>
+      </ShopSwitch>
+    </ShopSpace>
   </div>
 </template>

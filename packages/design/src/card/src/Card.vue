@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenCard' })
+defineOptions({ name: 'ShopCard' })
 import { maps } from '../../index'
 const Card = maps.get('Card')
 const props = defineProps({
@@ -12,7 +12,7 @@ const props = defineProps({
 <template>
   <Card v-bind="$attrs">
     <template #[item]="data" v-for="item in Object.keys($slots)" :key="item">
-      <VbenSkeleton v-if="loading" text />
+      <ShopSkeleton v-if="loading" text />
       <slot :name="item" v-bind="data || {}" v-else></slot> </template
   ></Card>
 </template>

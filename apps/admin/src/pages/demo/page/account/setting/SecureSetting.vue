@@ -2,9 +2,9 @@
 import { secureSettingList } from './data'
 </script>
 <template>
-  <VbenCard title="安全设置">
+  <ShopCard title="安全设置">
     <template v-for="item in secureSettingList" :key="item.key">
-      <VbenCard :title="item.title">
+      <ShopCard :title="item.title">
         <template #header-extra>
           <div
             class="float-right mt-10px mr-30px text-blue-500 text-font-normal cursor-pointer"
@@ -14,9 +14,9 @@ import { secureSettingList } from './data'
           </div>
         </template>
         <div>{{ item.description }}</div>
-      </VbenCard>
+      </ShopCard>
     </template>
-  </VbenCard>
+  </ShopCard>
 </template>
 
 <style lang="less" scoped></style>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenMessageProvider' })
+defineOptions({ name: 'ShopMessageProvider' })
 import { maps } from '../../index'
 const MessageProvider = maps.get('MessageProvider')
 </script>

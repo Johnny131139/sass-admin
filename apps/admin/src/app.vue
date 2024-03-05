@@ -70,20 +70,20 @@ const themeOverrides = computed(() => {
 </script>
 
 <template>
-  <VbenConfig
+  <ShopConfig
     :locale="locale"
     :date-locale="dateLocale"
     :theme="theme"
     v-bind="themeOverrides"
   >
-    <VbenNotificationProvider>
-      <VbenDialogProvider>
-        <VbenMessageProvider>
+    <ShopNotificationProvider>
+      <ShopDialogProvider>
+        <ShopMessageProvider>
           <AppProvider>
             <router-view />
           </AppProvider>
-        </VbenMessageProvider>
-      </VbenDialogProvider>
-    </VbenNotificationProvider>
-  </VbenConfig>
+        </ShopMessageProvider>
+      </ShopDialogProvider>
+    </ShopNotificationProvider>
+  </ShopConfig>
 </template>

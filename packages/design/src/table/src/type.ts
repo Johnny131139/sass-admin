@@ -1,13 +1,13 @@
 import type { VxeGridProps,VxeTableEvents } from 'vxe-table-demonic'
 import { VxeGridPropTypes } from 'vxe-table-demonic'
 
-export type VbenTableProps<D = any> = VxeGridProps<D> & {
+export type ShopTableProps<D = any> = VxeGridProps<D> & {
   api?: Function
   params?: Object
   title?: string
   pagination?: boolean | VxeGridPropTypes.PagerConfig
   afterFetch?: Function
 }
-export type VbenColumns = VxeGridPropTypes.Columns
+export type ShopColumns = VxeGridPropTypes.Columns
 
-export type VbenCellClick=VxeTableEvents.CellClick
+export type ShopCellClick=VxeTableEvents.CellClick

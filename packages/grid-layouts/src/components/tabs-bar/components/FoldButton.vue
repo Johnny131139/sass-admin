@@ -21,7 +21,7 @@ function handleFold() {
 
 <template>
   <SuffixItemWrapper v-if="tabTar.showFold" @click.stop="handleFold">
-    <VbenIconify
+    <ShopIconify
       :icon="getIsUnFold ? 'codicon:screen-normal' : 'codicon:screen-full'"
     />
   </SuffixItemWrapper>

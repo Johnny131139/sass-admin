@@ -42,7 +42,7 @@ const showSidebarLogo = computed(() => {
       sidebar.visible ? 'visible' : 'invisible overflow-hidden',
     ]"
   >
-    <VbenConfig :theme-mode="sidebar.theme" :inherit="false" abstract>
+    <ShopConfig :theme-mode="sidebar.theme" :inherit="false" abstract>
       <template v-if="!isMixSidebar">
         <Logo ref="logoRef" v-if="showSidebarLogo" />
         <SidebarMenu :style="{ height: `calc(100% - ${lagoHeight}px)` }" />
@@ -51,6 +51,6 @@ const showSidebarLogo = computed(() => {
         <SecondaryBorder right class="!bg-[var(--trigger-background-color)]" />
       </template>
       <MixSidebarMenu v-else />
-    </VbenConfig>
+    </ShopConfig>
   </div>
 </template>

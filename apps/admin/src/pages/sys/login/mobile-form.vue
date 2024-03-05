@@ -35,31 +35,31 @@ async function handleLogin() {
 <template>
   <template v-if="show">
     <login-form-title class="enter-x" />
-    <vben-form
+    <Shop-form
       class="rd-2"
       :model="formData"
       :rules="getFormRules"
       ref="formRef"
     >
-      <vben-form-item name="mobile" class="enter-x" inline :show-label="false">
-        <vben-input
+      <Shop-form-item name="mobile" class="enter-x" inline :show-label="false">
+        <Shop-input
           size="large"
           v-model:value="formData.mobile"
           :placeholder="t('sys.login.mobile')"
           class="fix-auto-fill"
         />
-      </vben-form-item>
-      <vben-form-item name="sms" class="enter-x" inline :show-label="false">
+      </Shop-form-item>
+      <Shop-form-item name="sms" class="enter-x" inline :show-label="false">
         <count-down-input
           size="large"
           class="fix-auto-fill"
           v-model:value="formData.sms"
           :placeholder="t('sys.login.smsCode')"
         />
-      </vben-form-item>
+      </Shop-form-item>
 
       <div class="enter-x">
-        <vben-button
+        <Shop-button
           type="primary"
           size="large"
           block
@@ -67,11 +67,11 @@ async function handleLogin() {
           :loading="loading"
         >
           {{ t('sys.login.loginButton') }}
-        </vben-button>
-        <vben-button block class="mt-4" @click="handleBackLogin">
+        </Shop-button>
+        <Shop-button block class="mt-4" @click="handleBackLogin">
           {{ t('sys.login.backSignIn') }}
-        </vben-button>
+        </Shop-button>
       </div>
-    </vben-form>
+    </Shop-form>
   </template>
 </template>

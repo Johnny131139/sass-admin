@@ -89,7 +89,7 @@ const handleClose = (e: PointerEvent, route: RouteLocationNormalized) => {
 
 <template>
   <div class="mt-1">
-    <VbenTabs
+    <ShopTabs
       v-model:value="activeTabName"
       type="card"
       id="drag"
@@ -97,7 +97,7 @@ const handleClose = (e: PointerEvent, route: RouteLocationNormalized) => {
       animated
       @update:value="handleChange"
     >
-      <VbenTab
+      <ShopTab
         v-for="(item, index) in tabList"
         :key="item.query ? item.fullPath : item.path"
         :name="item.fullPath"
@@ -109,7 +109,7 @@ const handleClose = (e: PointerEvent, route: RouteLocationNormalized) => {
           @contextmenu="handleContextMenu($event, item)"
         >
           <span>{{ t(item.meta.title) }}</span>
-          <VbenIconify
+          <ShopIconify
             v-if="index != 0"
             class="absolute !transition-all top-1/2 ml-2px mt--6px hover:!text-14px hover:nt--7px group-hover:!inline-flex"
             :class="{ ['!hidden']: activeTabName !== item.fullPath }"
@@ -118,13 +118,13 @@ const handleClose = (e: PointerEvent, route: RouteLocationNormalized) => {
             @click="handleClose($event, item)"
           />
         </div>
-      </VbenTab>
+      </ShopTab>
       <template #suffix>
         <TabRedo v-if="getShowRedo" />
         <TabQuick :tabItem="$route" v-if="getShowQuick" />
         <FoldButton v-if="getShowFold" />
       </template>
-    </VbenTabs>
+    </ShopTabs>
     <TabDropdown ref="tabDropdownRef" />
   </div>
 </template>

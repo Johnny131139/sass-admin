@@ -13,7 +13,7 @@ function getRichContent(html: any) {
 </script>
 
 <template>
-    <VbenCard title="富文本组件示例"/>
+    <ShopCard title="富文本组件示例"/>
   <Editor :echo-data="tinymceHtml" @content="getRichContent" />
 </template>
 

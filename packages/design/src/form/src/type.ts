@@ -1,8 +1,8 @@
 import type { CSSProperties, VNode } from 'vue'
 import { formMethod } from './hooks/useForm'
-export interface VbenFormProps {
+export interface ShopFormProps {
   title?: string
-  schemas: VbenFormSchema[]
+  schemas: ShopFormSchema[]
   //栅格参数
   gridProps?: GridProps
   // label布局参数
@@ -45,7 +45,7 @@ export interface GridItemProps {
   suffix?: boolean
 }
 
-export interface VbenFormSchema {
+export interface ShopFormSchema {
   // Field name
   field: string
   // Event name triggered by internal value change, default change

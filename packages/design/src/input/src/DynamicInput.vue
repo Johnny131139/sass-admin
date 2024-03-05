@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-defineOptions({ name: 'VbenDynamicInput' })
+defineOptions({ name: 'ShopDynamicInput' })
 import { maps } from '../../index'
 const DynamicInput = maps.get('DynamicInput')
 </script>
